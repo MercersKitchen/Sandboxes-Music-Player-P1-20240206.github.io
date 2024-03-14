@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Used by the Keyboard-->
+    <meta charset="utf-8">
+
+    <title>Child Template</title>
+    <!-- Tab Favicon can be changed too, Google this-->
+    <!-- See https://www.w3schools.com/howto/howto_html_favicon.asp , accessed 20240214-->
+
+    <!-- Used by browser or Google Search-->
+    <meta name="author" content="Mark Mercer">
+    <meta name="description" content="Learning HTML by building a simple Website">
+    <meta name="keywords" content="learning, html, boilerplate, starter">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <!-- Content give value for name or http-equiv attribute, text entry in string or array string -->
+    <!-- meta http-equiv="default-style" content=""--> <!-- content matches css link exactly-->
+    <!-- Other meta attributes to be aware of -->
+    <!-- meta http-equiv="refresh" content="30"-->
+    <!-- Content forces a Internet Request to refresh webpage every "time value in seconds" -->
+    <!-- Use this when refreshes are needed -->
+    <!-- meta http-equiv="content-type" content="text/html; charset=UTF-8" -->
+    <!-- Already specified in the charset above-->
+    <!-- Cyber Security Note about JavaScript in Browsers-->
+
+    <!-- Websites Load in a specific order: Head, CSS, JavaScript, then the Body-->
+
+    <style>
+        * {
+            box-sizing: border-box;
+            //font-size: 2vw;
+        }
+        div { border: thin dotted red; }
+
+        .header {
+            border: 1px solid green;
+            padding: 15px;
+            //font-size: 4vw;
+        }
+
+        .nav {
+            width: 25%;
+            float: left;
+            padding: 15px;
+            border: 1px solid rgb(19, 0, 128);
+        }
+
+        .main {
+            width: 50%;
+            float: left;
+            padding: 15px;
+            border: 1px solid rgb(19, 0, 128);
+        }
+
+        .aside {
+            width: 25%;
+            float: left;
+            padding: 15px;
+            border: 1px solid rgb(19, 0, 128);
+        }
+
+        .footer {
+            padding: 15px;
+            border: 1px solid rgb(19, 0, 128);
+        }
+
+        .section {
+            width: 100%;
+            float: left;
+            padding: 15px;
+            border: 1px solid rgb(19, 0, 128);
+        }
+
+    </style>
+
+    <noscript>Running JavaScript is not necessary in the HTML page ... FYI: your Feature to execute scripts is turned off.</noscript>
+
+</head>
+
+<!-- Start here, BODY Semantic Tags-->
+<body>
+    <div>ViewPort Units are OFF</div>
+    <header class="header">
+        <h1 style="text-align: center;">Child Template Page</h1>
+        <h3 style="text-align: center;">Subtitle, H3</h3>
+        <p>Paragraph Tag, any writing</p>
+        <p><img src="../Images/CSRMqeHead.tif" alt="" title="Place Holder Image" style="max-width:10%;height:auto;"></p>
+    </header>
+    <nav class="nav">
+        <h3 style="text-align: center;">Navigation</h3>
+        <!-- Hyperlinks do not have any formating, use unorganized or organized lists -->
+
+        <ul style="list-style-type:none;">
+            <!-- NONE removes symbol for list items-->
+            <li>Back to the Beginning: <a href="../index.html" target="_blank">Home Page</a></li>
+            <br>
+            <li>What each page should have: <a href="metaData.html" target="_blank">Meta Data, must view in WYSIWYG</a></li>
+            <br>
+            <li>What is possible with text: <a href="Exp H P Tags.html" target="_blank">Text Experimental Page</a></li>
+            <br>
+            <li>A more powerful way of using font size in viewport: <a href="childTemplate_ VW-UnitsON.html" target="_blank">Viewport Units 1-6</a></li>
+            <br>
+            <li>What an image looks like: <a href="images.html" target="_blank">Images Lesson</a></li>
+            <br>
+            <li>What each webpage will look like BLANK: <a href="" target="_blank">Child Template Page</a></li>
+            <br>
+        </ul>
+
+        <p>Use a text edittor to craft white text for the nav items.</p>
+        <p>Use "ol" with style="type="1|a|A|i|I;" if want numbered pages</p>
+        <p>
+            Remember, the layout of li-tags & a-tags creates high contract with
+            hyperlinked colour text.
+            Some viewers struggle with low contrast text and colours.
+        </p>
+        <p>
+            CAUTION: Use the DOC-Map to craft all the pages, using file names in childTemplate before creating the actual files.
+            This will COPY/PASTE childTemplate to new pages with the same NAV Layout.
+        </p>
+
+        <img src="../Images/QE_Esports.png" alt="" title="Place Holder Image" style="max-width:10%;height:auto;">
+
+    </nav>
+    <main class="main">
+        <h1>MAIN, H-Tags, in h1</h1>
+        <h2>H2: text</h2>
+        <h3>H3: text</h3>
+        <h4>H4: text</h4>
+        <h5>H5: text</h5>
+        <h6>H6: text</h6>
+        <p>Paragraphs can include different types of <sup>big</sup> writing and <sub>small</sub> writing.</p>
+        <a>Hyperlink, text only, in a-tag</a>
+        <p><img src="../Images/CSRMqeHead.tif" alt="" title="Place Holder Image" style="max-width:10%;height:auto;"></p>
+        <br><br>
+        <section class="section">
+            <h2>Section H-Tags, in h2</h2>
+            <h3>SubHeadings usually stop at H3, in h3</h3>
+            <p>H2 is the largest. Put anything in SECTION-tags, in p-tag</p>
+            <a>Hyperlink, text only, in a-tag</a>
+            <br><br>
+            <article class="section">
+                <h2>Article H-Tags, in h2</h2>
+                <h3>SubHeadings usually stop at H3, in h3</h3>
+                <p>Writing Only in P-Tags</p>
+                <a>Hyperlink, text only, in a-tag</a>
+            </article>
+        </section>
+    </main>
+    <aside class="aside">
+        <h2>Aside Space H-Tags, in h2</h2>
+        <h3>H3: text</h3>
+        <h4>H4: text</h4>
+        <h5>H5: text</h5>
+        <h6>H6: text</h6>
+        <p>Paragraph Tag</p>
+        <a>Hyperlink, text only, in a-tag</a>
+        
+        <p><img src="../Images/QE_Esports_Reverse.png" alt="" title="Place Holder Image" style="max-width:10%;height:auto;"></p>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br>
+    </aside>
+    <footer class="footer" style="text-align: center;">
+        <h1>Footer H-Tags,in h1</h1>
+        <p>Paragraph Tag</p>
+    </footer>
+</body>
+<footer style="text-align: center;">
+    <blockquote cite="">
+        <!-- Date Accessed 20240214-->
+    </blockquote>
+    <p>
+        <strong>"Getting information off the Internet is like taking a drink from a firehose."</strong>
+        <em>- Mitch Kapor</em>
+    </p>
+    <p>&copy Mark Mercer, powered by MercersKitchen in GitHub</p>
+    <!-- Other information possilbe like Number of Visitor, Location, author contract information-->
+</footer>
+</html>
