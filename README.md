@@ -20,7 +20,8 @@ CS10 Main Project
   - Graphical User Interface (GUI)
   - Starting Place, not ending place
   - See Mr. Mercer's Google Drive for Paper Images (https://drive.google.com/drive/folders/1zW66hJX31XduL0i_nGVJh15geNLlsdV8) 
-- [ ] (100% Assignment, must be done or cannot compile code) Installation of Minim in Processing.pde IDE, through File / Sketch / Add Library
+- [ ] (100% Assignment, must be done or cannot compile code) Installation of Minim in Processing.pde IDE
+  - Through File / Sketch / Add Library
 - [ ] Upload of Music (minimum 3 songs, max 5), see https://studio.youtube.com/channel/UCkhFasU2ZSgusy_b1l4bcHg/music
 - [ ] Upload of Sound Effects (minimum one, max 5)
 
