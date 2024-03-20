@@ -24,7 +24,7 @@ CS10 Main Project
   - Through File / Sketch / Add Library
 - [ ] Upload of Music (minimum 3 songs, max 5), see https://studio.youtube.com/channel/UCkhFasU2ZSgusy_b1l4bcHg/music
 - [ ] Upload of Sound Effects (minimum one, max 5)
-
+- [ ] All text on Case Study typed into ReadMe.md file and spell-checked
 - [ ] TBA
 
 ---
