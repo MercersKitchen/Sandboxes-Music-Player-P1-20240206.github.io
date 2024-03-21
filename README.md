@@ -11,6 +11,7 @@ CS10 Main Project
 ---
 
 # Progression
+- [ ] Website Option for Promotion, Marketplace
 - [x] GitHub Repository ( i.e. github.io ) and Submission through Google CLASSROOM Google FORM
 - [x] Start Processing IDE, Introduction to Buttons, etc.
 - [x] Create Processing Boilerplate for Android Development (Interactive Visually-based Program) & ID Java Compiler Folder
