@@ -42,3 +42,10 @@ CS10 Main Project
 - [ ] TBA
 
 ---
+
+# Website Promo
+- [ ] include download button
+- [ ] promote Market Place 
+- [ ] Old School Arcade
+
+- [ ] See Website to Learn Webpages
