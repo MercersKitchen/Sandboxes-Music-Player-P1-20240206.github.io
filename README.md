@@ -38,6 +38,7 @@ CS10 Main Project
 ---
 
 # To Include
+- [ ] Case Study: link to Google Video for Paper and Pencil Prototyping
 - [ ] TBA
 
 ---
