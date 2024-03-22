@@ -18,14 +18,16 @@ CS10 Main Project
   - Global Variables, setup, draw, keyPressed, mousePressed, End
 - [x] Google Search of Music Player Images ( must end with IMAGE.fileExtension like IMAGE.jpg, etc. )
 - [x] Upload of Paper Case Study | Downloaded Image
+  - Purpose: must know what music player looks like because when we start to think like a computer it is easy to get lost "in a forest of detailed trees"
   - Graphical User Interface (GUI)
   - Starting Place, not ending place
   - See Mr. Mercer's Google Drive for Paper Images (https://drive.google.com/drive/folders/1zW66hJX31XduL0i_nGVJh15geNLlsdV8) 
 - [ ] (100% Assignment, must be done or cannot compile code) Installation of Minim in Processing.pde IDE
   - File-Sketch / Import Library / Manage Library / Contribution Manager 
   - Verify Minim is installed as a "Contributed Library"
-- [ ] Upload of Music (minimum 3 songs, max 5), see https://studio.youtube.com/channel/UCkhFasU2ZSgusy_b1l4bcHg/music
-- [ ] Upload of Sound Effects (minimum one, max 5)
+- [ ] Upload of Music & Sound Effects (.mp3 is Internet Standard)
+  - Minimum 3 songs, max 5, see https://studio.youtube.com/channel/UCkhFasU2ZSgusy_b1l4bcHg/music
+  - Minimum one sound effect, max 5
 - [ ] All text on Case Study typed into ReadMe.md file and spell-checked
 - [ ] TBA
 
