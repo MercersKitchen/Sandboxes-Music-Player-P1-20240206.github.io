@@ -52,3 +52,13 @@ CS10 Main Project
 - [ ] Old School Arcade
 
 - [ ] See Website to Learn Webpages
+
+---
+
+# To Include, TEACHER ONLY Links
+- Ensure all Snapshots copied here: https://github.com/Intro-CS-App-Dev-and-Deploy/App-Development
+
+- Take Lessons from Here: https://github.com/Intro-CS-App-Dev-and-Deploy/Overview
+
+- [ ] https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World
+- [ ] TBA
