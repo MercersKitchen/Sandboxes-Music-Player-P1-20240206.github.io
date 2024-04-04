@@ -33,6 +33,8 @@ CS10 Main Project
 - [ ] Drawing Rectangles: using Case Study, strongly formatted languages, variable types & casting, reading code like a book
   - "A computer knows where the CANVAS is, where the mouse is, and cannot learn to put these together"
   - "A developer makes common sense or intuitive experiences"
+  - "Developer must know what goes in these rectangles"
+  - Layout DIVISIONS of a page
   - Local Variables for calculations, garbage collection
   - Global Variables for memories
   - background rect(), variables, using inequalities to create a button, WINDOWS System Activation of Canvas or fullScreen()
