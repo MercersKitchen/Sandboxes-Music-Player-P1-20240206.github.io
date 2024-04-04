@@ -29,16 +29,25 @@ CS10 Main Project
   - Minimum 3 songs, max 5, see https://studio.youtube.com/channel/UCkhFasU2ZSgusy_b1l4bcHg/music
   - Minimum one sound effect, max 5
 - [ ] All text on Case Study typed into ReadMe.md file and spell-checked
+- [ ] HelloWorld: println(), print(), display key variables, concatenation, inspecting variables, character escapes, display geometry, ternary operators
+- [ ] Drawing Rectangles: using Case Study, strongly formatted languages, variable types & casting, reading code like a book
+  - "A computer knows where the CANVAS is, where the mouse is, and cannot learn to put these together"
+  - "A developer makes common sense or intuitive experiences"
+  - Local Variables for calculations, garbage collection
+  - Global Variables for memories
+  - background rect(), variables, using inequalities to create a button, WINDOWS System Activation of Canvas or fullScreen()
+  - foreground rect() and QUIT Button
+  - Primitive Variables, location-name and value: integers (int & long), decimals (float & double)
 - [ ] TBA
 
 ### Ideas
-- [ ] Drawing Background Rectangle
+- [ ] Drawing Background Rectangle, 
 - [ ] Drawing GUI Rectangles
 - [ ] Activating Windows with Mouse Click (use background rectangle variables, introduces buttons)
 - [ ] Display: width & height, displayWidth & displayHeight, appWidth, appHeight
 - [ ] Display: hardcode landscape mode (width > height), feedback on portrait (width < height), square is not considered here
 - [ ] Display: ternary operator for feedback
-- [ ] Drawing Rectangles: Global Variables, Local Variables, integers (int & long), decimals (float & double)
+- [ ] Drawing Rectangles: Global Variables, Local Variables, 
 - [ ] TBA
 
 - [ ] ADVANCED: auto reading list of music in folder containing music, see Intermediate or Advanced Memories
