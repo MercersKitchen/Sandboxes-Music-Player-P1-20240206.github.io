@@ -38,6 +38,8 @@ CS10 Main Project
 - [ ] Drawing Rectangles: Global Variables, Local Variables, integers (int & long), decimals (float & double)
 - [ ] TBA
 
+- [ ] ADVANCED: auto reading list of music in folder containing music, see Intermediate or Advanced Memories
+
 ---
 
 # To Include
