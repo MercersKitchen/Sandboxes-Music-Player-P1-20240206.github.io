@@ -29,7 +29,7 @@ CS10 Main Project
   - Minimum 3 songs, max 5, see https://studio.youtube.com/channel/UCkhFasU2ZSgusy_b1l4bcHg/music
   - Minimum one sound effect, max 5
 - [ ] All text on Case Study typed into ReadMe.md file and spell-checked
-- [ ] HelloWorld: println(), print(), display key variables, concatenation, inspecting variables, character escapes, display geometry, ternary operators
+- [x] HelloWorld: println(), print(), display key variables, concatenation, inspecting variables, character escapes, display geometry, ternary operators
 - [ ] Drawing Rectangles: using Case Study, strongly formatted languages, variable types & casting, reading code like a book
   - "A computer knows where the CANVAS is, where the mouse is, and cannot learn to put these together"
   - "A developer makes common sense or intuitive experiences"
@@ -42,6 +42,8 @@ CS10 Main Project
   - Primitive Variables, location-name and value: integers (int & long), decimals (float & double)
   - CAUTION: these rect()s get TURNED OFF, except for the Quit Button
   - Note: background(color) is same as background rect() without variables for button
+- [ ] Creating DIVs: from Case Study, paper folding activity & record DIV Ratios, rect(), variable names, the populate ratios of Display Geometry
+- [ ] Hackathon: Grade Progress of DIVs
 - [ ] Develop the Attributes of the QUIT Button, paper only
   - Image
   - Text
@@ -51,6 +53,7 @@ CS10 Main Project
 - [ ] Rectangles that do not go away - what is the code for these
 
 ### Ideas
+
 - [ ] initiation, declaration, naming, and values
 - [ ] TBA
 - [ ] Combining single line IFs to IF-ELSE to correct problems of appWidth&Height equaling zero and breaking the app
