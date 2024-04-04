@@ -41,14 +41,18 @@ CS10 Main Project
 - [ ] TBA
 
 ### Ideas
-- [ ] Drawing Background Rectangle, 
-- [ ] Drawing GUI Rectangles
-- [ ] Activating Windows with Mouse Click (use background rectangle variables, introduces buttons)
-- [ ] Display: width & height, displayWidth & displayHeight, appWidth, appHeight
-- [ ] Display: hardcode landscape mode (width > height), feedback on portrait (width < height), square is not considered here
-- [ ] Display: ternary operator for feedback
-- [ ] Drawing Rectangles: Global Variables, Local Variables, 
+- [ ] 
 - [ ] TBA
+- [ ] 
+- [ ] Purpose: using rect() parameters as variables in "divisions of page" metaphor leading to advanced Geometry Ratios, buttons, text, and images code
+- [ ] Exemplar is static and flat (comments will point toward dynamic sections)
+- [ ] CAUTION: might start with pixel numbers related to size() as if on a modified coordinate plane, BUT, ratios are better (see paperfolding lesson by Mr. Mercer)
+similar to DIV's in website design
+- [ ] Introduce separation of initiating & populating variables
+- [ ] Introduce color variable, hexadecimal, RGB Notation, random feature with inequality boundary, and IDE Color Sector
+- [ ] IDE Color Selector: Tools / Color Selector
+- [ ] Note about learning the hard way: video explores typing and reading in code, what different parameters to, and curiosity in prototyping a section of code
+- [ ] Note about primitive-version-control: these are "snapshots" of what coding a prototype might look like
 
 - [ ] ADVANCED: auto reading list of music in folder containing music, see Intermediate or Advanced Memories
 
