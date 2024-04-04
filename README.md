@@ -38,12 +38,23 @@ CS10 Main Project
   - background rect(), variables, using inequalities to create a button, WINDOWS System Activation of Canvas or fullScreen()
   - foreground rect() and QUIT Button
   - Primitive Variables, location-name and value: integers (int & long), decimals (float & double)
+  - CAUTION: these rect()s get TURNED OFF, except for the Quit Button
+  - Note: background(color) is same as background rect() without variables for button
+- [ ] Develop the Attributes of the QUIT Button, paper only
+  - Image
+  - Text
+  - Features, like hover over
+  - Additional 2D Shapes
 - [ ] TBA
+- [ ] Rectangles that do not go away - what is the code for these
 
 ### Ideas
-- [ ] 
+- [ ] initiation, declaration, naming, and values
 - [ ] TBA
-- [ ] 
+- [ ] Combining single line IFs to IF-ELSE to correct problems of appWidth&Height equaling zero and breaking the app
+- [ ] Compound AND OR conditionals the same as nested IFs
+- [ ] Example Feedback statements needed display is too small for minimum CANVAS size
+- [ ] Program must be in fullScreen() when deployed
 - [ ] Purpose: using rect() parameters as variables in "divisions of page" metaphor leading to advanced Geometry Ratios, buttons, text, and images code
 - [ ] Exemplar is static and flat (comments will point toward dynamic sections)
 - [ ] CAUTION: might start with pixel numbers related to size() as if on a modified coordinate plane, BUT, ratios are better (see paperfolding lesson by Mr. Mercer)
@@ -53,6 +64,23 @@ similar to DIV's in website design
 - [ ] IDE Color Selector: Tools / Color Selector
 - [ ] Note about learning the hard way: video explores typing and reading in code, what different parameters to, and curiosity in prototyping a section of code
 - [ ] Note about primitive-version-control: these are "snapshots" of what coding a prototype might look like
+- [ ] Visualizing where text will be located with a rectangle
+- [ ] Choosing a font and size
+- [ ] Choosing ink
+- [ ] Simple Typography choices (see Processing.org / Reference / Search Typography for other choices)
+- [ ] Debugging "white space" inside the font to choose a font size based on Display Geometry
+- [ ] Pick a screen size & orientation
+- [ ] Draw a rectangle in the middle of the canvas
+- [ ] Add hardcoded and random colours
+- [ ] Introduce dark & light Mode
+- [ ] Introduce Night Reading Mode
+- [ ] background()
+- [ ] stroke(), noStroke()
+- [ ] strokeWeight()
+- [ ] fill(), noFill()
+- [ ] random()
+- [ ] Single Line IF to make choices about code to run at specifies times
+- [ ] Night Mode happening at night or toggle button
 
 - [ ] ADVANCED: auto reading list of music in folder containing music, see Intermediate or Advanced Memories
 
@@ -60,6 +88,9 @@ similar to DIV's in website design
 
 # To Include
 - [ ] Case Study: link to Google Video for Paper and Pencil Prototyping
+- [ ] Population of Variables
+- [ ] Setup() TABS
+- [ ] Draw() TABS
 - [ ] TBA
 
 ---
@@ -78,5 +109,5 @@ similar to DIV's in website design
 
 - Take Lessons from Here: https://github.com/Intro-CS-App-Dev-and-Deploy/Overview
 
-- [ ] Hello World in Console and Rectangles: https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World
-- [ ] TBA
+- [x] Hello World in Console and Rectangles: https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World
+- [ ] Drawing a Rectangle: https://github.com/Intro-CS-App-Dev-and-Deploy/Drawing-a-Rectangle
