@@ -32,6 +32,9 @@ CS10 Main Project
 - [ ] TBA
 
 ### Ideas
+- [ ] Drawing Background Rectangle
+- [ ] Drawing GUI Rectangles
+- [ ] Activating Windows with Mouse Click (use background rectangle variables, introduces buttons)
 - [ ] Display: width & height, displayWidth & displayHeight, appWidth, appHeight
 - [ ] Display: hardcode landscape mode (width > height), feedback on portrait (width < height), square is not considered here
 - [ ] Display: ternary operator for feedback
@@ -62,5 +65,5 @@ CS10 Main Project
 
 - Take Lessons from Here: https://github.com/Intro-CS-App-Dev-and-Deploy/Overview
 
-- [ ] https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World
+- [ ] Hello World in Console and Rectangles: https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World
 - [ ] TBA
