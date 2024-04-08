@@ -47,6 +47,7 @@ CS10 Main Project
   - [OPTINAL] Use area calculations and referent measures with FOR Loops (See Demonstration by Mr. Mercer)
   - [OPTINAL] Use Linear Algebra or Calculus (Able to talk with Mr. Mercer about developing this method)
 - [ ] Hackathon: Grade Progress of DIVs
+  - Reminder: 2-day hackathon
 - [ ] Develop the Attributes of the QUIT Button, paper only
   - Image
   - Text
