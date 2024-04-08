@@ -43,6 +43,9 @@ CS10 Main Project
   - CAUTION: these rect()s get TURNED OFF, except for the Quit Button
   - Note: background(color) is same as background rect() without variables for button
 - [ ] Creating DIVs: from Case Study, paper folding activity & record DIV Ratios, rect(), variable names, the populate ratios of Display Geometry
+  - Use counting of fractions and decimals to "move rectangles"
+  - [OPTINAL] Use area calculations and referent measures with FOR Loops (See Demonstration by Mr. Mercer)
+  - [OPTINAL] Use Linear Algebra or Calculus (Able to talk with Mr. Mercer about developing this method)
 - [ ] Hackathon: Grade Progress of DIVs
 - [ ] Develop the Attributes of the QUIT Button, paper only
   - Image
