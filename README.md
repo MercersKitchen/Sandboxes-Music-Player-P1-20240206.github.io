@@ -43,11 +43,18 @@ CS10 Main Project
   - CAUTION: these rect()s get TURNED OFF, except for the Quit Button
   - Note: background(color) is same as background rect() without variables for button
 - [ ] Creating DIVs: from Case Study, paper folding activity & record DIV Ratios, rect(), variable names, the populate ratios of Display Geometry
-  - Use counting of fractions and decimals to "move rectangles"
+  - Use counting of fractions and decimals to "move rectangles" (easier method is mid-pointing and multiples of 1/2)
+  - Use Percent as a fraction: easier overall method since denominator is 100, numerator can be guessed
   - [OPTINAL] Use area calculations and referent measures with FOR Loops (See Demonstration by Mr. Mercer)
   - [OPTINAL] Use Linear Algebra or Calculus (Able to talk with Mr. Mercer about developing this method)
 - [ ] Hackathon: Grade Progress of DIVs
   - Reminder: 2-day hackathon
+	- #1: copy rect(X, Y, Width, Height) for each rectangle of GUI (Number from Case Study must be known)
+	- #2: name rect() variables according to type of rectangle on GUI
+	- #3: copy variables to Global Variables to initialize these on the hard-drive
+	- #4: Population: Typing Magic
+	- #5: Population: copy display-variable (i.e. appWidth & appHeight)
+	- #6: Population: use fraction | percent | formulaic method to develop ratio of display
 - [ ] Develop the Attributes of the QUIT Button, paper only
   - Image
   - Text
