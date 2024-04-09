@@ -43,6 +43,8 @@ CS10 Main Project
   - CAUTION: these rect()s get TURNED OFF, except for the Quit Button
   - Note: background(color) is same as background rect() without variables for button
 - [ ] Creating DIVs: from Case Study, paper folding activity & record DIV Ratios, rect(), variable names, the populate ratios of Display Geometry
+  - Quick activity: copy 3 rectangles from your Case Study (one image, one 2-D shapes, & one text)
+  - Follow demo on developing ratios: fractions, percent, or referent measure & area calculate
   - Use counting of fractions and decimals to "move rectangles" (easier method is mid-pointing and multiples of 1/2)
   - Use Percent as a fraction: easier overall method since denominator is 100, numerator can be guessed
   - [OPTINAL] Use area calculations and referent measures with FOR Loops (See Demonstration by Mr. Mercer)
