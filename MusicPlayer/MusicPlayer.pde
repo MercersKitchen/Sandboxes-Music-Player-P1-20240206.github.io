@@ -27,6 +27,10 @@ void setup() {
   playButtonY = appHeight*8/9;
   playButtonWidth = appWidth*1/8;
   playButtonHeight = appHeight*1/12;
+  quitButtonX = appWidth*90/100;
+  quitButtonY = appHeight*91/100;
+  quitButtonWidth = appWidth*9/100;
+  quitButtonHeight = appHeight*8/100;
   //Layout DIVs
   //rect(X, Y, Width, Height);
   rect(backgroundX, backgroundY, backgroundWidth, backgroundHeight);
