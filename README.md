@@ -56,7 +56,7 @@ CS10 Main Project
 	- #3: copy variables to Global Variables to initialize these on the hard-drive
 	- #4: Population: Typing Magic
 	- #5: Population: copy display-variable (i.e. appWidth & appHeight)
-	- #6: Population: use fraction | percent | formulaic method to develop ratio of display
+	- #6: Population: use fraction | percent | formulaic method using area referent measure to develop ratio of display
 - [ ] Develop the Attributes of the QUIT Button, paper only
   - Image
   - Text
