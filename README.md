@@ -64,6 +64,8 @@ CS10 Main Project
   - Additional 2D Shapes
 - [ ] TBA
 - [ ] Rectangles that do not go away - what is the code for these
+- [ ] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
+- [ ] TBA
 
 ### Ideas
 
