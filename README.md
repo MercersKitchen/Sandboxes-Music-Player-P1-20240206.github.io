@@ -75,6 +75,11 @@ CS10 Main Project
 	- Daytime, Light Mode: Black on White (no limit on blue light)
 	- Nighttime, all: Yellow on Black, all other colours can must limit blue light
 - [ ] Demonstrate Code for Exemplar Quit Button
+  - Drawing in draw(), Boolean update in draw()
+  - Trigger: mousePress
+  - Confirmation: hover-over
+  - Action: Close WINDOW, End Program
+  - Advanced: save program state for next execution ()
 - [ ] Grade interactive design of Quit Button (template for all buttons)
   - Reminder: 1-day Hackathon
 - [ ] Rectangles that do not go away - what is the code for these
