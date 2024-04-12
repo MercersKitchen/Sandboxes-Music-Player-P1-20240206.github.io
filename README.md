@@ -22,15 +22,15 @@ CS10 Main Project
   - Graphical User Interface (GUI)
   - Starting Place, not ending place
   - See Mr. Mercer's Google Drive for Paper Images (https://drive.google.com/drive/folders/1zW66hJX31XduL0i_nGVJh15geNLlsdV8) 
-- [ ] (100% Assignment, must be done or cannot compile code) Installation of Minim in Processing.pde IDE
+- [x] (100% Assignment, must be done or cannot compile code) Installation of Minim in Processing.pde IDE
   - File-Sketch / Import Library / Manage Library / Contribution Manager 
   - Verify Minim is installed as a "Contributed Library"
-- [ ] Upload of Music & Sound Effects (.mp3 is Internet Standard)
+- [x] Upload of Music & Sound Effects (.mp3 is Internet Standard)
   - Minimum 3 songs, max 5, see https://studio.youtube.com/channel/UCkhFasU2ZSgusy_b1l4bcHg/music
   - Minimum one sound effect, max 5
-- [ ] All text on Case Study typed into ReadMe.md file and spell-checked
+- [x] All text on Case Study typed into ReadMe.md file and spell-checked
 - [x] HelloWorld: println(), print(), display key variables, concatenation, inspecting variables, character escapes, display geometry, ternary operators
-- [ ] Drawing Rectangles: using Case Study, strongly formatted languages, variable types & casting, reading code like a book
+- [x] Drawing Rectangles: using Case Study, strongly formatted languages, variable types & casting, reading code like a book
   - "A computer knows where the CANVAS is, where the mouse is, and cannot learn to put these together"
   - "A developer makes common sense or intuitive experiences"
   - "Developer must know what goes in these rectangles"
@@ -58,11 +58,25 @@ CS10 Main Project
 	- #5: Population: copy display-variable (i.e. appWidth & appHeight)
 	- #6: Population: use fraction | percent | formulaic method using area referent measure to develop ratio of display
 - [ ] Develop the Attributes of the QUIT Button, paper only
-  - Image
-  - Text
-  - Features, like hover over
-  - Additional 2D Shapes
-- [ ] TBA
+  - Rectangle: two rectangles giving depth
+  - Image v 2D shape (two lines) v Text
+  - Text: QUIT v Hover-over "Close" Pop-up
+  - Features like hover-over to change the rectangle fill and ink
+  - Colours: blue light affects our eyes over time and our brains specifically at night
+	- Daytime: Light Mode v Dark Mode (limit blue light in white colour as a area calculation)
+	- Night Time: Limit all blue light (yellow on black)
+  - Student Choice: find a night mode colour for Purple (high level of blue light content)
+  - Teacher Choice of Colours: count in Tools / Color Selector
+	- Black: #000000
+	- White: #FFFFFF
+	- Purple: #FF00FF
+	- Yellow: #FFFF00
+	- Daytime, Dark Mode: White on Black (no limit on blue light)
+	- Daytime, Light Mode: Black on White (no limit on blue light)
+	- Nighttime, all: Yellow on Black, all other colours can must limit blue light
+- [ ] Demonstrate Code for Exemplar Quit Button
+- [ ] Grade interactive design of Quit Button (template for all buttons)
+  - Reminder: 1-day Hackathon
 - [ ] Rectangles that do not go away - what is the code for these
 - [ ] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
 - [ ] TBA
