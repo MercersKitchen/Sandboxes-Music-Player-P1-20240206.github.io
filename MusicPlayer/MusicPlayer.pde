@@ -6,6 +6,7 @@ float playButtonX, playButtonY, playButtonWidth, playButtonHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 color backgroundColour, darkBackground, whiteBackground;
+Boolean whiteMode=false;
 //
 void setup() {
   //size(400, 500); //width, height
@@ -73,6 +74,7 @@ void setup() {
   //Variable Population
   darkBackground = 0; //Gray Scale, much smaller than COLOR
   whiteBackground = 255; //Gray Scale, much smaller than COLOR
+  whiteMode = true;
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
   //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
   if ( hour()>=9 && hour()<=17 ) {
