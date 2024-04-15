@@ -74,10 +74,10 @@ void setup() {
   //Variable Population
   darkBackground = 0; //Gray Scale, much smaller than COLOR
   whiteBackground = 255; //Gray Scale, much smaller than COLOR
-  whiteMode = true;
+  //whiteMode = true; //Must ask to see BLUE Light
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
   //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
-  if ( hour()>=9 && hour()<=17 ) {
+  if ( whiteMode==true && hour()>=9 && hour()<=17 ) {
     backgroundColour = whiteBackground;
   } else {
     backgroundColour = darkBackground;
@@ -87,7 +87,7 @@ void setup() {
 //
 void draw() {
   background(backgroundColour); //Grayscale
-  //rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
 } //End draw
 //
 void keyPressed() {
