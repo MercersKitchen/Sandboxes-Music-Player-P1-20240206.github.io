@@ -43,34 +43,7 @@ void setup() {
   //rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
   //rect(playButtonX, playButtonY, playButtonWidth, playButtonHeight);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
-  /*
-  rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   rect(X, Y, Width, Height);
-   */
+  //
   //Variable Population
   darkBackground = 0; //Gray Scale, much smaller than COLOR
   whiteBackground = 255; //Gray Scale, much smaller than COLOR
