@@ -5,13 +5,15 @@ float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
 float playButtonX, playButtonY, playButtonWidth, playButtonHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
+color backgroundColour, darkBackground, whiteBackground;
+//
 void setup() {
   //size(400, 500); //width, height
   fullScreen(); //displayWidth, displayHeight
   appWidth = displayWidth;
   appHeight = displayHeight;
   //Landscape is HARDCODED
-  String displayInstructions = ( appWidth >= appHeight ) ? "Good To Go" : "Bru, turn your phun"; 
+  String displayInstructions = ( appWidth >= appHeight ) ? "Good To Go" : "Bru, turn your phun";
   println(displayInstructions);
   //
   //Population
@@ -33,51 +35,57 @@ void setup() {
   quitButtonHeight = appHeight*8/100;
   //Layout DIVs
   //rect(X, Y, Width, Height);
-  rect(backgroundX, backgroundY, backgroundWidth, backgroundHeight);
+  //rect(backgroundX, backgroundY, backgroundWidth, backgroundHeight);
   int centerX = appWidth*1/2;
   int centerY = appHeight*1/2;
   //rect(centerX*1/2, centerY*1/2, appWidth*1/2, appHeight*1/2);
-  rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
-  rect(playButtonX, playButtonY, playButtonWidth, playButtonHeight); 
+  //rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
+  //rect(playButtonX, playButtonY, playButtonWidth, playButtonHeight);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   /*
-  
   rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  rect(X, Y, Width, Height);
-  */
-  //
-  //CONTINUE HERE
-  //Paper Folding for Case Study
-  //Write Out Ratios on 2nd Case Study
-  //More time for DIVs, Grade Progress
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   rect(X, Y, Width, Height);
+   */
+  //Variable Population
+  darkBackground = 0; //Gray Scale, much smaller than COLOR
+  whiteBackground = 255; //Gray Scale, much smaller than COLOR
+  //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
+  //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
+  if ( hour()>=9 && hour()<=17 ) {
+    backgroundColour = whiteBackground;
+  } else {
+    backgroundColour = darkBackground;
+  }
   //
 } //End setup
 //
 void draw() {
+  background(backgroundColour); //Grayscale
+  //rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
 } //End draw
 //
 void keyPressed() {
