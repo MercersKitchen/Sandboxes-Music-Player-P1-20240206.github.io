@@ -6,6 +6,8 @@ float playButtonX, playButtonY, playButtonWidth, playButtonHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 color backgroundColour, darkBackground, whiteBackground;
+color foregroundColour;
+color white=255, yellow=#FFFF00;
 Boolean whiteMode=false;
 //
 void setup() {
@@ -47,13 +49,18 @@ void setup() {
   //Variable Population
   darkBackground = 0; //Gray Scale, much smaller than COLOR
   whiteBackground = 255; //Gray Scale, much smaller than COLOR
+  white = ;
+  yellow = ;
   //whiteMode = true; //Must ask to see BLUE Light
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
   //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
   if ( whiteMode==true && hour()>=9 && hour()<=17 ) {
     backgroundColour = whiteBackground;
+    foregroundColour = #FFFFFF;
   } else {
     backgroundColour = darkBackground;
+    foregroundColour = yellow; //Note: if(hour()<9&&hour()>17) 
+    if ( hour()>=9 && hour()<=17 ) foregroundColour = white;
   }
   //
 } //End setup
