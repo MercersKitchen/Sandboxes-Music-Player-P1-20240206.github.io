@@ -5,9 +5,9 @@ float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
 float playButtonX, playButtonY, playButtonWidth, playButtonHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
-color backgroundColour, darkBackground, whiteBackground;
+color backgroundColour, darkBackground=0, whiteBackground=255; //Gray Scale, note much smaller than COLOR
 color foregroundColour;
-color white=255, yellow=#FFFF00;
+color white=255, yellow=#FFFF00; //Hexidecimal, see Tools / Colour Selector
 Boolean whiteMode=false;
 //
 void setup() {
@@ -47,11 +47,6 @@ void setup() {
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   //
   //Variable Population
-  darkBackground = 0; //Gray Scale, much smaller than COLOR
-  whiteBackground = 255; //Gray Scale, much smaller than COLOR
-  white = ;
-  yellow = ;
-  //whiteMode = true; //Must ask to see BLUE Light
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
   //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
   if ( whiteMode==true && hour()>=9 && hour()<=17 ) {
