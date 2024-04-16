@@ -7,7 +7,7 @@ float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 color backgroundColour, darkBackground=0, whiteBackground=255; //Gray Scale, note much smaller than COLOR
 color foregroundColour;
-color white=255, yellow=#FFFF00; //Hexidecimal, see Tools / Colour Selector
+color white=255, yellow=#FFFF00, black=0; //Hexidecimal, see Tools / Colour Selector
 Boolean whiteMode=false;
 //
 void setup() {
@@ -61,7 +61,8 @@ void setup() {
 } //End setup
 //
 void draw() {
-  background(backgroundColour); //Grayscale
+  background(backgroundColour);
+  fill(foregroundColour);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
 } //End draw
 //
