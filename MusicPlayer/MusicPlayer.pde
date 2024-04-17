@@ -65,8 +65,13 @@ void draw() {
   fill(foregroundColour);
   //
   //Quit Button
-  fill(purple);
-  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) fill(yellow);
+  //fill(purple);
+  //if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) fill(yellow);
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
+    fill(yellow);
+  } else {
+    fill(purple);
+  }
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   fill(foregroundColour); //Resetting the Defaults
   println(mouseX, mouseY);
@@ -81,7 +86,7 @@ void keyPressed() { //Listener
 //
 void mousePressed() { //Listener
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight )
-  { 
+  {
     exit();
   }
 } //End mousePressed
