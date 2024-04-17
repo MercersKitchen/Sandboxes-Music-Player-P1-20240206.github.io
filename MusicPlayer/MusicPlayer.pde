@@ -8,7 +8,7 @@ float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 color backgroundColour, darkBackground=0, whiteBackground=255; //Gray Scale, note much smaller than COLOR
 color foregroundColour;
 color white=255, yellow=#FFFF00, black=0; //Hexidecimal, see Tools / Colour Selector
-Boolean whiteMode=true;
+Boolean whiteMode=false;
 //
 void setup() {
   //size(400, 500); //width, height
@@ -49,7 +49,7 @@ void setup() {
   //Variable Population
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
   //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
-  if ( whiteMode==true && hour()>=9 && hour()<=17 ) {
+  if ( whiteMode==false && hour()>=9 && hour()<=17 ) {
     backgroundColour = whiteBackground;
     foregroundColour = black;
   } else {
@@ -69,11 +69,11 @@ void draw() {
 //
 void keyPressed() { //Listener
   if (key=='Q' || key=='q') exit();
-  if (key==CODED && keyCode==UP) exit();
+  if (key==CODED && keyCode==ESC) exit();
+  if (key=='W' || key=='w') ;
 } //End keyPressed
 //
 void mousePressed() { //Listener
-  //QUIT
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight )
   { 
     exit();
