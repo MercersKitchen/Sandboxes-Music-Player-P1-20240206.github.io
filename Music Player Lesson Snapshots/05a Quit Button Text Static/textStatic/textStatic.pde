@@ -35,4 +35,5 @@ rect(titleX, titleY, titleWidth, titleHeight);
 //rect(X, Y, Width, Height); //footer
 //
 //Repeated Code: draw()ing text
-text(title, );
+textFont(titleFont, 20);
+text(title, titleX, titleY, titleWidth, titleHeight);
