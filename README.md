@@ -75,14 +75,15 @@ CS10 Main Project
 	- Daytime, Light Mode: Black on White (no limit on blue light)
 	- Nighttime, all: Yellow on Black, all other colours can must limit blue light
 - [ ] Demonstrate Code for Exemplar Quit Button
+  - Text Prototyped in Static Program, Copied to Dynamic musicPlayer: learn about boilerplate sections
+  - NOTE: actual text incorporates colours from above creating effect with hoverover
   - Drawing in draw(), Boolean update in draw()
   - Trigger: mousePress
   - Confirmation: hover-over
   - Action: Close WINDOW, End Program
   - Advanced: save program state for next execution ()
+- [ ] Mini Hackathon: Text Assignment: static program, bottom footer repeating the header-title
 - [ ] Grade interactive design of Quit Button (template for all buttons)
-  - Reminder: 1-day Hackathon
-  - Reminder: grade Text Assignment: static program, bottom footer repeating the header-title
 - [ ] Rectangles that do not go away - what is the code for these
 - [ ] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
 - [ ] TBA
@@ -151,3 +152,4 @@ similar to DIV's in website design
 
 - [x] Hello World in Console and Rectangles: https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World
 - [ ] Drawing a Rectangle: https://github.com/Intro-CS-App-Dev-and-Deploy/Drawing-a-Rectangle
+- [ ] Text in a Rectangle (Static & Dynamic Lessons): https://github.com/Intro-CS-App-Dev-and-Deploy/Rect-Application-Text/tree/main
