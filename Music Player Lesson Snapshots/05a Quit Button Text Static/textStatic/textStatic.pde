@@ -17,11 +17,14 @@ int appHeight = displayHeight;
 //
 //Population
 titleX = appWidth*1/10;
-titleY = appHeight*1/0;
+titleY = appHeight*1/10;
 titleWidth = appWidth*8/10;
 titleHeight = appHeight*1/10;
 //
 //Single Executed Code: Font SETUP
+//Fonts from OS (Operating System)
+String[] fontList = PFont.list(); //To list all fonts available on OS
+printArray(fontList);
 //
 //DIVs & rect()s: rect(X, Y, Width, Height);
 rect(titleX, titleY, titleWidth, titleHeight);
