@@ -16,10 +16,10 @@ int appWidth = displayWidth;
 int appHeight = displayHeight;
 //
 //Population
-titleX = ;
-titleY = ;
-titleWidth = ;
-titleHeight = ;
+titleX = appWidth*1/10;
+titleY = appHeight*1/0;
+titleWidth = appWidth*8/10;
+titleHeight = appHeight*1/10;
 //
 //Single Executed Code: Font SETUP
 //
