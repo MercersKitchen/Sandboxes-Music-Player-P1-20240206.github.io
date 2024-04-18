@@ -5,14 +5,21 @@
  */
 //
 //Global Variables
+float titleX, titleY, titleWidth, titleHeight;
 //
 //Display Geoemtry, Display Orientation: landscape, portrait, square
 fullScreen();
 //
 //Concatenation & Inspection of Variables
 println("Display Monitor:", "width:"+displayWidth, "\theight:"+displayHeight);
+int appWidth = displayWidth;
+int appHeight = displayHeight;
 //
 //Population
+titleX = ;
+titleY = ;
+titleWidth = ;
+titleHeight = ;
 //
 //Single Executed Code: Font SETUP
 //
