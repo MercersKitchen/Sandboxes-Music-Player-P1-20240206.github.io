@@ -42,7 +42,7 @@ CS10 Main Project
   - Primitive Variables, location-name and value: integers (int & long), decimals (float & double)
   - CAUTION: these rect()s get TURNED OFF, except for the Quit Button
   - Note: background(color) is same as background rect() without variables for button
-- [ ] Creating DIVs: from Case Study, paper folding activity & record DIV Ratios, rect(), variable names, the populate ratios of Display Geometry
+- [x] Creating DIVs: from Case Study, paper folding activity & record DIV Ratios, rect(), variable names, the populate ratios of Display Geometry
   - Quick activity: copy 3 rectangles from your Case Study (one image, one 2-D shapes, & one text)
   - Follow demo on developing ratios: fractions, percent, or referent measure & area calculate
   - Use counting of fractions and decimals to "move rectangles" (easier method is mid-pointing and multiples of 1/2)
@@ -82,6 +82,7 @@ CS10 Main Project
   - Advanced: save program state for next execution ()
 - [ ] Grade interactive design of Quit Button (template for all buttons)
   - Reminder: 1-day Hackathon
+  - Reminder: grade Text Assignment: static program, bottom footer repeating the header-title
 - [ ] Rectangles that do not go away - what is the code for these
 - [ ] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
 - [ ] TBA
