@@ -31,6 +31,7 @@ String[] fontList = PFont.list(); //To list all fonts available on OS
 printArray(fontList); //For listing all possible fonts to choose from, then createFont
 size = 55;
 titleFont = createFont("Harrington", size);
+//bottomFont = createFont("", size); //Note: more than one font allowed
 // Tools / Create Font / Find Font / Use size field / Do not press "OK", known bug
 //
 //DIVs & rect()s: rect(X, Y, Width, Height);
@@ -41,6 +42,6 @@ rect(titleX, titleY, titleWidth, titleHeight);
 fill(purple); //Ink
 textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
 //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-size = 20; //Note: CS20 studies size algorithm
+size = 80; //Note: CS20 studies size algorithm
 textFont(titleFont, size);
 text(title, titleX, titleY, titleWidth, titleHeight);
