@@ -34,8 +34,12 @@ titleFont = createFont("Harrington", size);
 //
 //DIVs & rect()s: rect(X, Y, Width, Height);
 rect(titleX, titleY, titleWidth, titleHeight);
-//rect(X, Y, Width, Height); //footer
+//rect(X, Y, Width, Height); //footer //Note: assignment
 //
 //Repeated Code: draw()ing text
-textFont(titleFont, 20);
+fill(purple); //Ink
+textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
+//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+size = 20; //Note: CS20 studies size algorithm
+textFont(titleFont, size);
 text(title, titleX, titleY, titleWidth, titleHeight);
