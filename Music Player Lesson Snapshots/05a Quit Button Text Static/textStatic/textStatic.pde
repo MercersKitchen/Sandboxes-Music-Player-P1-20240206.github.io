@@ -8,6 +8,7 @@
 float titleX, titleY, titleWidth, titleHeight;
 PFont titleFont;
 String title="Wahoo!";
+int size;
 //
 //Display Geoemtry, Display Orientation: landscape, portrait, square
 fullScreen();
