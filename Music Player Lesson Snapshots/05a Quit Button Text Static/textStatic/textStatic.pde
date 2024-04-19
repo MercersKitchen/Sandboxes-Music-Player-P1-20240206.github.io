@@ -34,7 +34,7 @@ titleHeight = appHeight*1/10;
 //Fonts from OS (Operating System)
 String[] fontList = PFont.list(); //To list all fonts available on OS
 printArray(fontList); //For listing all possible fonts to choose from, then createFont
-size = 55;
+size = ( appWidth > appHeight ) ? appHeight : appWidth ; // Font size starts with smaller dimension
 titleFont = createFont("Harrington", size);
 //bottomFont = createFont("", size); //Note: more than one font allowed
 // Tools / Create Font / Find Font / Use size field / Do not press "OK", known bug
@@ -47,7 +47,7 @@ rect(titleX, titleY, titleWidth, titleHeight);
 fill(purple); //Ink
 textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
 //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-size = 80; //Note: CS20 studies size algorithm
+size = appHeight*1/13; // Var based on ratio of display
 textFont(titleFont, size);
 text(title, titleX, titleY, titleWidth, titleHeight);
 fill(resetDefaultColour);

@@ -25,7 +25,7 @@ void setup() {
   //Fonts from OS (Operating System)
   String[] fontList = PFont.list(); //To list all fonts available on OS
   printArray(fontList); //For listing all possible fonts to choose from, then createFont
-  size = 55;
+  size = ( appWidth > appHeight ) ? appHeight : appWidth ; // Font size starts with smaller dimension
   generalFont = createFont("Harrington", size);
   //bottomFont = createFont("", size); //Note: more than one font allowed
   // Tools / Create Font / Find Font / Use size field / Do not press "OK", known bug
@@ -87,12 +87,13 @@ void draw() {
     fill(purple);
   }
   fill(foregroundColour); //Resetting the Defaults
+  //Quit, Text
   fill(purple); //Ink
   textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  size = appHeight*1/21; //Note: CS20 studies size algorithm
+  size = appHeight*1/23; // Var based on ratio of display
   textFont(generalFont, size);
-  text(quit, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  text(quit, quitButtonX+quitButtonWidth*1/7, quitButtonY+quitButtonHeight*1/7, quitButtonWidth*5/7, quitButtonHeight*5/7); //Inside rect() above
   //fill(resetDefaultColour);
   //
 
