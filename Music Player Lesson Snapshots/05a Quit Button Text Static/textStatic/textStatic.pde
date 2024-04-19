@@ -27,7 +27,8 @@ titleHeight = appHeight*1/10;
 //Fonts from OS (Operating System)
 String[] fontList = PFont.list(); //To list all fonts available on OS
 printArray(fontList); //For listing all possible fonts to choose from, then createFont
-titleFont = createFont("Harrington", 55);
+size = 55;
+titleFont = createFont("Harrington", size);
 // Tools / Create Font / Find Font / Use size field / Do not press "OK", known bug
 //
 //DIVs & rect()s: rect(X, Y, Width, Height);
