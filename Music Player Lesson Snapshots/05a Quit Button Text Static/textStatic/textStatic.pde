@@ -45,3 +45,12 @@ textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
 size = 80; //Note: CS20 studies size algorithm
 textFont(titleFont, size);
 text(title, titleX, titleY, titleWidth, titleHeight);
+fill(resetDefaultColour;);
+//
+fill(???); //Ink
+textAlign( ???, ??? ); //Align X&Y, see Processing.org / Reference
+//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+size = ??; //Note: CS20 studies size algorithm
+textFont(???, size);
+text(???, ???X, ???Y, ???Width, ???Height);
+fill(resetDefaultColour;);
