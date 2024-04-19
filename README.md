@@ -150,11 +150,14 @@ similar to DIV's in website design
 
 - Take Lessons from Here: https://github.com/Intro-CS-App-Dev-and-Deploy/Overview
 
-- Able to delete the following Repositories when finished
+- Able to delete the following Repositories when ...
+- Code is copied, checked off
+- ReadMe is copied and organized here, crossed out
 
-- [x] Hello World in Console and Rectangles: https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World
+
+- [x] <del> Hello World in Console and Rectangles: https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World </del>
 - [ ] Drawing a Rectangle: https://github.com/Intro-CS-App-Dev-and-Deploy/Drawing-a-Rectangle
-- [x] Text in a Rectangle (Static & Dynamic Lessons): https://github.com/Intro-CS-App-Dev-and-Deploy/Rect-Application-Text/tree/main
+- [] Text in a Rectangle (Static & Dynamic Lessons): https://github.com/Intro-CS-App-Dev-and-Deploy/Rect-Application-Text/tree/main
 - [ ] TBA
 
 ---
