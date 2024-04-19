@@ -9,6 +9,7 @@ float titleX, titleY, titleWidth, titleHeight;
 PFont titleFont;
 String title="Wahoo!";
 int size;
+color purple=#FF00FF;
 //
 //Display Geoemtry, Display Orientation: landscape, portrait, square
 fullScreen();
