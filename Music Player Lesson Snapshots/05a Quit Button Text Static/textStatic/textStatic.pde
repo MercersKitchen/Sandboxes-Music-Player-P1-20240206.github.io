@@ -1,7 +1,11 @@
-/*Purpose
+/*
+ Purpose
  - introduce single and mutliple executed code
  - activity: do another rectangle with text in it
  - copy and paste to dynamic program
+ 
+ Note: Having both rect() with different textAlign illustrates serifs
+       and how center is different than bottom or baseline
  */
 //
 //Global Variables
@@ -9,7 +13,8 @@ float titleX, titleY, titleWidth, titleHeight;
 PFont titleFont;
 String title="Wahoo!";
 int size;
-color purple=#FF00FF;
+color resetDefaultColour=#FFFFFF, purple=#FF00FF;
+//Note: Dark, Light, & Night Modes not considered
 //
 //Display Geoemtry, Display Orientation: landscape, portrait, square
 fullScreen();
@@ -45,12 +50,13 @@ textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
 size = 80; //Note: CS20 studies size algorithm
 textFont(titleFont, size);
 text(title, titleX, titleY, titleWidth, titleHeight);
-fill(resetDefaultColour;);
+fill(resetDefaultColour);
 //
+/*
 fill(???); //Ink
 textAlign( ???, ??? ); //Align X&Y, see Processing.org / Reference
 //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
 size = ??; //Note: CS20 studies size algorithm
 textFont(???, size);
 text(???, ???X, ???Y, ???Width, ???Height);
-fill(resetDefaultColour;);
+fill(resetDefaultColour;);*/
