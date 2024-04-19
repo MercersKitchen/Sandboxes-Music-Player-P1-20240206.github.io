@@ -155,3 +155,6 @@ similar to DIV's in website design
 - [x] Hello World in Console and Rectangles: https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World
 - [ ] Drawing a Rectangle: https://github.com/Intro-CS-App-Dev-and-Deploy/Drawing-a-Rectangle
 - [x] Text in a Rectangle (Static & Dynamic Lessons): https://github.com/Intro-CS-App-Dev-and-Deploy/Rect-Application-Text/tree/main
+- [ ] TBA
+
+---
