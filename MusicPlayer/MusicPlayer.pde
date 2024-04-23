@@ -39,11 +39,18 @@ void setup() {
   println(displayInstructions);
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
+  String extension = ".mp3";
+  String quitButtonSound = "CarDoorClosing";
+  String pathwaySoundEffects = "../Audio/SoundEffect/"; //Relative Path
+  //println ( pathwaySoundEffects+quitButtonSound+extension );
+  String path = sketchPath( pathwaySoundEffects + quitButtonSound + extension ); //Absolute Path
+  //println ( path );
+  soundEffects1 = minim.loadFile( path );
   //playList1 = minim.loadFile( path );
   //
   //Fonts from OS (Operating System)
-  String[] fontList = PFont.list(); //To list all fonts available on OS
-  printArray(fontList); //For listing all possible fonts to choose from, then createFont
+  //String[] fontList = PFont.list(); //To list all fonts available on OS
+  //printArray(fontList); //For listing all possible fonts to choose from, then createFont
   size = ( appWidth > appHeight ) ? appHeight : appWidth ; // Font size starts with smaller dimension
   generalFont = createFont("Harrington", size);
   //bottomFont = createFont("", size); //Note: more than one font allowed
@@ -88,6 +95,7 @@ void setup() {
     if ( hour()>=9 && hour()<=17 ) foregroundColour = white;
   }
   //
+  //soundEffects1.loop();
 } //End setup
 //
 void draw() {
@@ -116,20 +124,36 @@ void draw() {
   fill(foregroundColour); //Resetting the Defaults
   //
 
-  println(mouseX, mouseY);
+  //println(mouseX, mouseY);
 
   //
 } //End draw
 //
 void keyPressed() { //Listener
-  if (key=='Q' || key=='q') exit();
-  if (key==CODED && keyCode==ESC) exit();
+  if (key=='Q' || key=='q')
+  {
+    soundEffects1.loop(0);
+    delay(2650); //Parameter: milliseconds
+    exit();
+  }
+  if (key==CODED && keyCode==ESC) //Hardcoded QUIT, no sound available
+  {
+    soundEffects1.loop(0);
+    delay(2650); //Parameter: milliseconds
+    exit();
+  }
   if (key=='W' || key=='w') ;
+  
+  //soundEffects1.loop(0);
+  
+  
 } //End keyPressed
 //
 void mousePressed() { //Listener
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight )
   {
+    soundEffects1.loop(0);
+    delay(2650); //Parameter: milliseconds
     exit();
   }
 } //End mousePressed
