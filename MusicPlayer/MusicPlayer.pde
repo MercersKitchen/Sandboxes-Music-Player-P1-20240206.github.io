@@ -1,4 +1,20 @@
+/* Documentation
+ Library: use Sketch / Import Library / Add Library / Minim
+ Suporting Website: https://code.compartmental.net/minim/
+ - https://code.compartmental.net/minim/audioplayer_method_loop.html
+ */
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 //Global Variables
+Minim minim; //creates object to access all functions
+AudioPlayer soundEffects1;
+AudioPlayer playList1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+//
 int appWidth, appHeight;
 float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
