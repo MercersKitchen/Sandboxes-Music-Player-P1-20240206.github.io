@@ -84,9 +84,10 @@ CS10 Main Project
   - Advanced: save program state for next execution ()
 - [ ] Mini Hackathon: Text Assignment: static program, bottom footer repeating the header-title
 - [ ] Grade interactive design of Quit Button (template for all buttons)
-- [ ] Sound for QUIT Button, see mousePressed
-  - [ ] delay based on second(), see delay and second code in Processing.org / Reference
-  - [ ] delay based on real crystal time (see CS20 Time keeper, create a prototype for this)
+- [x] Sound for QUIT Button, see mousePressed
+  - [x] delay based on real crystal time (see CS20 Time keeper, create a prototype for this)
+  - [ ] using TAB to copy and paste code
+  - [ ] OPTIONAL: delay based on second(), see delay and second code in Processing.org / Reference
 - [ ] Rectangles that do not go away - what is the code for these
 - [ ] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
 - [ ] TBA
