@@ -38,6 +38,9 @@ void setup() {
   String displayInstructions = ( appWidth >= appHeight ) ? "Good To Go" : "Bru, turn your phun";
   println(displayInstructions);
   //
+  minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
+  //playList1 = minim.loadFile( path );
+  //
   //Fonts from OS (Operating System)
   String[] fontList = PFont.list(); //To list all fonts available on OS
   printArray(fontList); //For listing all possible fonts to choose from, then createFont
