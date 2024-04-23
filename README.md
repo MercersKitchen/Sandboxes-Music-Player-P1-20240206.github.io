@@ -87,6 +87,8 @@ CS10 Main Project
 - [x] Sound for QUIT Button, see mousePressed
   - [x] delay based on real crystal time (see CS20 Time keeper, create a prototype for this)
   - [ ] using TAB to copy and paste code
+    - VOID in MAIN Program
+	- VOID in TAB: Music TAB ( note: copy global variables, setup() and draw() later )
   - [ ] OPTIONAL: delay based on second(), see delay and second code in Processing.org / Reference
 - [ ] Rectangles that do not go away - what is the code for these
 - [ ] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
