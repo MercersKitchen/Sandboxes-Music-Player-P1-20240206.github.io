@@ -2,6 +2,7 @@
  Library: use Sketch / Import Library / Add Library / Minim
  Suporting Website: https://code.compartmental.net/minim/
  - https://code.compartmental.net/minim/audioplayer_method_loop.html
+ - loop(0) seems best for sound effects
  */
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -132,30 +133,23 @@ void draw() {
 void keyPressed() { //Listener
   if (key=='Q' || key=='q')
   {
-    soundEffects1.loop(0);
-    delay(2650); //Parameter: milliseconds
-    exit();
+    soundeffect_1();
   }
   if (key==CODED && keyCode==ESC) //Hardcoded QUIT, no sound available
   {
-    soundEffects1.loop(0);
-    delay(2650); //Parameter: milliseconds
-    exit();
+    soundeffect_1();
   }
-  if (key=='W' || key=='w') ;
-  
+  if (key=='W' || key=='w') ; //CAUTION, must return to "Request White, Light Mode"
+
   //soundEffects1.loop(0);
-  
-  
 } //End keyPressed
 //
 void mousePressed() { //Listener
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight )
   {
-    soundEffects1.loop(0);
-    delay(2650); //Parameter: milliseconds
-    exit();
+    soundeffect_1();
   }
 } //End mousePressed
 //
+
 // End MAIN Program
