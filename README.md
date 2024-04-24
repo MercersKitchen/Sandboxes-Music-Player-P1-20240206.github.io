@@ -97,6 +97,9 @@ CS10 Main Project
 - [ ] Rectangles that do not go away - what is the code for these
 - [ ] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
 - [ ] TBA
+- [ ] TBA Images
+- [ ] TBA 2D Images
+- [ ] TBA
 
 ### Ideas
 
