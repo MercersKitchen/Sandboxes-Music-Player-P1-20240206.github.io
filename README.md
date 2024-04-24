@@ -171,6 +171,11 @@ similar to DIV's in website design
 - [x] <del> Hello World in Console and Rectangles: https://github.com/Intro-CS-App-Dev-and-Deploy/Hello-World </del>
 - [ ] Drawing a Rectangle: https://github.com/Intro-CS-App-Dev-and-Deploy/Drawing-a-Rectangle
 - [x] Text in a Rectangle (Static & Dynamic Lessons): https://github.com/Intro-CS-App-Dev-and-Deploy/Rect-Application-Text/tree/main
-- [ ] TBA
+- [ ] Images in a Rectangle: https://github.com/Intro-CS-App-Dev-and-Deploy/Rect-Application-Image
+- [ ] TBA: https://github.com/Intro-CS-App-Dev-and-Deploy/Overview#using-rect-drawing-multiple-shapes
+- [ ] TBA: https://github.com/Intro-CS-App-Dev-and-Deploy/Composite-Shapes
+- [ ] TBA: https://github.com/Intro-CS-App-Dev-and-Deploy/Overview?tab=readme-ov-file#practice-makes-better-repeating-buttons-and-mouse-interactions
+- [ ] TBA: https://github.com/Intro-CS-App-Dev-and-Deploy/3x3-Home-Screen
+- [ ] TBA: Do This Not That, changing what is displayed as a button
 
 ---
