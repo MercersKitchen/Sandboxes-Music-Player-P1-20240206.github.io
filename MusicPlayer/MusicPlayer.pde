@@ -4,23 +4,20 @@
  - https://code.compartmental.net/minim/audioplayer_method_loop.html
  - loop(0) seems best for sound effects
  */
+//Library
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
-
+//
 //Global Variables
 Minim minim; //creates object to access all functions
 AudioPlayer soundEffects1;
 AudioPlayer playList1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 //
 int appWidth, appHeight;
-float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
-float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
-float playButtonX, playButtonY, playButtonWidth, playButtonHeight;
-float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int size;
 PFont generalFont;
 String quit="QUIT";
@@ -57,32 +54,7 @@ void setup() {
   //bottomFont = createFont("", size); //Note: more than one font allowed
   // Tools / Create Font / Find Font / Use size field / Do not press "OK", known bug
   //
-  //Population
-  backgroundX = appWidth*0;
-  backgroundY = appHeight*0;
-  backgroundWidth = appWidth;
-  backgroundHeight = appHeight;
-  albumCoverX = appWidth*18/100; //Percents Example
-  albumCoverY = appHeight*15/100;
-  albumCoverWidth = appWidth*64/100;
-  albumCoverHeight = appHeight*6/16; //Fraction Example
-  playButtonX = appWidth*3.5/8;
-  playButtonY = appHeight*8/9;
-  playButtonWidth = appWidth*1/8;
-  playButtonHeight = appHeight*1/12;
-  quitButtonX = appWidth*90/100;
-  quitButtonY = appHeight*91/100;
-  quitButtonWidth = appWidth*9/100;
-  quitButtonHeight = appHeight*8/100;
-  //Layout DIVs
-  //rect(X, Y, Width, Height);
-  //rect(backgroundX, backgroundY, backgroundWidth, backgroundHeight);
-  int centerX = appWidth*1/2;
-  int centerY = appHeight*1/2;
-  //rect(centerX*1/2, centerY*1/2, appWidth*1/2, appHeight*1/2);
-  //rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
-  //rect(playButtonX, playButtonY, playButtonWidth, playButtonHeight);
-  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  divs();
   //
   //Variable Population
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
