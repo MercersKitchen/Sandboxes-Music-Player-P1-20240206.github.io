@@ -16,7 +16,7 @@ int size;
 color resetDefaultColour=#FFFFFF, purple=#FF00FF;
 //Note: Dark, Light, & Night Modes not considered
 //
-//Display Geoemtry, Display Orientation: landscape, portrait, square
+//Display Geometry, Display Orientation: landscape, portrait, square
 fullScreen();
 //
 //Concatenation & Inspection of Variables
