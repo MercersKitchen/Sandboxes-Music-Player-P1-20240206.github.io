@@ -10,8 +10,10 @@
 //
 //Global Variables
 float titleX, titleY, titleWidth, titleHeight;
+//float footerX, footerY, footerWidth, footerHeight;
 PFont titleFont;
 String title="Wahoo!";
+//String footer="Wonderful Effort!";
 int size;
 color resetDefaultColour=#FFFFFF, purple=#FF00FF;
 //Note: Dark, Light, & Night Modes not considered
@@ -29,6 +31,10 @@ titleX = appWidth*1/10;
 titleY = appHeight*1/10;
 titleWidth = appWidth*8/10;
 titleHeight = appHeight*1/10;
+//footerX = titleX;
+//footerY = appHeight*8/10;
+//footerWidth = titleWidth;
+//footerHeight = titleHeight;
 //
 //Single Executed Code: Font SETUP
 //Fonts from OS (Operating System)
@@ -41,7 +47,7 @@ titleFont = createFont("Harrington", size);
 //
 //DIVs & rect()s: rect(X, Y, Width, Height);
 rect(titleX, titleY, titleWidth, titleHeight);
-//rect(X, Y, Width, Height); //footer //Note: assignment
+//rect(footerX, footerY, footerWidth, footerHeight);
 //
 //Repeated Code: draw()ing text
 fill(purple); //Ink
@@ -50,13 +56,6 @@ textAlign( CENTER, CENTER ); //Align X&Y, see Processing.org / Reference
 size = appHeight*1/13; // Var based on ratio of display
 textFont(titleFont, size);
 text(title, titleX, titleY, titleWidth, titleHeight);
+//text(footer, footerX, footerY, footerWidth, footerHeight);
 fill(resetDefaultColour);
 //
-/*
-fill(???); //Ink
-textAlign( ???, ??? ); //Align X&Y, see Processing.org / Reference
-//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-size = ??; //Note: CS20 studies size algorithm
-textFont(???, size);
-text(???, ???X, ???Y, ???Width, ???Height);
-fill(resetDefaultColour;);*/
