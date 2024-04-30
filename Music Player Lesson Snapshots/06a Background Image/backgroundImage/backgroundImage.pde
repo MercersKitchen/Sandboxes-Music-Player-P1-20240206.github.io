@@ -14,7 +14,10 @@ void setup() {
   backgroundImageWidth = appWidth-1;
   backgroundImageHeight = appHeight-1;
   //
-  //backgroundImage = ;
+  String backgroundImageName = "";
+  String extension = ".jpg";
+  backgroundImage = loadImage("");
+  //
   //DIV
   rect(backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
 } //End setup
