@@ -96,9 +96,12 @@ void draw() {
   text(quit, quitButtonX+quitButtonWidth*1/7, quitButtonY+quitButtonHeight*1/7, quitButtonWidth*5/7, quitButtonHeight*5/7); //Inside rect() above
   fill(foregroundColour); //Resetting the Defaults
   //
-
+  //Albumn Cover Image
+  rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
+  //
+  
+  
   //println(mouseX, mouseY);
-
   //
 } //End draw
 //
