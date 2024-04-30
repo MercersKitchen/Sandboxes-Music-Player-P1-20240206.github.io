@@ -1,11 +1,18 @@
 //Global Variables
+float backImageX, backImageY, backImageWidth, backImageHeight;
 //
-void setup() {} //End setup
+void setup() {
+  //DIV
+  rect(backImageX, backImageY, backImageWidth, backImageHeight);
+} //End setup
 //
-void draw() {} //End draw
+void draw() {
+} //End draw
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+} //End mousePressed
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+} //End keyPressed
 //
 //End MAIN Program
