@@ -1,6 +1,6 @@
 //Global Variables
 int appWidth, appHeight;
-float backImageX, backImageY, backImageWidth, backImageHeight;
+float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
 //
 void setup() {
   //Display
@@ -8,15 +8,16 @@ void setup() {
   appWidth = displayWidth;
   appHeight = displayHeight;
   //Population
-  backImageX = ;
-  backImageY = ;
-  backImageWidth = ;
-  backImageHeight = ;
+  backgroundImageX = appWidth*0;
+  backgroundImageY = appHeight*0;
+  backgroundImageWidth = appWidth-1;
+  backgroundImageHeight = appHeight-1;
   //DIV
-  rect(backImageX, backImageY, backImageWidth, backImageHeight);
+  rect(backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
 } //End setup
 //
 void draw() {
+  image( backgroundImage, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
 } //End draw
 //
 void mousePressed() {
