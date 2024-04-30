@@ -1,6 +1,7 @@
 //Global Variables
 int appWidth, appHeight;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
+PImage backgroundImage;
 //
 void setup() {
   //Display
@@ -12,6 +13,8 @@ void setup() {
   backgroundImageY = appHeight*0;
   backgroundImageWidth = appWidth-1;
   backgroundImageHeight = appHeight-1;
+  //
+  //backgroundImage = ;
   //DIV
   rect(backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
 } //End setup
