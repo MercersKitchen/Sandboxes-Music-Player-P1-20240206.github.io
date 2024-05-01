@@ -2,6 +2,7 @@
 int appWidth, appHeight;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
 PImage backgroundImage;
+Boolean lightMode=false, darkMode=false, dayMode=false, nightMode=false;
 //
 void setup() {
   //Display
@@ -38,7 +39,9 @@ void draw() {
 void mousePressed() {
 } //End mousePressed
 //
-void keyPressed() {
+void keyPressed() { //Key Board Short Cuts for Mouse Pressing Prototyping
+  if () {} //End Day Mode
+  if () {} //End Night Mode
 } //End keyPressed
 //
 //End MAIN Program
