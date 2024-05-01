@@ -1,8 +1,8 @@
 //Global Variables
-int appWidth, appHeight;
+int appWidth, appHeight, brightness=255;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
 PImage backgroundImage;
-Boolean lightMode=false, dayMode=false, nightMode=false;
+Boolean lightMode=true, dayMode=false, nightMode=false;
 //Boolean darkMode=false; //See keyPressed for NOTE
 //
 void setup() {
@@ -34,6 +34,14 @@ void setup() {
 } //End setup
 //
 void draw() {
+  background(255); //Day Mode, Light Mode ON / OFF, WHITE allowed
+  //NOTE: lightMode ON = max saturation
+  if ( lightMode == true ) {
+    brightness = 255;
+  } else {
+    brightness = 64; //USER Preference: lowest brightness
+  }
+  tint(255, brightness); //255 is max saturation, max colour
   image( backgroundImage, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
   //
   println(lightMode);
