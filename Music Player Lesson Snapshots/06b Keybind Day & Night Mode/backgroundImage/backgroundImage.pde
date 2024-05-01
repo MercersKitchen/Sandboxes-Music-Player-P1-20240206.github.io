@@ -40,7 +40,7 @@ void mousePressed() {
 } //End mousePressed
 //
 void keyPressed() { //Key Board Short Cuts for Mouse Pressing Prototyping
-  if () {} //End Day Mode
+  if ( key=='' || key=='' ) {} //End Day Mode
   if () {} //End Night Mode
 } //End keyPressed
 //
