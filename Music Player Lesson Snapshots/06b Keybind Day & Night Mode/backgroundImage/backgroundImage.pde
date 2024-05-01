@@ -2,7 +2,8 @@
 int appWidth, appHeight;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
 PImage backgroundImage;
-Boolean lightMode=false, darkMode=false, dayMode=false, nightMode=false;
+Boolean lightMode=false, dayMode=false, nightMode=false;
+//Boolean darkMode=false; //See keyPressed for NOTE
 //
 void setup() {
   //Display
@@ -34,6 +35,8 @@ void setup() {
 //
 void draw() {
   image( backgroundImage, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
+  //
+  println(lightMode);
 } //End draw
 //
 void mousePressed() {
