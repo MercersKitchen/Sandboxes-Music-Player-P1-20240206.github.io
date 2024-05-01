@@ -39,14 +39,10 @@ void draw() {
   background(255); //Day Mode, Light Mode ON / OFF, WHITE allowed
   //NOTE: lightMode ON = max saturation
   if ( lightMode == true ) {
-    backgroundImageName = bike;
+    backgroundImageName = bike; //obiWan
     path = pathway + landscape_Square + backgroundImageName + extension;
     backgroundImage = loadImage( path );
-  } else if ( starWars==true ) {
-    backgroundImageName = obiWan;
-    path = pathway + landscape_Square + backgroundImageName + extension;
-    backgroundImage = loadImage( path );
-  }
+  } 
   else {
     backgroundImageName = darthvader;
     path = pathway + portrait + backgroundImageName + extension;
@@ -65,11 +61,7 @@ void keyPressed() { //Key Board Short Cuts for Mouse Pressing Prototyping
   if ( key=='W' || key=='w' ) { //Day Mode, White Light Containing Blue Colour
     if (  lightMode == false ) {
       lightMode = true;  //Light Mode ON
-    } else if ( starWars==false) {
-      starWars=true;
-      lightMode = true;
     } else {
-      //starWars=false;
       lightMode = false; //Dark Mode ON, no darkMode Boolean required
     }
   } //End Day Mode
