@@ -40,8 +40,10 @@ void mousePressed() {
 } //End mousePressed
 //
 void keyPressed() { //Key Board Short Cuts for Mouse Pressing Prototyping
-  if ( key=='' || key=='' ) {} //End Day Mode
-  if () {} //End Night Mode
+  if ( key=='W' || key=='w' ) { //Day Mode, White Light Containing Blue Colour
+    if () {} else {}
+  } //End Day Mode
+  //if () {} //End Night Mode
 } //End keyPressed
 //
 //End MAIN Program
