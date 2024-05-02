@@ -73,8 +73,8 @@ void setup() {
 //
 void draw() {
   //Display
-  background(backgroundColour);
-  if ( lightMode == true ) {
+  // background(backgroundColour); //Hardcoded Backgorund Colour Out, use IF to change
+  if ( lightMode == true ) { //Boolean keyBind
     backgroundImageName = bike; //obiWan
     path = pathway + landscape_Square + backgroundImageName + extension;
     backgroundImage = loadImage( path );
