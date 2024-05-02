@@ -26,7 +26,7 @@ color backgroundColour, darkBackground=0, whiteBackground=255; //Gray Scale, not
 color foregroundColour;
 color white=255, yellow=#FFFF00, black=0, purple=#FF00FF; //Hexidecimal, see Tools / Colour Selector
 Boolean dayMode=false; //App starts in Night Mode
-Boolean lightMode=null;
+Boolean lightMode=false; //Dark mode starts App, null possible if USER Preferences made
 //
 void setup() {
   size(600, 400); //width, height //400, 500
@@ -61,6 +61,8 @@ void setup() {
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
   //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
   if ( dayMode==true && hour()>=9 && hour()<=17 ) { //Day & Night Mode Clock Choice
+    if () {} else {} //End Light Mode
+    
     backgroundColour = whiteBackground;
     foregroundColour = black;
   } else {
