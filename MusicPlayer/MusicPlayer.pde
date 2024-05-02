@@ -27,7 +27,15 @@ color foregroundColour;
 color white=255, yellow=#FFFF00, black=0, purple=#FF00FF; //Hexidecimal, see Tools / Colour Selector
 Boolean dayMode=false; //App starts in Night Mode
 Boolean lightMode=false; //Dark mode starts App, null possible if USER Preferences made
+String summerMarketPlaceImage = "Summer Knights Market Background Image";
 String backgroundImageName = " ";
+String extensionPNG  = ".png";
+String extensionJPG = ".jpg";
+String pathway = "../Images/";
+String landscape_Square = "Landscape & Square Images/";
+String portrait = "Portrait/";
+String backgroundFileName = "Background Image";
+String path;
 //
 void setup() {
   size(600, 400); //width, height //400, 500
