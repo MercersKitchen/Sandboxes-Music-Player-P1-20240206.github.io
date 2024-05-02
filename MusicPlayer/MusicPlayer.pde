@@ -28,10 +28,10 @@ color white=255, yellow=#FFFF00, black=0, purple=#FF00FF; //Hexidecimal, see Too
 Boolean whiteMode=false;
 //
 void setup() {
-  //size(400, 500); //width, height
-  fullScreen(); //displayWidth, displayHeight
-  appWidth = displayWidth;
-  appHeight = displayHeight;
+  size(600, 400); //width, height //400, 500
+  //fullScreen(); //displayWidth, displayHeight
+  appWidth = width; //displayWidth
+  appHeight = height; //displayHeight
   //Landscape is HARDCODED
   String displayInstructions = ( appWidth >= appHeight ) ? "Good To Go" : "Bru, turn your phun";
   println(displayInstructions);
@@ -72,7 +72,19 @@ void setup() {
 } //End setup
 //
 void draw() {
+  //Display
   background(backgroundColour);
+  if ( lightMode == true ) {
+    backgroundImageName = bike; //obiWan
+    path = pathway + landscape_Square + backgroundImageName + extension;
+    backgroundImage = loadImage( path );
+  } 
+  else {
+    backgroundImageName = darthvader;
+    path = pathway + portrait + backgroundImageName + extension;
+    backgroundImage = loadImage( path );
+  }
+  image( backgroundImage, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight);
   fill(foregroundColour);
   //
   //Quit Button

@@ -17,9 +17,10 @@ String path;
 //
 void setup() {
   //Display
-  fullScreen();
-  appWidth = displayWidth;
-  appHeight = displayHeight;
+  size(600, 400);
+  //fullScreen();
+  appWidth = width; //displayWidth
+  appHeight = height; //displayHeight
   //Population
   backgroundImageX = appWidth*0;
   backgroundImageY = appHeight*0;

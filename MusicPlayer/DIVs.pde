@@ -11,8 +11,8 @@ void divs() {
 void population() {
   backgroundX = appWidth*0;
   backgroundY = appHeight*0;
-  backgroundWidth = appWidth;
-  backgroundHeight = appHeight;
+  backgroundWidth = appWidth-1;
+  backgroundHeight = appHeight-1;
   albumCoverX = appWidth*18/100; //Percents Example
   albumCoverY = appHeight*15/100;
   albumCoverWidth = appWidth*64/100;
