@@ -126,10 +126,22 @@ void keyPressed() { //Listener
   {
     soundeffect_1();
   }
-  if (key=='W' || key=='w') ; //CAUTION, must return to "Request White, Light Mode"
-
+  //CAUTION, must return to "Request White, Light Mode"
+  if ( key=='W' || key=='w' ) { //Day Mode, White Light Containing Blue Colour
+  if (  lightMode == false ) {
+      lightMode = true;  //Light Mode ON
+    } else {
+      lightMode = false; //Dark Mode ON, no darkMode Boolean required
+    }
+} //End Day Mode
   //soundEffects1.loop(0);
 } //End keyPressed
+
+
+    
+  
+
+
 //
 void mousePressed() { //Listener
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight )
