@@ -25,7 +25,7 @@ String quit="QUIT";
 color backgroundColour, darkBackground=0, whiteBackground=255; //Gray Scale, note much smaller than COLOR
 color foregroundColour;
 color white=255, yellow=#FFFF00, black=0, purple=#FF00FF; //Hexidecimal, see Tools / Colour Selector
-Boolean whiteMode=false;
+Boolean dayMode=false; //App starts in Night Mode
 //
 void setup() {
   size(600, 400); //width, height //400, 500
