@@ -59,7 +59,7 @@ void setup() {
   //Variable Population
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
   //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
-  if ( whiteMode==true && hour()>=9 && hour()<=17 ) {
+  if ( dayMode==true && hour()>=9 && hour()<=17 ) { //Day & Night Mode Clock Choice
     backgroundColour = whiteBackground;
     foregroundColour = black;
   } else {
@@ -78,8 +78,7 @@ void draw() {
     backgroundImageName = bike; //obiWan
     path = pathway + landscape_Square + backgroundImageName + extension;
     backgroundImage = loadImage( path );
-  } 
-  else {
+  } else {
     backgroundImageName = darthvader;
     path = pathway + portrait + backgroundImageName + extension;
     backgroundImage = loadImage( path );
@@ -111,8 +110,8 @@ void draw() {
   //Albumn Cover Image
   rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
   //
-  
-  
+
+
   //println(mouseX, mouseY);
   //
 } //End draw
@@ -128,20 +127,15 @@ void keyPressed() { //Listener
   }
   //CAUTION, must return to "Request White, Light Mode"
   if ( key=='W' || key=='w' ) { //Day Mode, White Light Containing Blue Colour
-  if (  lightMode == false ) {
+    if (  lightMode == false ) {
       lightMode = true;  //Light Mode ON
     } else {
       lightMode = false; //Dark Mode ON, no darkMode Boolean required
     }
-} //End Day Mode
+  } //End Day Mode
+  //
   //soundEffects1.loop(0);
 } //End keyPressed
-
-
-    
-  
-
-
 //
 void mousePressed() { //Listener
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight )
