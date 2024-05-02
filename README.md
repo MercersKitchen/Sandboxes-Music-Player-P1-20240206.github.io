@@ -94,8 +94,14 @@ CS10 Main Project
   - Global Variables
   - rectSetup() listing of all rect() to visualize DIVs
   - able to turn these off automatically 
-- [ ] Rectangles that do not go away - what is the code for these
-- [ ] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
+- [x] Code for Timer, required to pause for sound effects, introduction to a listener from draw(), and a Boolean
+- [x] Images, Prototyping Program: Background for Day Mode (Light or Dark Mode) and Night Mode
+- [x] Images, Prototyping Program: example Key Bind for User Preference between Day Mode's Light and Dark Mode
+  - CAUTION: Dark Mode is safer
+  - NOTE: the current Market Place Folder is in Light Mode, so it needs to be asked for
+- [ ] Images, Music Program: Background Image Choices
+- [ ] Images, Music Program: Foreground Image (Image for One Song, Groove.mp3)
+
 - [ ] TBA
 - [ ] TBA Images
 - [ ] TBA 2D Images

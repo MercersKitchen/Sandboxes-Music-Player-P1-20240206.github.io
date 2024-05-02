@@ -28,7 +28,10 @@ color white=255, yellow=#FFFF00, black=0, purple=#FF00FF; //Hexidecimal, see Too
 Boolean dayMode=false; //App starts in Night Mode
 Boolean lightMode=false; //Dark mode starts App, null possible if USER Preferences made
 String summerMarketPlaceImage = "Summer Knights Market Background Image";
-String backgroundImageName = " ";
+String darthvader = "10-star-wars-darth-vader-portrait-wallpaper-1-325x485";
+String obiWan = "Obi-wan-star-wars-jedi-23864621-800-600";
+String bike = "bike";
+//String backgroundImageName = " ";
 String extensionPNG  = ".png";
 String extensionJPG = ".jpg";
 String pathway = "../Images/";
@@ -36,6 +39,7 @@ String landscape_Square = "Landscape & Square Images/";
 String portrait = "Portrait/";
 String backgroundFileName = "Background Image";
 String path;
+//PImage backgroundImage=null;
 //
 void setup() {
   size(600, 400); //width, height //400, 500
@@ -74,16 +78,21 @@ void setup() {
       backgroundColour = whiteBackground;
       foregroundColour = black;
       backgroundImageName = summerMarketPlaceImage;
-      path = pathway + landscape_Square + backgroundImageName + extension;
+      path = pathway + backgroundFileName + backgroundImageName + extensionPNG;
+      // CONTINUE HERE
       backgroundImage = loadImage( path );
     } else {
       backgroundColour = black;
       foregroundColour = whiteBackground;
+      backgroundImageName = darthvader;
+      path = pathway + portrait + backgroundImageName + extensionJPG;
+      backgroundImage = loadImage( path );
     } //End Light & Dark Modes
   } else {
     backgroundColour = darkBackground;
     foregroundColour = yellow; //Note: if(hour()<9&&hour()>17)
-    if ( hour()>=9 && hour()<=17 ) foregroundColour = white;
+    //TURN OFF, adjusted above
+    //if ( hour()>=9 && hour()<=17 ) foregroundColour = white;
   }
   //
   //soundEffects1.loop();
