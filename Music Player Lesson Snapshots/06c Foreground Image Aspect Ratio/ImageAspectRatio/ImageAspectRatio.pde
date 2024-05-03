@@ -2,11 +2,8 @@
 int appWidth, appHeight;
 float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
 PImage albumCoverImage;
+//NOTE: paths are local variables
 String albumCoverImagePath; //Lesson Note: Building Global Var from Local Var, System Resources
-String obiWan = "Obi-wan-star-wars-jedi-23864621-800-600";
-String extensionJPG = ".jpg";
-String pathway = "../../../Images/"; //Relative Pathway
-String landscape_Square = "Landscape & Square Images/";
 //
 void setup() {
   //Display
@@ -22,7 +19,20 @@ void setup() {
   albumCoverHeight = appHeight*6/16; //Fraction Example
   //
   //Variable Population
-  albumCoverImage = loadImage();
+  //String albumCoverImagePath;
+  String obiWan = "Obi-wan-star-wars-jedi-23864621-800-600";
+  String extensionJPG = ".jpg";
+  String pathway = "../../../Images/"; //Relative Pathway
+  String landscape_Square = "Landscape & Square Images/";
+  albumCoverImagePath = pathway + landscape_Square + obiWan + extensionJPG;
+  albumCoverImage = loadImage( albumCoverImagePath );
+  //
+  //Image Aspect Ratio Calculations
+  float smallerAlbumCoverDimension = ( albumCoverWidth < albumCoverHeight ) ? albumCoverWidth : albumCoverHeight ;
+  int albumCoverImageWidthPixel = 800;
+  int albumCoverImageHeightPixel = 600;
+  float albumCoverAspectRatio = ;
+  float largerAlbumCoverDimension = ; //Apsect Ratio
   //DIVs
   rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
 } //End setup
