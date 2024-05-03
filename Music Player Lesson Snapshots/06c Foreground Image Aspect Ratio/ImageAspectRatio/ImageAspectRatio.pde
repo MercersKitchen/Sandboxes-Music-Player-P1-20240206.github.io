@@ -21,6 +21,8 @@ void setup() {
   albumCoverWidth = appWidth*64/100;
   albumCoverHeight = appHeight*6/16; //Fraction Example
   //
+  //Variable Population
+  albumCoverImage = loadImage();
   //DIVs
   rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
 } //End setup
