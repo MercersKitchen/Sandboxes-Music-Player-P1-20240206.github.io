@@ -1,4 +1,5 @@
 //Global Variables
+float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
 //
 void setup() {
   //DIVs
