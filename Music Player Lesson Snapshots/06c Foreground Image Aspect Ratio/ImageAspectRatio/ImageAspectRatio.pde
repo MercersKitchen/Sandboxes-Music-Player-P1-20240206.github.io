@@ -3,8 +3,6 @@ int appWidth, appHeight;
 float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight, albumCoverWidthAdjusted, albumCoverHeightAdjusted;
 float albumCoverRIGHT, albumCoverCENTERED, albumCoverLEFT;
 PImage albumCoverImage;
-//NOTE: paths are local variables
-String albumCoverImagePath; //Lesson Note: Building Global Var from Local Var, System Resources
 //
 void setup() {
   //Display
@@ -20,12 +18,13 @@ void setup() {
   albumCoverHeight = appHeight*6/16; //Fraction Example
   //
   //Variable Population
-  //String albumCoverImagePath;
+  //NOTE: once image loaded by STRINGS, only image variable as Global Variable Required
+  //NOTE: Computer knows what the folder names are and can be programmed automatically (beyond scope of course)
   String obiWan = "Obi-wan-star-wars-jedi-23864621-800-600";
   String extensionJPG = ".jpg";
-  String pathway = "../../../Images/"; //Relative Pathway
+  String pathway = "../../../../Images/"; //Relative Pathway
   String landscape_Square = "Landscape & Square Images/";
-  albumCoverImagePath = pathway + landscape_Square + obiWan + extensionJPG;
+  String albumCoverImagePath = pathway + landscape_Square + obiWan + extensionJPG;
   albumCoverImage = loadImage( albumCoverImagePath );
   //
   //Image Aspect Ratio Calculations
