@@ -1,6 +1,12 @@
 //Global Variables
 int appWidth, appHeight;
 float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
+PImage albumCoverImage;
+String albumCoverImagePath; //Lesson Note: Building Global Var from Local Var, System Resources
+String obiWan = "Obi-wan-star-wars-jedi-23864621-800-600";
+String extensionJPG = ".jpg";
+String pathway = "../../../Images/"; //Relative Pathway
+
 //
 void setup() {
   //Display
@@ -20,6 +26,7 @@ void setup() {
 } //End setup
 //
 void draw() {
+  image( albumCoverImage, albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight );
 } //End draw
 //
 void mousePressed() {
