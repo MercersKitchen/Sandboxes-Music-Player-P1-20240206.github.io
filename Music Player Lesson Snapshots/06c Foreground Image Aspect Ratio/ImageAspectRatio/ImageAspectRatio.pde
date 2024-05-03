@@ -1,4 +1,5 @@
 //Global Variables
+int appWidth, appHeight;
 float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
 //
 void setup() {
