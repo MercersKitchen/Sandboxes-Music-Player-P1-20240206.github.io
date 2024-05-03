@@ -6,7 +6,7 @@ String albumCoverImagePath; //Lesson Note: Building Global Var from Local Var, S
 String obiWan = "Obi-wan-star-wars-jedi-23864621-800-600";
 String extensionJPG = ".jpg";
 String pathway = "../../../Images/"; //Relative Pathway
-
+String landscape_Square = "Landscape & Square Images/";
 //
 void setup() {
   //Display
