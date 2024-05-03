@@ -28,6 +28,8 @@ void setup() {
   albumCoverImage = loadImage( albumCoverImagePath );
   //
   //Image Aspect Ratio Calculations
+  //NOTE: IF-Else & WHILE to Adjust Aspect Ratio Dimensions
+  //Forms a Procedure for Aspect Ratios of all Images ( copy and paste in setup() )
   float smallerAlbumCoverDimension = ( albumCoverWidth < albumCoverHeight ) ? albumCoverWidth : albumCoverHeight ;
   int albumCoverImageWidthPixel = 800;
   int albumCoverImageHeightPixel = 600;
