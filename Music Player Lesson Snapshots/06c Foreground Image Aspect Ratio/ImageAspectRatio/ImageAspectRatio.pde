@@ -2,6 +2,12 @@
 float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight;
 //
 void setup() {
+  //Display
+  size(600, 400); //width, height //400, 500
+  //fullScreen(); //displayWidth, displayHeight
+  appWidth = width; //displayWidth
+  appHeight = height; //displayHeight
+  //
   //Population
   albumCoverX = appWidth*18/100; //Percents Example
   albumCoverY = appHeight*15/100;
