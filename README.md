@@ -101,10 +101,8 @@ CS10 Main Project
   - NOTE: the current Market Place Folder is in Light Mode, so it needs to be asked for
 - [ ] Images, Music Program: Background Image Choices
 - [ ] Images, Music Program: Foreground Image (Image for One Song, Groove.mp3)
+- [ ] 2D Shapes, Music Program: GUI Music Player Buttons and Other Buttons as needed
 
-- [ ] TBA
-- [ ] TBA Images
-- [ ] TBA 2D Images
 - [ ] TBA
 
 ### Ideas
