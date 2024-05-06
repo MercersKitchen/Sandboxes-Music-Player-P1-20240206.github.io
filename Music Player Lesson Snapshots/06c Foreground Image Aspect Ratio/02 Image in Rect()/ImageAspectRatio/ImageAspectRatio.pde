@@ -55,7 +55,7 @@ void setup() {
   albumCoverLEFT =albumCoverX+albumCoverWidth-albumCoverWidthAdjusted;
   //
   //DIVs
-  rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
+  //rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
   //
 } //End setup
 //
