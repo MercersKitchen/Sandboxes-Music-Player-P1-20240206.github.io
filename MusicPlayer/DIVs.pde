@@ -3,7 +3,7 @@ float albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight, albumCoverWid
 float playButtonX, playButtonY, playButtonWidth, playButtonHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
-void divs() {
+void divs() { //Access all of subprogram in order
   population();
   drawRects();
 } //End DIVs
@@ -36,7 +36,7 @@ void drawRects() { //Layout DIVs
   int centerY = appHeight*1/2;
   //rect(centerX*1/2, centerY*1/2, appWidth*1/2, appHeight*1/2);
   //
-  //rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
+  rect(albumCoverX, albumCoverY, albumCoverWidth, albumCoverHeight);
   rect(playButtonX, playButtonY, playButtonWidth, playButtonHeight);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   //

@@ -14,25 +14,27 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim; //creates object to access all functions
-AudioPlayer soundEffects1;
 AudioPlayer playList1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+AudioPlayer soundEffects1; //"Play List" for Sound Effects
 //
 int appWidth, appHeight;
+//
 int size;
 PFont generalFont;
 String quit="QUIT";
 //
-color backgroundColour, darkBackground=0, whiteBackground=255; //Gray Scale, note much smaller than COLOR
-color foregroundColour;
 color white=255, yellow=#FFFF00, black=0, purple=#FF00FF; //Hexidecimal, see Tools / Colour Selector
 Boolean dayMode=false; //App starts in Night Mode, set to day in setup()
 Boolean lightMode=false; //Dark mode starts App, null possible if USER Preferences made
+//
+color backgroundColour, darkBackground=0, whiteBackground=255; //Gray Scale, note much smaller than COLOR
+color foregroundColour;
 //
 String pathDarkBackgroundImage, pathLightBackgroundImage;
 PImage summerMarketPlaceBackground, darthvader, obiwan, bike;
 PImage backgroundImage;
 PImage albumCoverImage;
-float albumCoverRIGHT, albumCoverCENTERED, albumCoverLEFT;
+float albumCoverRIGHT, albumCoverCENTERED, albumCoverLEFT; //??? Local
 //
 void setup() {
   //Display
@@ -45,9 +47,9 @@ void setup() {
   println(displayInstructions);
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  String extension = ".mp3";
-  String quitButtonSound = "CarDoorClosing";
   String pathwaySoundEffects = "../Audio/SoundEffect/"; //Relative Path
+  String quitButtonSound = "CarDoorClosing";
+  String extension = ".mp3";
   //println ( pathwaySoundEffects+quitButtonSound+extension );
   String path = sketchPath( pathwaySoundEffects + quitButtonSound + extension ); //Absolute Path
   //println ( path );
@@ -112,8 +114,8 @@ void setup() {
   //if ( hour()>=9 && hour()<=17 ) backgroundColour = whiteBackground;
   //if ( hour()<9 && hour()>17 ) backgroundColour = darkBackground;
   if ( hour()>=9 && hour()<=17 ) dayMode=true; //Day & Night Mode Clock Choice
-  println();
-  if ( dayMode==true && lightMode==true ) { //Light & Dark Modes
+  //println(dayMode);
+  if ( dayMode==true && lightMode==true ) { //Light & Dark Modes, Logical Shortcut
     backgroundColour = whiteBackground;
     foregroundColour = black;
     backgroundImage = loadImage( pathLightBackgroundImage ); //Changing this Variable with 3 different images
