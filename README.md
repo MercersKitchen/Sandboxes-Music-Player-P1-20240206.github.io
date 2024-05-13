@@ -183,3 +183,9 @@ similar to DIV's in website design
 - [ ] TBA: Do This Not That, changing what is displayed as a button
 
 ---
+
+- https://github.com/Intro-CS-App-Dev-and-Deploy/App-Development/tree/main/Music%20Program/Minim%20Single%20Song%20Functions
+
+- https://github.com/Intro-CS-App-Dev-and-Deploy/App-Development/blob/main/Music%20Program/Mutliple%20Songs%20with%20Arrays/15%20Advanced%20Music%20Buttons/01%20Auto%20Play/MusicApp.pde
+
+--- 
