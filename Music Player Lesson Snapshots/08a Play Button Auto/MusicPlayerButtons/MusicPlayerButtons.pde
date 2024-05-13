@@ -27,6 +27,7 @@ void setup() {
   String pathwaySoundEffects = "../../../Audio/SoundEffect/"; //Relative Path
   String pathwayMusic = "../../../Audio/MusicDownload/"; //Relative Path
   String quitButtonSound = "CarDoorClosing";
+  String groove = "groove";
   String extension = ".mp3";
   //println ( pathwaySoundEffects+quitButtonSound+extension );
   String path = sketchPath( pathwaySoundEffects + quitButtonSound + extension ); //Absolute Path
