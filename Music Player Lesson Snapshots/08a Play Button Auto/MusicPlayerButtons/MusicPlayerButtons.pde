@@ -41,7 +41,9 @@ void setup() {
   //
 } //End setup
 //
-void draw() {} //End draw
+void draw() {
+  println( "Song Position", playList1.position(), "Song Length", playList1.length() );
+} //End draw
 //
 void keyPressed() {} //End keyPressed
 //
