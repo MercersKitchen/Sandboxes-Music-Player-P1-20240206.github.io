@@ -24,7 +24,8 @@ void setup() {
   println(displayInstructions);
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  String pathwaySoundEffects = "../Audio/SoundEffect/"; //Relative Path
+  String pathwaySoundEffects = "../../../Audio/SoundEffect/"; //Relative Path
+  String pathwayMusic = "../../../Audio/MusicDownload/"; //Relative Path
   String quitButtonSound = "CarDoorClosing";
   String extension = ".mp3";
   //println ( pathwaySoundEffects+quitButtonSound+extension );
