@@ -35,7 +35,7 @@ void setup() {
   String pathGrooveSong = sketchPath( pathwayMusic + groove + extension ); //Absolute Path
   println ( "Absolute Pathway:", pathGrooveSong ); //pathQuitButtonSound
   soundEffects1 = minim.loadFile( pathQuitButtonSound );
-  playList1 =  minim.loadFile( pathGrooveSong );
+  playList1 =  minim.loadFile( pathGrooveSong ); // "" is compiler error
   //playList1 = minim.loadFile( path );
   //
 } //End setup
