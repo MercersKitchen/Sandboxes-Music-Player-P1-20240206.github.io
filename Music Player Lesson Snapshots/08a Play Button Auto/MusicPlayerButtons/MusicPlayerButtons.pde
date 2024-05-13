@@ -36,3 +36,13 @@ void setup() {
   soundEffects1 = minim.loadFile( path );
   //playList1 = minim.loadFile( path );
   //
+} //End setup
+//
+void draw() {} //End draw
+//
+void keyPressed() {} //End keyPressed
+//
+void mousePressed() {} //End mousPressed
+//
+//End MAIN Program
+//
