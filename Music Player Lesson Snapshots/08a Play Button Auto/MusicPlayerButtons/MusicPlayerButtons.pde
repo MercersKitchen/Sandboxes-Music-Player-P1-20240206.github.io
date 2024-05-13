@@ -15,8 +15,8 @@ int appWidth, appHeight;
 //
 void setup() {
   //Display
-  //size(600, 400); //width, height //400, 500
-  fullScreen(); //displayWidth, displayHeight
+  size(600, 400); //width, height //400, 500
+  //fullScreen(); //displayWidth, displayHeight
   appWidth = displayWidth; //width
   appHeight = displayHeight; //height
   //Landscape is HARDCODED
@@ -37,12 +37,13 @@ void setup() {
   soundEffects1 = minim.loadFile( pathQuitButtonSound );
   playList1 =  minim.loadFile( pathGrooveSong ); // "" is compiler error
   //
-  playList1.loop(0);
+  //playList1.loop(0); //Testing Only
   //
 } //End setup
 //
 void draw() {
   println( "Song Position", playList1.position(), "Song Length", playList1.length() );
+  playList1.loop(0); //ERROR: only plays beginning of song before starting again
 } //End draw
 //
 void keyPressed() {} //End keyPressed
