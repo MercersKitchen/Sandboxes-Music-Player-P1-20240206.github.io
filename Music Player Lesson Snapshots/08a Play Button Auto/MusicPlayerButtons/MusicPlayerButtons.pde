@@ -30,10 +30,10 @@ void setup() {
   String groove = "groove";
   String extension = ".mp3";
   //println ( pathwaySoundEffects+quitButtonSound+extension );
-  println ( pathwayMusic+groove+extension );
+  println ( "Relative Pathway:", pathwayMusic+groove+extension );
   String pathQuitButtonSound = sketchPath( pathwaySoundEffects + quitButtonSound + extension ); //Absolute Path
   String pathGrooveSong = sketchPath( pathwayMusic + groove + extension ); //Absolute Path
-  //println ( pathQuitButtonSound ); //pathQuitButtonSound
+  println ( "Absolute Pathway:", pathGrooveSong ); //pathQuitButtonSound
   soundEffects1 = minim.loadFile( pathQuitButtonSound );
   playList1 =  minim.loadFile( "" );
   //playList1 = minim.loadFile( path );
