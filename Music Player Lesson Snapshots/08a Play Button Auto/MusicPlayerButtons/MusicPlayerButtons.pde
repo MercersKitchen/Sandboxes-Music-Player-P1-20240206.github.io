@@ -21,7 +21,7 @@ void setup() {
   appHeight = displayHeight; //height
   //Landscape is HARDCODED
   String displayInstructions = ( appWidth >= appHeight ) ? "Good To Go" : "Bru, turn your phun";
-  println(displayInstructions);
+  //println(displayInstructions);
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
   String pathwaySoundEffects = "../../../Audio/SoundEffect/"; //Relative Path
@@ -30,13 +30,14 @@ void setup() {
   String groove = "groove";
   String extension = ".mp3";
   //println ( pathwaySoundEffects+quitButtonSound+extension );
-  println ( "Relative Pathway:", pathwayMusic+groove+extension );
+  //println ( "Relative Pathway:", pathwayMusic+groove+extension );
   String pathQuitButtonSound = sketchPath( pathwaySoundEffects + quitButtonSound + extension ); //Absolute Path
   String pathGrooveSong = sketchPath( pathwayMusic + groove + extension ); //Absolute Path
-  println ( "Absolute Pathway:", pathGrooveSong ); //pathQuitButtonSound
+  //println ( "Absolute Pathway:", pathGrooveSong ); //pathQuitButtonSound
   soundEffects1 = minim.loadFile( pathQuitButtonSound );
   playList1 =  minim.loadFile( pathGrooveSong ); // "" is compiler error
-  //playList1 = minim.loadFile( path );
+  //
+  playList1.loop(0);
   //
 } //End setup
 //
