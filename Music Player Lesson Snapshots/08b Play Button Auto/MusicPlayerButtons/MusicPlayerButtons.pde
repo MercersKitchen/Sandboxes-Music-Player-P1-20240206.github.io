@@ -51,25 +51,32 @@ void draw() {
   //ERROR: only plays beginning of song before starting again
   //playList[currentSong].loop(0);
   //
-  //if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()!=-1 ) println("There are", playList[currentSong].loopCount(), "loops left.");
-  //if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()==-1 ) println("Looping Infinitely");
-  //if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
+  /*Note: For Loop Feature
+   Easter Egg: program time for number of song loops
+   Alternate to timer for music player, times to the end of a song
+   if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()!=-1 ) println("There are", playList[currentSong].loopCount(), "loops left.");
+   if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()==-1 ) println("Looping Infinitely");
+   */
+   //
+  if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
   //
   /*
   if ( playList[currentSong].isPlaying() ) {
-    //Empty IF, TRUE
-  } else {
-    //currentSong at end of FILE
-    playList[currentSong].rewind();
-    currentSong = currentSong + 1; //currentSong++; currentSong+=1
-    playList[currentSong].play();
-  }
-  */
+   //Empty IF, TRUE
+   } else {
+   //currentSong at end of FILE
+   playList[currentSong].rewind();
+   currentSong = currentSong + 1; //currentSong++; currentSong+=1
+   playList[currentSong].play();
+   }
+   */
 } //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+} //End keyPressed
 //
-void mousePressed() {} //End mousPressed
+void mousePressed() {
+} //End mousPressed
 //
 //End MAIN Program
 //
