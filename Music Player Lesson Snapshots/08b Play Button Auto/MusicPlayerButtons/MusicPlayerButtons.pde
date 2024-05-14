@@ -63,6 +63,8 @@ void draw() {
   if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
   //
   /*
+  // Auto Play Code for Future Use
+  // Contains instructions from Key Board Short Cuts
   if ( playList[currentSong].isPlaying() ) {
    //Empty IF, TRUE
    } else {
@@ -75,6 +77,14 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
+  if ( key=='P' || key=='p' ) { //Play Pause Button
+    //How much of the song should play before the Pause Button is actually a rewind button
+    if ( playList[currentSong].isPlaying() ) { //Note, debugging: use true==true & true==false
+      playList[currentSong].pause(); //playList[currentSong].play();
+    } else {
+      playList[currentSong].play(); //playList[currentSong].pause();
+    }
+  } //End Play Pause Button
 } //End keyPressed
 //
 void mousePressed() {
