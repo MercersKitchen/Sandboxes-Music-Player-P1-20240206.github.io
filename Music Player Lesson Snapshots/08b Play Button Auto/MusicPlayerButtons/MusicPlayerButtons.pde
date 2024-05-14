@@ -8,10 +8,10 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim; //creates object to access all functions
-//int numberSoundEffects = 4; //DEV Verify, OS able to count (CS20 Solution)
-//int numberMusicSongs = 8; //DEV Verify, OS able to count (CS20 Solution)
-AudioPlayer[] playList; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
-AudioPlayer[] soundEffects; //"Play List" for Sound Effects
+int numberSoundEffects = 4; //DEV Verify, OS able to count (CS20 Solution)
+int numberMusicSongs = 8; //DEV Verify, OS able to count (CS20 Solution)
+AudioPlayer[] playList = new AudioPlayer[ numberMusicSongs ]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+AudioPlayer[] soundEffects = new AudioPlayer[ numberSoundEffects ]; //"Play List" for Sound Effects
 //int currentSong = 0; //JAVA starts at 0, no for all languages
 //
 int appWidth, appHeight;
