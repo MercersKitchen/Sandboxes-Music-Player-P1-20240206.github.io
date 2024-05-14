@@ -41,7 +41,8 @@ void setup() {
   playList[0] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
   //
   //Note: Music starts before CANVAS ... Purpose of Player
-  playList[currentSong].loop(0); //Testing Only
+  //Note: See Easter Egg about Time-On and Looping Songs
+  //playList[currentSong].loop(0); //Testing Only
   //
 } //End setup
 //
@@ -57,7 +58,8 @@ void draw() {
    if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()!=-1 ) println("There are", playList[currentSong].loopCount(), "loops left.");
    if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()==-1 ) println("Looping Infinitely");
    */
-   //
+  //
+  if ( !playList[currentSong].isPlaying() ) println( "Nothing is playing, Pick a Song" );
   if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
   //
   /*
