@@ -26,7 +26,7 @@ CS10 Main Project
   - Minimum Minutes before touching music player after pressing play ( PAUSE turns to STOP)
   - Minimum % of song left is paused before the end of the song ( PAUSE turns to STOP ) 
 - [ ] Looping TBA
-- [ ] Draw: reset loop to 0
+- [ ] Draw: reset loop to 0, or stop song (looping count should end too)
 - [ ] KeyPressed: start infinite or single loop
 
 - [ ] TBA
