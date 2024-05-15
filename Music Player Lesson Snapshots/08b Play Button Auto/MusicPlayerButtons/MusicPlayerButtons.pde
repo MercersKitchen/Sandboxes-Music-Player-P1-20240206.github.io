@@ -62,16 +62,21 @@ void draw() {
   if ( !playList[currentSong].isPlaying() ) println( "Nothing is playing, Pick a Song" );
   if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
   //
-  /*
   // Auto Play Code for Future Use
   // Contains instructions from Key Board Short Cuts
   if ( playList[currentSong].isPlaying() ) {
+    //Empty IF is FALSE
+  } else if ( !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN #
+    //TRUE: if 75% played, we need a STOP & Rewind Button
+    playList[currentSong].rewind(); //CAUTION: !.isPlaying() & .rewind() = STOP
+    //currentSong = currentSong + 1; //currentSong++; currentSong+=1
+    //playList[currentSong].play();
+  } else {}
+  /* Previous IF-Else
+   if ( playList[currentSong].isPlaying() ) {
    //Empty IF, TRUE
    } else {
-   //currentSong at end of FILE
-   playList[currentSong].rewind();
-   currentSong = currentSong + 1; //currentSong++; currentSong+=1
-   playList[currentSong].play();
+   playList[currentSong].rewind(); //CAUTION: !.isPlaying() & .rewind() = STOP
    }
    */
 } //End draw
