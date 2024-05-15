@@ -10,12 +10,12 @@ CS10 Main Project
 
 ---
 
-# User Preference
+# User Preferences
 
 ### Case Study
 - [ ] Unchanging Player Text (i.e. Quit Button)
-- [ ] Unchanging Player Buttons: text or 2D images
-- [ ] Unchanging Images for Song
+- [ ] Unchanging Player Buttons: images or 2D images
+- [ ] Unchanging Images | Fan Photos for Song
 - [ ] Song Time Played
 - [ ] Length of Song
 
@@ -23,8 +23,8 @@ CS10 Main Project
 
 ### Abstract User Preferences
 - [ ] Auto Play Button PAIN Thresholds
-  - Minimum Minutes before touching music player after pressing play
-  - Minimum % of song left is paused before the end of the song
+  - Minimum Minutes before touching music player after pressing play ( PAUSE turns to STOP)
+  - Minimum % of song left is paused before the end of the song ( PAUSE turns to STOP ) 
 - [ ] Looping TBA
 
 - [ ] TBA
