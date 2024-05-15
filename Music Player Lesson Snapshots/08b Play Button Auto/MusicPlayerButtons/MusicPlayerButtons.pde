@@ -66,12 +66,20 @@ void draw() {
   // Contains instructions from Key Board Short Cuts
   if ( playList[currentSong].isPlaying() ) {
     //Empty IF is FALSE
+  } else if ( playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3, 180s, 180,000ms
+    //TRUE: if song is less than 3 minutes, STOP, I want to hear it from the beginning
+    //Pause is actually STOP
+    playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
   } else if ( !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN #
     //TRUE: if 75% played, we need a STOP & Rewind Button
-    playList[currentSong].rewind(); //CAUTION: !.isPlaying() & .rewind() = STOP
-    //currentSong = currentSong + 1; //currentSong++; currentSong+=1
-    //playList[currentSong].play();
-  } else {}
+    playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
+    //
+    /* Future coding
+     currentSong = currentSong + 1; //currentSong++; currentSong+=1
+     playList[currentSong].play();
+     */
+  } else {
+  }
   /* Previous IF-Else
    if ( playList[currentSong].isPlaying() ) {
    //Empty IF, TRUE
