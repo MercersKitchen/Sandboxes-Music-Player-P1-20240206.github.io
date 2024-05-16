@@ -52,12 +52,12 @@ void draw() {
   //ERROR: only plays beginning of song before starting again
   //playList[currentSong].loop(0);
   //
-  /*Note: For Loop Feature
+  /* Note: For Loop Feature
    Easter Egg: program time for number of song loops
    Alternate to timer for music player, times to the end of a song
-   if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()!=-1 ) println("There are", playList[currentSong].loopCount(), "loops left.");
-   if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()==-1 ) println("Looping Infinitely");
    */
+  if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()!=-1 ) println("There are", playList[currentSong].loopCount(), "loops left.");
+  if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()==-1 ) println("Looping Infinitely");
   //
   if ( !playList[currentSong].isPlaying() ) println( "Nothing is playing, Pick a Song" );
   if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
@@ -69,7 +69,7 @@ void draw() {
    */
   if ( playList[currentSong].isPlaying() ) {
     //Empty IF is FALSE
-  } else if ( playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3, 180s, 180,000ms
+  } else if ( !playList[currentSong].isPlaying() && playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3, 180s, 180,000ms
     //TRUE: if song is less than 3 minutes, STOP, I want to hear it from the beginning
     //Pause is actually STOP
     playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
@@ -102,11 +102,15 @@ void keyPressed() {
     }
   } //End Play Pause Button
   if ( key=='L' || key=='l' ) { //Loop Once
-    //
+    playList[currentSong].loop(1);
   } //End Loop Once
-  if ( key=='' || key=='' ) { //Loop Infinite Times
-    //
+  if ( key=='I' || key=='i' ) { //Loop Infinite Times
+    playList[currentSong].loop();
   } //End Loop Infinite Times
+  if ( key=='S' || key=='s' ) { // STOP Button
+    .pause();
+    .rewind();
+  } // End STOP Button
 } //End keyPressed
 //
 void mousePressed() {
