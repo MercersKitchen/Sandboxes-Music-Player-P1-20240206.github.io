@@ -26,15 +26,11 @@ CS10 Main Project
   - Minimum Minutes before touching music player after pressing play ( PAUSE turns to STOP)
   - Minimum % of song left is paused before the end of the song ( PAUSE turns to STOP ) 
   - PAIN Thresholds are Preferences in a Settings Menus, or variables that could be changed (see AutoPlay Snapshot for notes)
-- [ ] Looping 
+- [ ] Looping & Play
   - Looping ONCE
   - Looping Infinite Number of Times
   - Programmed number of loops of a play list (Advanced Option, not taught and only discussed)
-- [ ] Draw: reset loop to 0, or stop song (looping count should end too)
-- [ ] KeyPressed: start Play ONCE
-- [ ] KeyPressed: start Loop ONCE (Play twice)
-- [ ] KeyPressed: start Loop Infinite
-- [ ] KeyPressed: STOP Song
+- [ ] TBA
 
 ### Easter Eggs: Auto Play to and Program Exits after a certain amount of time
 - [ ] Loop Feature to End after a Specific Number of Songs Loop
@@ -136,9 +132,20 @@ CS10 Main Project
 - [x] Images, Prototyping Program: example Key Bind for User Preference between Day Mode's Light and Dark Mode
   - CAUTION: Dark Mode is safer
   - NOTE: the current Market Place Folder is in Light Mode, so it needs to be asked for
-- [ ] Images, Music Program: Background Image Choices
-- [ ] Images, Music Program: Foreground Image (Image for One Song, Groove.mp3)
+- [x] Images, Music Program: Background Image Choices
+- [x] Images, Music Program: Foreground Image (Image for One Song, Groove.mp3)
 - [ ] 2D Shapes, Music Program: GUI Music Player Buttons and Other Buttons as needed
+
+- [ ] TBA
+
+- [x] Music Buttons Prototyped in VOID keyPressed(){}
+- [x] KeyPressed: start Play ONCE
+- [x] KeyPressed: start Loop ONCE (Play twice)
+- [x] KeyPressed: start Loop Infinite
+- [x] KeyPressed: STOP Song
+- [x] Draw: reset loop to 0, or stop song (looping count should end too)
+- [ ] TBA
+
 
 - [ ] TBA
 
