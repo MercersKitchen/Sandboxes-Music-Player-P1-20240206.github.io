@@ -25,6 +25,7 @@ CS10 Main Project
 - [ ] Auto Play Button PAIN Thresholds
   - Minimum Minutes before touching music player after pressing play ( PAUSE turns to STOP)
   - Minimum % of song left is paused before the end of the song ( PAUSE turns to STOP ) 
+  - PAIN Thresholds are Preferences in a Settings Menus, or variables that could be changed (see AutoPlay Snapshot for notes)
 - [ ] Looping TBA
 - [ ] Draw: reset loop to 0, or stop song (looping count should end too)
 - [ ] KeyPressed: start infinite or single loop
