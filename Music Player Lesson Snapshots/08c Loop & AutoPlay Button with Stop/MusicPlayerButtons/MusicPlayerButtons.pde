@@ -16,6 +16,8 @@ int currentSong = 0; //JAVA starts at 0, no for all languages
 //
 int appWidth, appHeight;
 //
+Boolean looping=false;
+//
 void setup() {
   //Display
   size(600, 400); //width, height //400, 500
@@ -58,6 +60,7 @@ void draw() {
    */
   if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()!=-1 ) println("There are", playList[currentSong].loopCount(), "loops left.");
   if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()==-1 ) println("Looping Infinitely");
+  println("Keyboard Looping Question", looping);
   //
   if ( !playList[currentSong].isPlaying() ) println( "Nothing is playing, Pick a Song" );
   if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
@@ -69,11 +72,11 @@ void draw() {
    */
   if ( playList[currentSong].isPlaying() ) {
     //Empty IF is FALSE
-  } else if ( !playList[currentSong].isPlaying() && playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3, 180s, 180,000ms
+  } else if ( looping== false && !playList[currentSong].isPlaying() && playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3, 180s, 180,000ms
     //TRUE: if song is less than 3 minutes, STOP, I want to hear it from the beginning
     //Pause is actually STOP
     playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
-  } else if ( !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN #
+  } else if ( looping== false && !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN #
     //TRUE: if 75% played, we need a STOP & Rewind Button
     playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
     //
@@ -103,13 +106,28 @@ void keyPressed() {
   } //End Play Pause Button
   if ( key=='L' || key=='l' ) { //Loop Once
     playList[currentSong].loop(1);
+    looping = true;
   } //End Loop Once
   if ( key=='I' || key=='i' ) { //Loop Infinite Times
     playList[currentSong].loop();
+    looping = true;
   } //End Loop Infinite Times
   if ( key=='S' || key=='s' ) { // STOP Button
-    .pause();
-    .rewind();
+    playList[currentSong].pause();
+    playList[currentSong].rewind(); //Affects LOOP Times
+    
+    
+    // CONTINUE HERE
+    //looping = false;
+    
+    
+    
+    
+    
+    
+    
+    
+    
   } // End STOP Button
 } //End keyPressed
 //
