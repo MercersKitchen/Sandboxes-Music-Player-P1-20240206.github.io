@@ -62,8 +62,11 @@ void draw() {
   if ( !playList[currentSong].isPlaying() ) println( "Nothing is playing, Pick a Song" );
   if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
   //
-  // Auto Play Code for Future Use
-  // Contains instructions from Key Board Short Cuts
+  /* Auto Play Code for Future Use
+   Contains instructions from Key Board Short Cuts
+   Note: PAIN Thresholds, 3 minutes & 75%, can be variables
+   Note: Variables can be set in a Menu Button
+   */
   if ( playList[currentSong].isPlaying() ) {
     //Empty IF is FALSE
   } else if ( playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3, 180s, 180,000ms
