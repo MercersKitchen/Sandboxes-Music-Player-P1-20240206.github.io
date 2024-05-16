@@ -26,11 +26,24 @@ CS10 Main Project
   - Minimum Minutes before touching music player after pressing play ( PAUSE turns to STOP)
   - Minimum % of song left is paused before the end of the song ( PAUSE turns to STOP ) 
   - PAIN Thresholds are Preferences in a Settings Menus, or variables that could be changed (see AutoPlay Snapshot for notes)
-- [ ] Looping TBA
+- [ ] Looping 
+  - Looping ONCE
+  - Looping Infinite Number of Times
+  - Programmed number of loops of a play list (Advanced Option, not taught and only discussed)
 - [ ] Draw: reset loop to 0, or stop song (looping count should end too)
-- [ ] KeyPressed: start infinite or single loop
+- [ ] KeyPressed: start Play ONCE
+- [ ] KeyPressed: start Loop ONCE (Play twice)
+- [ ] KeyPressed: start Loop Infinite
+- [ ] KeyPressed: STOP Song
 
-- [ ] TBA
+### Easter Eggs: Auto Play to and Program Exits after a certain amount of time
+- [ ] Loop Feature to End after a Specific Number of Songs Loop
+- [ ] User chooses to Play Music Play for X minutes (i.e. 10 minutes)
+  - Fall asleep feature
+- [ ] Music player start paying
+- [ ] When a song starts, it subtracts from the X minutes to play
+- [ ] Computer tracks a "running total" through subtraction
+- [ ] When total minutes <= zero, exit()
 
 ---
 

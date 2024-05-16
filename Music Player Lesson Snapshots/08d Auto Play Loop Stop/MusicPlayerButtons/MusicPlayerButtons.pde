@@ -12,11 +12,12 @@ int numberSoundEffects = 4; //DEV Verify, OS able to count (CS20 Solution)
 int numberMusicSongs = 8; //DEV Verify, OS able to count (CS20 Solution)
 AudioPlayer[] playList = new AudioPlayer[ numberMusicSongs ]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer[] soundEffects = new AudioPlayer[ numberSoundEffects ]; //"Play List" for Sound Effects
-int currentSong = 0; //JAVA starts at 0, no for all languages
+int currentSong = 0; //JAVA starts counting at 0, not for all languages
 //
 int appWidth, appHeight;
 //
 Boolean looping=false;
+//Protects .rewind in draw() from being inappropriately accessed between .play(), .loop(1), & .loop()
 //
 void setup() {
   //Display
@@ -49,22 +50,11 @@ void setup() {
 } //End setup
 //
 void draw() {
+  //Instrpection of Booleans and Associated Varaiables
   println( "Song Position", playList[currentSong].position(), "Song Length", playList[currentSong].length() );
-  //
-  //ERROR: only plays beginning of song before starting again
-  //playList[currentSong].loop(0);
-  //
-  /* Note: For Loop Feature
-   Easter Egg: program time for number of song loops
-   Alternate to timer for music player, times to the end of a song
-   */
   if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()!=-1 ) println("There are", playList[currentSong].loopCount(), "loops left.");
   if ( playList[currentSong].isLooping() && playList[currentSong].loopCount()==-1 ) println("Looping Infinitely");
-  println("Keyboard Looping Question", looping);
-  // Resetting Looping Automatically outside the STOP Button
-  // Will reset wheter the song is playing or not
-  //if ( !playList[currentSong].isLooping() && looping==true) looping=false;
-  //
+  //println("Keyboard Looping Question", looping);
   if ( !playList[currentSong].isPlaying() ) println( "Nothing is playing, Pick a Song" );
   if ( playList[currentSong].isPlaying() && !playList[currentSong].isLooping() ) println("Play Once");
   //
@@ -74,24 +64,20 @@ void draw() {
    Note: Variables can be set in a Menu Button
    */
   if ( playList[currentSong].isPlaying() ) {
-    //Empty IF is FALSE
-    //
-    //Alternate Placement of looping-variable reset
-    if ( !playList[currentSong].isLooping() && looping==true) looping=false;
-    //
-  } else if ( looping == false && !playList[currentSong].isPlaying() && playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3, 180s, 180,000ms
+    if ( !playList[currentSong].isLooping() && looping==true) looping=false; //Protect .loop() from .rewind() as STOP Loop
+  } else if ( looping == false && !playList[currentSong].isPlaying() && playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3 minutes, 180s, 180,000ms
     //TRUE: if song is less than 3 minutes, STOP, I want to hear it from the beginning
-    //Pause is actually STOP
+    //.pause() in keyPressed() {} is actually STOP
     playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
-  } else if ( looping == false && !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN #
+  } else if ( looping == false && !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN # as % of Song
     //TRUE: if 75% played, we need a STOP & Rewind Button
+    //.pause() in keyPressed() {} is actually STOP
     playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
-    //
+  } else {
     /* Future coding
      currentSong = currentSong + 1; //currentSong++; currentSong+=1
      playList[currentSong].play();
      */
-  } else {
   }
   /* Previous IF-Else
    if ( playList[currentSong].isPlaying() ) {
@@ -105,10 +91,10 @@ void draw() {
 void keyPressed() {
   if ( key=='P' || key=='p' ) { //Play Pause Button
     //How much of the song should play before the Pause Button is actually a rewind button
-    if ( playList[currentSong].isPlaying() ) { //Note, debugging: use true==true & true==false
-      playList[currentSong].pause(); //playList[currentSong].play();
+    if ( playList[currentSong].isPlaying() ) {
+      playList[currentSong].pause();
     } else {
-      playList[currentSong].play(); //playList[currentSong].pause();
+      playList[currentSong].play();
     }
   } //End Play Pause Button
   if ( key=='L' || key=='l' ) { //Loop Once
@@ -122,15 +108,12 @@ void keyPressed() {
   if ( key=='S' || key=='s' ) { // STOP Button
     playList[currentSong].pause();
     playList[currentSong].rewind(); //Affects LOOP Times
-
-
-    // CONTINUE HERE
     looping = false;
   } // End STOP Button
+  //
 } //End keyPressed
 //
-void mousePressed() {
-} //End mousPressed
+void mousePressed() {} //End mousPressed
 //
 //End MAIN Program
 //
