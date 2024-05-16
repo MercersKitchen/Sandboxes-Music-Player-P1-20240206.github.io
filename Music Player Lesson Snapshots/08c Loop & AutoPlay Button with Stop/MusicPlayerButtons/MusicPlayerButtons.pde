@@ -101,6 +101,12 @@ void keyPressed() {
       playList[currentSong].play(); //playList[currentSong].pause();
     }
   } //End Play Pause Button
+  if ( key=='L' || key=='l' ) { //Loop Once
+    //
+  } //End Loop Once
+  if ( key=='' || key=='' ) { //Loop Infinite Times
+    //
+  } //End Loop Infinite Times
 } //End keyPressed
 //
 void mousePressed() {
