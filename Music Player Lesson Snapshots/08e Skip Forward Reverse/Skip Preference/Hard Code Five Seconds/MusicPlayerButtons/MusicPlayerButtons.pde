@@ -47,7 +47,9 @@ void draw() {
 //
 void keyPressed() {
   //Preferences, might need to be in draw()
-  int skip = 5000; //Local, might need to be Global
+  int skip = null; //Local, might need to be Global
+  if ( key=='' || key=='' ) skip = 5000 ;
+  if ( key=='' || key=='' ) skip = 10000 ;
   //
   if ( key=='F' || key=='f' ) playList[0].skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds)
   if ( key=='R' || key=='r' ) playList[0].skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
