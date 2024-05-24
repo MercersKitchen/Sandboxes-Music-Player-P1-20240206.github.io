@@ -24,8 +24,8 @@ void setup() {
   //println(displayInstructions);
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  String pathwaySoundEffects = "../../../../Audio/SoundEffect/"; //Relative Path
-  String pathwayMusic = "../../../../Audio/MusicDownload/"; //Relative Path
+  String pathwaySoundEffects = "../../../../../Audio/SoundEffect/"; //Relative Path
+  String pathwayMusic = "../../../../../Audio/MusicDownload/"; //Relative Path
   String quitButtonSound = "CarDoorClosing";
   String groove = "groove";
   String extension = ".mp3";
@@ -46,8 +46,11 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
-  if ( key=='F' || key=='f' ) playList[0].skip( 1000 ) ; //SKIP Forward 1 second (1000 milliseconds)
-  if ( key=='R' || key=='r' ) playList[0].skip( -1000 ) ; //SKIP Reverse 1 second (1000 milliseconds)
+  //Preferences, might need to be in draw()
+  int skip = 5000; //Local, might need to be Global
+  //
+  if ( key=='F' || key=='f' ) playList[0].skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds)
+  if ( key=='R' || key=='r' ) playList[0].skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
 } //End keyPressed
 //
 void mousePressed() {} //End mousPressed
