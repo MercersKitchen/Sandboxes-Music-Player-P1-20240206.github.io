@@ -8,7 +8,7 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim; //creates object to access all functions
-AudioPlayer playList1; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+AudioPlayer[] playList = new AudioPlayer[1]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer soundEffects1; //"Play List" for Sound Effects
 //
 int appWidth, appHeight;
@@ -24,8 +24,8 @@ void setup() {
   //println(displayInstructions);
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  String pathwaySoundEffects = "../../../Audio/SoundEffect/"; //Relative Path
-  String pathwayMusic = "../../../Audio/MusicDownload/"; //Relative Path
+  String pathwaySoundEffects = "../../../../Audio/SoundEffect/"; //Relative Path
+  String pathwayMusic = "../../../../Audio/MusicDownload/"; //Relative Path
   String quitButtonSound = "CarDoorClosing";
   String groove = "groove";
   String extension = ".mp3";
@@ -35,18 +35,20 @@ void setup() {
   String pathGrooveSong = sketchPath( pathwayMusic + groove + extension ); //Absolute Path
   //println ( "Absolute Pathway:", pathGrooveSong ); //pathQuitButtonSound
   soundEffects1 = minim.loadFile( pathQuitButtonSound );
-  playList1 =  minim.loadFile( pathGrooveSong ); // "" is compiler error
+  playList[0] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
   //
-  //playList1.loop(0); //Testing Only
+  playList[0].loop(0); //Testing Only
   //
 } //End setup
 //
 void draw() {
-  println( "Song Position", playList1.position(), "Song Length", playList1.length() );
-  playList1.loop(0); //ERROR: only plays beginning of song before starting again
+  println( "Song Position", playList[0].position(), "Song Length", playList[0].length() );
 } //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+  
+
+} //End keyPressed
 //
 void mousePressed() {} //End mousPressed
 //
