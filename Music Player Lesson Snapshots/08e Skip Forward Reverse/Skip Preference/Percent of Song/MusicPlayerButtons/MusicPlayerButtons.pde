@@ -55,7 +55,7 @@ void keyPressed() {
   //if ( key=='G' || key=='g' ) skip = 10000 ;
   if ( key=='G' || key=='g' ) { //Two Preference Option
     if ( skip == 5000 ) {
-      skip = 10000;
+      skip = int ( playList[0].length()*0.25 ); //tuncated to nearest millisecond
     } else {
       skip = 5000;
     }
