@@ -46,8 +46,8 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
-  if () ; //SKIP Forward 1 second (1000 milliseconds)
-  if () ; //SKIP Reverse 1 second (1000 milliseconds)
+  if ( key=='' || key=='' ) ; //SKIP Forward 1 second (1000 milliseconds)
+  if ( key=='' || key=='' ) ; //SKIP Reverse 1 second (1000 milliseconds)
 } //End keyPressed
 //
 void mousePressed() {} //End mousPressed
