@@ -110,10 +110,20 @@ void keyPressed() {
     playList[currentSong].rewind(); //Affects LOOP Times
     looping = false;
   } // End STOP Button
+  if ( key=='M' || key=='m' ) {
+    //Note: mute individual songs if multiple songs are playing
+    //CAUTION: potential fatal error
+    if ( playList[currentSong].isMuted() ) {
+      playList[currentSong].unmute();
+    } else {
+      playList[currentSong].mute() ;
+    }
+  }
   //
 } //End keyPressed
 //
-void mousePressed() {} //End mousPressed
+void mousePressed() {
+} //End mousPressed
 //
 //End MAIN Program
 //
