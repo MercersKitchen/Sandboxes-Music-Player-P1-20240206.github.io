@@ -101,7 +101,7 @@ void draw() {
   fill(black); //Note: background for rect()
   rect(width*1/4, height*0, width*1/2, height*1/10); //Text DIV
   fill(white); //Ink
-  textAlign (CENTER, TOP); //Align X&Y, see Processing.org / Reference
+  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   int size = 30; //Change the number until it fits, largest font size
   textFont(generalFont, size); //CAUTION: SIZE is hardcoded, needs to be changed manually
