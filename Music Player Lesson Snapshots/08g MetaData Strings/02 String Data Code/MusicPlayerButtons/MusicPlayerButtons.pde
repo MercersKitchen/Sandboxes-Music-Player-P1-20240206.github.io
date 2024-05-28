@@ -22,7 +22,7 @@ Boolean looping=false;
 String testingOnly = "1"; // Note: "one"
 PFont generalFont;
 //PFont othersAvailable
-color black=#000000, white=#FFFFFF, nightInk=#FFFF00; //Reminders about NightMode
+color black=#000000, white=#FFFFFF, nightInk=#FFFF00; //Reminders about DarkMode & NightMode
 //
 void setup() {
   //Display
@@ -96,13 +96,14 @@ void draw() {
    */
   //
   //Printing Text to Console | CANVAS
+  fill(black); //Note: background for rect()
   rect(width*1/4, height*0, width*1/2, height*1/10); //Text DIV
   fill(white); //Ink
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  int size = 30; //Change the number until it fits, largest font size
+  int size = 43; //Change the number until it fits, largest font size
   textFont(generalFont, size); //CAUTION: SIZE is hardcoded, needs to be changed manually
-  print(testingOnly);
+  println("String Variable is:", testingOnly);
   text(testingOnly, width*1/4, height*0, width*1/2, height*1/10);
   fill(255); //Reset to white for rest of the program
 } //End draw
