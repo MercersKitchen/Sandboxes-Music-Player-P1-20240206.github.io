@@ -19,6 +19,11 @@ int appWidth, appHeight;
 Boolean looping=false;
 //Protects .rewind in draw() from being inappropriately accessed between .play(), .loop(1), & .loop()
 //
+String testingOnly = "1"; // Note: "one"
+PFont generalFont;
+//PFont othersAvailable
+color black=#000000, white=#FFFFFF, nightInk=#FFFF00; //Reminders about NightMode
+//
 void setup() {
   //Display
   size(600, 400); //width, height //400, 500
@@ -28,6 +33,9 @@ void setup() {
   //Landscape is HARDCODED
   String displayInstructions = ( appWidth >= appHeight ) ? "Good To Go" : "Bru, turn your phun";
   //println(displayInstructions);
+  //
+  //Font Code
+  generalFont = createFont( "Harrington", appHeight );
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
   String pathwaySoundEffects = "../../../../Audio/SoundEffect/"; //Relative Path
@@ -86,6 +94,15 @@ void draw() {
    playList[currentSong].rewind(); //CAUTION: !.isPlaying() & .rewind() = STOP
    }
    */
+  //
+  //Printing Text to Console | CANVAS
+  rect(width*1/4, height*0, width*1/2, height*1/10); //Text DIV
+  fill(white); //Ink
+  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+  textFont(titleFont, 30); //Change the number until it fits, largest font size
+  text(songMetaData1.title(), width*1/4, height*0, width*1/2, height*1/10);
+  fill(255); //Reset to white for rest of the program
 } //End draw
 //
 void keyPressed() {
@@ -113,7 +130,8 @@ void keyPressed() {
   //
 } //End keyPressed
 //
-void mousePressed() {} //End mousPressed
+void mousePressed() {
+} //End mousPressed
 //
 //End MAIN Program
 //
