@@ -102,7 +102,8 @@ void draw() {
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   int size = 30; //Change the number until it fits, largest font size
   textFont(generalFont, size); //CAUTION: SIZE is hardcoded, needs to be changed manually
-  text(songMetaData1.title(), width*1/4, height*0, width*1/2, height*1/10);
+  print(testingOnly);
+  text(testingOnly, width*1/4, height*0, width*1/2, height*1/10);
   fill(255); //Reset to white for rest of the program
 } //End draw
 //
