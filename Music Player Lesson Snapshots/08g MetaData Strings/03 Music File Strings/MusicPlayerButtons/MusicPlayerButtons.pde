@@ -50,6 +50,7 @@ void setup() {
   //println ( "Absolute Pathway:", pathGrooveSong ); //pathQuitButtonSound
   soundEffects[0] = minim.loadFile( pathQuitButtonSound );
   playList[0] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
+  playListMetaData[0] = playList[0].getMetaData(); //reads song meta 1, like song 1, mimicing array notation
   //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
