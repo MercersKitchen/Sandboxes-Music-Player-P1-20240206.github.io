@@ -18,7 +18,6 @@ int appWidth, appHeight;
 //
 Boolean looping=false;
 //Protects .rewind in draw() from being inappropriately accessed between .play(), .loop(1), & .loop()
-
 //
 void setup() {
   //Display
