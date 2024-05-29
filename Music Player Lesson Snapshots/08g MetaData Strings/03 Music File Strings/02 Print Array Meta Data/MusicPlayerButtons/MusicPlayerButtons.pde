@@ -20,7 +20,7 @@ int appWidth, appHeight;
 Boolean looping=false;
 //Protects .rewind in draw() from being inappropriately accessed between .play(), .loop(1), & .loop()
 //
-String testingOnly = "1"; // Note: "one"
+//String testingOnly = "1"; // Note: "one"
 PFont generalFont;
 //PFont othersAvailable
 color black=#000000, white=#FFFFFF, nightInk=#FFFF00; //Reminders about DarkMode & NightMode
@@ -40,6 +40,7 @@ void setup() {
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
   String pathwaySoundEffects = "../../../../../Audio/SoundEffect/"; //Relative Path
+  //Note: ~../~ previous error, corrected above and below
   String pathwayMusic = "../../../../../Audio/MusicDownload/"; //Relative Path
   String quitButtonSound = "CarDoorClosing";
   String groove = "groove";
@@ -105,8 +106,8 @@ void draw() {
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   int size = 43; //Change the number until it fits, largest font size
   textFont(generalFont, size); //CAUTION: SIZE is hardcoded, needs to be changed manually
-  printArray( playListMetaData ); //Hard Drive Address to where the Meta Data is
-  printArray( playListMetaData[0] ); //Hard Drive Address to where the Meta Data is
+  printArray( playListMetaData ); //Hard Drive Address to where the Meta Data Var is
+  printArray( playListMetaData[0] ); //Hard Drive Address to specific Var
   println( "Title is:", playListMetaData[0].title() ); //Hard Drive Address to where the Meta Data is
   //text(testingOnly, width*1/4, height*0, width*1/2, height*1/10);
   fill(255); //Reset to white for rest of the program
