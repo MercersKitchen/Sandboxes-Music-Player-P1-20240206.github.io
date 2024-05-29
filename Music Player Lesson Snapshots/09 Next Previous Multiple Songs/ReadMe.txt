@@ -3,8 +3,12 @@ https://github.com/Intro-CS-App-Dev-and-Deploy/App-Development/tree/main/Music%2
 
 Key to
 
-- Next Button with ArrayListOutOfBounds and End of Song forward with FastForward (minimal buttons)
-- Previous BUtton with ArrayListOutOfBounds and Beginning of Song previuos with Pause (minimal buttons)
+- Next Button with ArrayListOutOfBounds ERROR
+- Next Button | Fast Forward minimalist design if song.position() > song.length()*0.75 (minimal buttons)
+- Previous Button with ArrayListOutOfBounds ERROR
+- Previous Button | Fast Rewind minimalist design if song.position() < song.position(10000) (minimal buttons)
+  Note: 10000 milliseconds = 10 seconds
+  CAUTION: notation is not parameter but a return
 
 - Random Start
 - Random Playlist as next song
