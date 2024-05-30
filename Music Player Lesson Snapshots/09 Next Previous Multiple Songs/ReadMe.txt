@@ -14,3 +14,8 @@ Key to
 - Random Playlist as next song
 - Return to Beginning of Play List
 - Next & Previous to Random
+
+Advanced: when properties is empty
+- IF-Else catch for .title() == NULL, rewrite to SPACE
+
+---
