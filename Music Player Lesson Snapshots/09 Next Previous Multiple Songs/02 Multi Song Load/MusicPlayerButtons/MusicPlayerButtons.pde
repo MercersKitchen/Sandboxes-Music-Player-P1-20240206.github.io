@@ -12,7 +12,7 @@ int numberSoundEffects = 4; //DEV Verify, OS able to count (CS20 Solution)
 int numberMusicSongs = 8; //DEV Verify, OS able to count (CS20 Solution)
 AudioPlayer[] playList = new AudioPlayer[ numberMusicSongs ]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer[] soundEffects = new AudioPlayer[ numberSoundEffects ]; //"Play List" for Sound Effects
-int currentSong = 0; //JAVA starts counting at 0, not for all languages
+int currentSong = numberSoundEffects - numberSoundEffects; //JAVA starts counting at 0, not for all languages
 //
 int appWidth, appHeight;
 //
@@ -34,18 +34,39 @@ void setup() {
   String pathwayMusic = "../../../../Audio/MusicDownload/"; //Relative Path
   String quitButtonSound = "CarDoorClosing";
   String groove = "groove";
+  String beatYourCompetition = "Beat_Your_Competition";
+  String cycles = "Cycles";
+  String eureka = "Eureka";
+  String ghostWalk = "Ghost_Walk";
+  String newsroom = "Newsroom";
+  String startYourEngines = "Start_Your_Engines";
+  String theSimplest = "The_Simplest";
   String extension = ".mp3";
   //println ( pathwaySoundEffects+quitButtonSound+extension );
   //println ( "Relative Pathway:", pathwayMusic+groove+extension );
   String pathQuitButtonSound = sketchPath( pathwaySoundEffects + quitButtonSound + extension ); //Absolute Path
   String pathGrooveSong = sketchPath( pathwayMusic + groove + extension ); //Absolute Path
+  String pathBeatYourCompetitionSong = sketchPath( pathwayMusic + beatYourCompetition + extension ); //Absolute Path
+  String pathCyclesSong = sketchPath( pathwayMusic + cycles + extension ); //Absolute Path
+  String pathEurekaSong = sketchPath( pathwayMusic + eureka + extension ); //Absolute Path
+  String pathGhostWalkSong = sketchPath( pathwayMusic + ghostWalk + extension ); //Absolute Path
+  String pathNewsroomSong = sketchPath( pathwayMusic + newsroom + extension ); //Absolute Path
+  String pathStartYourEnginesSong = sketchPath( pathwayMusic + startYourEngines + extension ); //Absolute Path
+  String pathTheSimplestSong = sketchPath( pathwayMusic + theSimplest + extension ); //Absolute Path
   //println ( "Absolute Pathway:", pathGrooveSong ); //pathQuitButtonSound
   soundEffects[0] = minim.loadFile( pathQuitButtonSound );
   playList[0] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
+  playList[1] =  minim.loadFile( pathBeatYourCompetitionSong ); // "" is compiler error
+  playList[2] =  minim.loadFile( pathCyclesSong ); // "" is compiler error
+  playList[3] =  minim.loadFile( pathEurekaSong ); // "" is compiler error
+  playList[4] =  minim.loadFile( pathGhostWalkSong ); // "" is compiler error
+  playList[5] =  minim.loadFile( pathNewsroomSong ); // "" is compiler error
+  playList[6] =  minim.loadFile( pathStartYourEnginesSong ); // "" is compiler error
+  playList[7] =  minim.loadFile( pathTheSimplestSong ); // "" is compiler error
   //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
-  //playList[currentSong].loop(0); //Testing Only
+  //playList[currentSong].loop(0); //Testing Only, change parameter to the accruate number
   //
 } //End setup
 //
