@@ -53,20 +53,34 @@ void setup() {
   String pathNewsroomSong = sketchPath( pathwayMusic + newsroom + extension ); //Absolute Path
   String pathStartYourEnginesSong = sketchPath( pathwayMusic + startYourEngines + extension ); //Absolute Path
   String pathTheSimplestSong = sketchPath( pathwayMusic + theSimplest + extension ); //Absolute Path
-  //println ( "Absolute Pathway:", pathGrooveSong ); //pathQuitButtonSound
+  println ( "Absolute Pathway:", pathTheSimplestSong ); //pathQuitButtonSound
   soundEffects[0] = minim.loadFile( pathQuitButtonSound );
-  playList[0] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
-  playList[1] =  minim.loadFile( pathBeatYourCompetitionSong ); // "" is compiler error
-  playList[2] =  minim.loadFile( pathCyclesSong ); // "" is compiler error
-  playList[3] =  minim.loadFile( pathEurekaSong ); // "" is compiler error
-  playList[4] =  minim.loadFile( pathGhostWalkSong ); // "" is compiler error
-  playList[5] =  minim.loadFile( pathNewsroomSong ); // "" is compiler error
-  playList[6] =  minim.loadFile( pathStartYourEnginesSong ); // "" is compiler error
-  playList[7] =  minim.loadFile( pathTheSimplestSong ); // "" is compiler error
+  //
+  //Note: currentSong, currentSong+=1, currentSong++
+  println( "The current song is:", currentSong );
+  //
+  playList[currentSong] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
+  println( "The current song is:", currentSong );
+  playList[currentSong+=1] =  minim.loadFile( pathBeatYourCompetitionSong ); // "" is compiler error
+  println( "The current song is:", currentSong );
+  playList[currentSong++] =  minim.loadFile( pathCyclesSong ); // "" is compiler error
+  println( "The current song is:", currentSong );
+  playList[currentSong++] =  minim.loadFile( pathEurekaSong ); // "" is compiler error
+  println( "The current song is:", currentSong );
+  playList[currentSong++] =  minim.loadFile( pathGhostWalkSong ); // "" is compiler error
+  println( "The current song is:", currentSong );
+  playList[currentSong++] =  minim.loadFile( pathNewsroomSong ); // "" is compiler error
+  println( "The current song is:", currentSong );
+  playList[currentSong++] =  minim.loadFile( pathStartYourEnginesSong ); // "" is compiler error
+  println( "The current song is:", currentSong );
+  playList[currentSong++] =  minim.loadFile( pathTheSimplestSong ); // "" is compiler error
+  println( "The current song is:", currentSong );
+  currentSong = 7;
+  println( "The current song is:", currentSong );
   //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
-  //playList[currentSong].loop(0); //Testing Only, change parameter to the accruate number
+  playList[currentSong].loop(0); //Testing Only, change parameter to the accruate number
   //
 } //End setup
 //

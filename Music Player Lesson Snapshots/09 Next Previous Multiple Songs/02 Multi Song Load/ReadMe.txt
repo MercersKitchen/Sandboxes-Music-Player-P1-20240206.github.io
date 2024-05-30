@@ -20,6 +20,8 @@ String pathNewsroomSong = sketchPath( pathwayMusic + newsroom + extension );
 String pathStartYourEnginesSong = sketchPath( pathwayMusic + startYourEngines + extension );
 String pathTheSimplestSong = sketchPath( pathwayMusic + theSimplest + extension );
 
+//Note: currentSong++
+//Note" currentSong+=1
 playList[1] =  minim.loadFile( pathBeatYourCompetitionSong );
 playList[2] =  minim.loadFile( pathCyclesSong );
 playList[3] =  minim.loadFile( pathEurekaSong );
