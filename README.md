@@ -233,3 +233,41 @@ similar to DIV's in website design
 - https://github.com/Intro-CS-App-Dev-and-Deploy/App-Development/blob/main/Music%20Program/Mutliple%20Songs%20with%20Arrays/15%20Advanced%20Music%20Buttons/01%20Auto%20Play/MusicApp.pde
 
 --- 
+
+# To Include: Purpose of Music Player at AP CSP Level
+- Can this be turned into a book or AP CSP Resource (Google Funding?)
+- Computational Problem Solving throughout
+
+### Introductory CS - Introductions to GUI and Associated Information
+- Primitive Variables, Strongly Formatted
+- Casting and Truncating
+- Language Specific Variables based on auto-loaded libraries and dependencies (beyond native)
+- Concatenation (two types), specifically of pathways and directories
+- Inspecting Variables and CONSOLE
+- Arrays of Primitive and Library-specific variables using primitive variables as element-constructor-parameter
+- Using OS to read pathways and associated information
+- 2D shapes, starting with rectangle as Divisions in an app
+- Function parameters using ratios of display geometry (referred to as Population for introductions to object constructors)
+- Display Geometry introduces ternary operator
+- Introduction to FOR assigning division symmetry for variable population, including discussion of overall program efficiently using crystal time v. counting lines of code
+- Quit Button: Introduction to Infinite Loops ( void draw() {} ) and interaction with keyboard & mouse listeners
+- Quit Button: introduction to primitive and library-based variable data structures in constructing features like
+  - Listers: single line IF statements
+  - Hover over: colour contrast design and 4-colour map theorem, IF-Else Structure, resetting CANVAS defaults
+  - 2D Shape Attributes controlled by library-specific functions
+  - Drawing Text (sequencing code for purpose)
+  - Mouse Locations and Building Conditionals with inequalities and AND
+  - Day v. Night Mode Blue Light Design Safety introducing Conditional Shortcuts and conditional evaluation order (flowcharts and truth tables)
+- Images: background, foreground ( including aspect ratio as an algorithm ) and formatting images in division space ( as an algorithm )
+- Music Files: .mp3 music with meta data access using library
+- Library Functions to construct Music Button Function ( combining Booleans, parameters, and specific code sequence)
+  - Single Song Functions to Review sequential or linear coding
+  - Multiple Song FFunctions to review integration of entire year 
+- General Note about Algorithms & decisions
+  - Listeners use nested IF statements
+  - Music Buttons use IF-ElseIF-Else construction with developed conditionals
+- Listeners: keyboard and mouse, including touch screen as enrichment
+
+### Future Lessons
+- Review Music Player as an Object and Class Design focused on Constructor-GUI ( "pop-up" ) & encapsulated code referenced in MAIN Program (MAIN introduces DRIVER)
+- 
