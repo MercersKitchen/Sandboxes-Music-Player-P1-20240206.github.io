@@ -237,6 +237,7 @@ similar to DIV's in website design
 # To Include: Purpose of Music Player at AP CSP Level
 - Can this be turned into a book or AP CSP Resource (Google Funding?)
 - Computational Problem Solving throughout
+- Functions, including library ones, are taught to enable reading of documentation to understand enough to ask questions, interpret parameters and returns, and create prototpying programs
 
 ### Introductory CS - Introductions to GUI and Associated Information
 - Primitive Variables, Strongly Formatted
@@ -287,3 +288,5 @@ similar to DIV's in website design
 - Purpose of CS30 (all previous): PONG Driver, Objects, Classes & Encapsulation, & Abstract Classes
 - SMART Questions, GUI, interactions, and Algorithms
 - Array-list muted arrays focusing array properties of copy, add, remove, delete, and rewrite using local objects (since processing.org makes arrays unmuted)
+
+---
