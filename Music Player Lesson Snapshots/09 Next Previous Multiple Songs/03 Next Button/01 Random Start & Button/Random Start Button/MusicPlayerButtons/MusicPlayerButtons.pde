@@ -30,8 +30,8 @@ void setup() {
   //println(displayInstructions);
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder, like loadImage
-  String pathwaySoundEffects = "../../../../Audio/SoundEffect/"; //Relative Path
-  String pathwayMusic = "../../../../Audio/MusicDownload/"; //Relative Path
+  String pathwaySoundEffects = "../../../../../../Audio/SoundEffect/"; //Relative Path
+  String pathwayMusic = "../../../../../../Audio/MusicDownload/"; //Relative Path
   String quitButtonSound = "CarDoorClosing";
   String groove = "groove";
   String beatYourCompetition = "Beat_Your_Competition";
@@ -45,14 +45,14 @@ void setup() {
   //println ( pathwaySoundEffects+quitButtonSound+extension );
   //println ( "Relative Pathway:", pathwayMusic+groove+extension );
   String pathQuitButtonSound = sketchPath( pathwaySoundEffects + quitButtonSound + extension ); //Absolute Path
-  String pathGrooveSong = pathwayMusic + groove + extension; //Absolute Path
-  String pathBeatYourCompetitionSong = sketchPath( pathwayMusic + beatYourCompetition + extension ); //Absolute Path
-  String pathCyclesSong = sketchPath( pathwayMusic + cycles + extension ); //Absolute Path
-  String pathEurekaSong = sketchPath( pathwayMusic + eureka + extension ); //Absolute Path
-  String pathGhostWalkSong = sketchPath( pathwayMusic + ghostWalk + extension ); //Absolute Path
-  String pathNewsroomSong = sketchPath( pathwayMusic + newsroom + extension ); //Absolute Path
-  String pathStartYourEnginesSong = sketchPath( pathwayMusic + startYourEngines + extension ); //Absolute Path
-  String pathTheSimplestSong = sketchPath( pathwayMusic + theSimplest + extension ); //Absolute Path
+  String pathGrooveSong = pathwayMusic + groove + extension;
+  String pathBeatYourCompetitionSong = pathwayMusic + beatYourCompetition + extension; 
+  String pathCyclesSong = pathwayMusic + cycles + extension ;
+  String pathEurekaSong = pathwayMusic + eureka + extension ;
+  String pathGhostWalkSong = pathwayMusic + ghostWalk + extension ;
+  String pathNewsroomSong = pathwayMusic + newsroom + extension ; 
+  String pathStartYourEnginesSong = pathwayMusic + startYourEngines + extension ; 
+  String pathTheSimplestSong = pathwayMusic + theSimplest + extension ; 
   //println ( "Sound Effect Absolute Pathway:", pathQuitButtonSound );
   //println ( "1. Absolute Pathway:", pathGrooveSong );
   //println ( "2. Absolute Pathway:", pathBeatYourCompetitionSong );
@@ -67,21 +67,21 @@ void setup() {
   //Note: currentSong, currentSong+=1, currentSong++
   //println( "The current song is:", currentSong );
   //
-  playList[0] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
+  playList[currentSong] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
   //println( "1. The current song is:", currentSong, pathGrooveSong );
-  //playList[1] =  minim.loadFile( pathBeatYourCompetitionSong ); // "" is compiler error
+  playList[currentSong+=1] =  minim.loadFile( pathBeatYourCompetitionSong ); // "" is compiler error
   //println( "2. The current song is:", currentSong, pathBeatYourCompetitionSong );
-  //playList[currentSong++] =  minim.loadFile( pathCyclesSong ); // "" is compiler error
+  playList[currentSong++] =  minim.loadFile( pathCyclesSong ); // "" is compiler error
   //println( "3. The current song is:", currentSong );
-  //playList[currentSong++] =  minim.loadFile( pathEurekaSong ); // "" is compiler error
+  playList[currentSong++] =  minim.loadFile( pathEurekaSong ); // "" is compiler error
   //println( "4. The current song is:", currentSong );
-  //playList[currentSong++] =  minim.loadFile( pathGhostWalkSong ); // "" is compiler error
+  playList[currentSong++] =  minim.loadFile( pathGhostWalkSong ); // "" is compiler error
   //println( "5. The current song is:", currentSong );
-  //playList[currentSong++] =  minim.loadFile( pathNewsroomSong ); // "" is compiler error
+  playList[currentSong++] =  minim.loadFile( pathNewsroomSong ); // "" is compiler error
   //println( "6. The current song is:", currentSong );
-  //playList[currentSong++] =  minim.loadFile( pathStartYourEnginesSong ); // "" is compiler error
+  playList[currentSong++] =  minim.loadFile( pathStartYourEnginesSong ); // "" is compiler error
   //println( "7. The current song is:", currentSong );
-  //playList[currentSong++] =  minim.loadFile( pathTheSimplestSong ); // "" is compiler error
+  playList[currentSong++] =  minim.loadFile( pathTheSimplestSong ); // "" is compiler error
   //println( "8. The current song is:", currentSong );
   //
   //Random Start Prototype
@@ -93,13 +93,51 @@ void setup() {
   //
 } //End setup
 //
-void draw() {} //End draw
+void draw() {
+  println( currentSong, playList[currentSong]);
+  if ( playList[currentSong].isPlaying() ) {
+    if ( !playList[currentSong].isLooping() && looping==true) looping=false; //Protect .loop() from .rewind() as STOP Loop
+  } else if ( looping == false && !playList[currentSong].isPlaying() && playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3 minutes, 180s, 180,000ms
+    //TRUE: if song is less than 3 minutes, STOP, I want to hear it from the beginning
+    //.pause() in keyPressed() {} is actually STOP
+    playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
+  } else if ( looping == false && !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN # as % of Song
+    //TRUE: if 75% played, we need a STOP & Rewind Button
+    //.pause() in keyPressed() {} is actually STOP
+    playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
+  } else {
+    /* Future coding
+     currentSong = currentSong + 1; //currentSong++; currentSong+=1
+     playList[currentSong].play();
+     */
+  }
+} //End draw
 //
 void keyPressed() {
-  if ( key=='A' || key=='a' ) currentSong = int ( random( numberMusicSongs - numberMusicSongs, numberMusicSongs ) );
+  if ( key=='A' || key=='a' ) currentSong = int ( random( numberMusicSongs - numberMusicSongs, numberMusicSongs ) ); //Note formuale for "Drag and Drop"
   //
-  // Must add Muisic and rest of Key Pressed for Play & Loop
-  //Remember, must add code into draw()
+  if ( key=='P' || key=='p' ) { //Play Pause Button
+    //How much of the song should play before the Pause Button is actually a rewind button
+    if ( playList[currentSong].isPlaying() ) {
+      playList[currentSong].pause();
+    } else {
+      playList[currentSong].play();
+    }
+  } //End Play Pause Button
+  if ( key=='L' || key=='l' ) { //Loop Once
+    playList[currentSong].loop(1);
+    looping = true;
+  } //End Loop Once
+  if ( key=='I' || key=='i' ) { //Loop Infinite Times
+    playList[currentSong].loop();
+    looping = true;
+  } //End Loop Infinite Times
+  if ( key=='S' || key=='s' ) { // STOP Button
+    playList[currentSong].pause();
+    playList[currentSong].rewind(); //Affects LOOP Times
+    looping = false;
+  } // End STOP Button
+  //
 } //End keyPressed
 //
 void mousePressed() {
