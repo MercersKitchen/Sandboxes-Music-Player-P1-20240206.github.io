@@ -85,7 +85,7 @@ void setup() {
   //println( "8. The current song is:", currentSong );
   //
   //Random Start Prototype
-  println( "Current Song, Random Number:", int ( random(0, 8) ) );
+  //println( "Current Song, Random Number:", int ( random(0, 8) ) );
   //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
@@ -93,12 +93,13 @@ void setup() {
   //
 } //End setup
 //
-void draw() {
-  //Random Start Prototype
-  println( "Current Song, Random Number:", int ( random(0, 8) ) );
-} //End draw
+void draw() {} //End draw
 //
 void keyPressed() {
+  if ( key=='A' || key=='a' ) currentSong = int ( random( numberMusicSongs - numberMusicSongs, numberMusicSongs ) );
+  //
+  // Must add Muisic and rest of Key Pressed for Play & Loop
+  //Remember, must add code into draw()
 } //End keyPressed
 //
 void mousePressed() {
