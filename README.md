@@ -290,3 +290,11 @@ similar to DIV's in website design
 - Array-list muted arrays focusing array properties of copy, add, remove, delete, and rewrite using local objects (since processing.org makes arrays unmuted)
 
 ---
+
+# CAUTION
+
+Song Loading has changed to single objects as AudioPlayer and GLobal Variable String Arrays
+
+Change all programs
+
+--- 
