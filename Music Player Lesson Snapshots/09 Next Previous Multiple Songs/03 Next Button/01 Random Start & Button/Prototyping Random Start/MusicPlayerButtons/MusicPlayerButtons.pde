@@ -94,7 +94,8 @@ void setup() {
 } //End setup
 //
 void draw() {
-  
+  //Random Start Prototype
+  println( "Current Song, Random Number:", int ( random(0, 8) ) );
 } //End draw
 //
 void keyPressed() {
