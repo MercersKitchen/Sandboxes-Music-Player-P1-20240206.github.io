@@ -9,7 +9,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 Minim minim ; //creates object to access all functions
 int numberSoundEffects = 4; //DEV Verify, OS able to count (CS20 Solution)
-int numberMusicSongs = 8; //DEV Verify, OS able to count (CS20 Solution)
+int numberMusicSongs = 9; //DEV Verify, OS able to count (CS20 Solution)
 String[] filePathNameMusic = new String[numberMusicSongs];
 String[] filePathNameSoundEffect = new String[numberSoundEffects];
 AudioPlayer playList; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
@@ -64,6 +64,9 @@ void setup() {
   //println( currentSong, filePathNameMusic[currentSong] );
   filePathNameMusic[currentSong+=1] = pathwayMusic + theSimplest + extension;
   //println( currentSong, filePathNameMusic[currentSong] );
+  //
+  //Explore loading files with URLs - need a stream
+  filePathNameMusic[currentSong] = "https://github.com/Intro-CS-App-Dev-and-Deploy/App-Development/blob/main/FreeWare%20Music/Winter%20Break%20Music%20Acapella/Pentatonix%20-%20Carol%20of%20the%20Bells.mp3";
   //
   filePathNameSoundEffect[0] = pathQuitButtonSound;
   //println ( "Absolute Pathway:", filePathNameSoundEffect[0] ); //pathQuitButtonSound
