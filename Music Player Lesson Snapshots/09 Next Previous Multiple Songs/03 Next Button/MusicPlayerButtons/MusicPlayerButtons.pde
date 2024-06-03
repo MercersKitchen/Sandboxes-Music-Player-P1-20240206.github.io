@@ -65,10 +65,10 @@ void setup() {
   soundEffects[0] = minim.loadFile( pathQuitButtonSound );
   //
   //Note: currentSong, currentSong+=1, currentSong++
-  println( "The current song is:", currentSong );
+  //println( "The current song is:", currentSong );
   //
   playList[0] =  minim.loadFile( pathGrooveSong ); // "" is compiler error
-  println( "1. The current song is:", currentSong, pathGrooveSong );
+  //println( "1. The current song is:", currentSong, pathGrooveSong );
   //playList[1] =  minim.loadFile( pathBeatYourCompetitionSong ); // "" is compiler error
   //println( "2. The current song is:", currentSong, pathBeatYourCompetitionSong );
   //playList[currentSong++] =  minim.loadFile( pathCyclesSong ); // "" is compiler error
@@ -84,17 +84,24 @@ void setup() {
   //playList[currentSong++] =  minim.loadFile( pathTheSimplestSong ); // "" is compiler error
   //println( "8. The current song is:", currentSong );
   //
+  //Random Start Prototype
+  println( "Current Song, Random Number:", int ( random(0, 8) ) );
+  //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
-  playList[0].loop(); //Testing Only, change parameter to the accruate number
+  //playList[0].loop(); //Testing Only, change parameter to the accruate number
   //
 } //End setup
 //
-void draw() {} //End draw
+void draw() {
+  
+} //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+} //End keyPressed
 //
-void mousePressed() {} //End mousPressed
+void mousePressed() {
+} //End mousPressed
 //
 //End MAIN Program
 //
