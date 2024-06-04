@@ -1,0 +1,18 @@
+
+https://github.com/Intro-CS-App-Dev-and-Deploy/App-Development/blob/main/Music%20Program/Mutliple%20Songs%20with%20Arrays/15%20Advanced%20Music%20Buttons/10%20Next%20Prev/Not%20DONE%20Yet/MusicApp.pde
+
+When Song reaches the end, autoplay to the next song
+void draw()
+
+if ( playList[currentSong].isPlaying() ) {
+    //Empty IF, TRUE
+  } else {
+    //currentSong at end of FILE
+    playList[currentSong].rewind();
+    currentSong = currentSong + 1; //currentSong++; currentSong+=1
+    //Require IF-Catch for array index out of bounds
+    //Random here, not +1, is called SHUFFLE, able to play same song mulitple times
+    //This SHUFFLE randomized the folder, not what has already played, requires amending int[] and deleteing 
+      elements and 1-index value until playlist done, then recopy array to make new shuffle and not repeat songs
+    playList[currentSong].play();
+  }

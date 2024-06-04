@@ -86,10 +86,24 @@ void setup() {
 } //End setup
 //
 void draw() {
+  /*
+  //Instrpection of Booleans and Associated Varaiables
+  println( "Song Position", playList.position(), "Song Length", playList.length() );
+  if ( playList.isLooping() && playList.loopCount()!=-1 ) println("There are", playList.loopCount(), "loops left.");
+  if ( playList.isLooping() && playList.loopCount()==-1 ) println("Looping Infinitely");
+  //println("Keyboard Looping Question", looping);
+  if ( !playList.isPlaying() ) println( "Nothing is playing, Pick a Song" );
+  if ( playList.isPlaying() && !playList.isLooping() ) println("Play Once");
+  */
+  //
   //Random Start Prototype
   //println( "Current Song, Random Number:", currentSong );
   //
-  //AutoPlay
+  /* Auto Play Code for Future Use
+   Contains instructions from Key Board Short Cuts
+   Note: PAIN Thresholds, 3 minutes & 75%, can be variables
+   Note: Variables can be set in a Menu Button
+   */
   if ( playList.isPlaying() ) {
     if ( !playList.isLooping() && looping==true) looping=false; //Protect .loop() from .rewind() as STOP Loop
   } else if ( looping == false && !playList.isPlaying() && playList.length() < 180000 ) { //PAIN Minutes is 3 minutes, 180s, 180,000ms
