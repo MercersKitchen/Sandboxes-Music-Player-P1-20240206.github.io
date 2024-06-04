@@ -154,18 +154,26 @@ void keyPressed() {
    int skip = 5000; //Basic Preference
    if ( key=='H' || key=='h' ) skip = 5000 ;
    if ( key=='G' || key=='g' ) skip = 10000 ;
+   if ( key=='G' || key=='g' ) skip = playList.length()*0.25 ;
    */
   if ( key=='G' || key=='g' ) { //Two Preference Option
+    println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
     if ( skip == 5000 ) {
-      skip = int ( playList[0].length()*0.25 ); //tuncated to nearest millisecond
+      skip = int ( playList.length()*0.25 ); //tuncated to nearest millisecond
     } else {
       skip = 5000;
     }
+    println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
-  //println(skip);
+  if ( key=='F' || key=='f' ) {
+    playList.skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds)
+    println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
+  }
+  if ( key=='R' || key=='r' ) {
+    playList.skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
+    println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
+  }
   //
-  if ( key=='F' || key=='f' ) playList[0].skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds)
-  if ( key=='R' || key=='r' ) playList[0].skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
 } //End keyPressed
 //
 void mousePressed() {
