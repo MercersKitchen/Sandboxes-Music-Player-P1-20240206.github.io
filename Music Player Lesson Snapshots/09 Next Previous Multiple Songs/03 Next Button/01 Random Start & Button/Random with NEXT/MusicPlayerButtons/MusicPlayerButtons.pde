@@ -77,7 +77,7 @@ void setup() {
   //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
-  //println(currentSong, filePathNameMusic[currentSong]);
+  println(currentSong, filePathNameMusic[currentSong]);
   currentSong = numberMusicSongs-numberMusicSongs; //Resetting the Defaults
   playList =  minim.loadFile( filePathNameMusic[currentSong] ); // "" is compiler error
   //Note: music player "plays" one loaded song at a time
@@ -117,6 +117,61 @@ void keyPressed() {
     playList.rewind(); //     mulitple files will play at the same time
     playList =  minim.loadFile( filePathNameMusic[currentSong] );
     playList.play();
+  }
+  //
+  if ( key=='P' || key=='p' ) { //Play Pause Button
+    //How much of the song should play before the Pause Button is actually a rewind button
+    if ( playList.isPlaying() ) {
+      playList.pause();
+    } else {
+      playList.play();
+    }
+  } //End Play Pause Button
+  if ( key=='L' || key=='l' ) { //Loop Once
+    playList.loop(1);
+    looping = true;
+  } //End Loop Once
+  if ( key=='I' || key=='i' ) { //Loop Infinite Times
+    playList.loop();
+    looping = true;
+  } //End Loop Infinite Times
+  if ( key=='S' || key=='s' ) { // STOP Button
+    playList.pause();
+    playList.rewind(); //Affects LOOP Times
+    looping = false;
+  } // End STOP Button
+  //
+  /* Note: NEXT:
+   - FF: first 10 seconds means NEXT
+   - FF: last 25% means NEXT
+   - FF means between above, it is a FF Button
+   - Note: between the above, NEXT Exists
+   
+   Preferences, might need to be in draw()
+   Local, might need to be Global
+   
+   Previous Code Statements
+   int skip = 5000; //Basic Preference
+   if ( key=='H' || key=='h' ) skip = 5000 ;
+   if ( key=='G' || key=='g' ) skip = 10000 ;
+   if ( key=='G' || key=='g' ) skip = playList.length()*0.25 ;
+   */
+  if ( key=='G' || key=='g' ) { //Two Preference Option
+    println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
+    if ( skip == 5000 ) {
+      skip = int ( playList.length()*0.25 ); //tuncated to nearest millisecond
+    } else {
+      skip = 5000;
+    }
+    println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
+  }
+  if ( key=='F' || key=='f' ) {
+    playList.skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds)
+    println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
+  }
+  if ( key=='R' || key=='r' ) {
+    playList.skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
+    println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
   //
 } //End keyPressed
