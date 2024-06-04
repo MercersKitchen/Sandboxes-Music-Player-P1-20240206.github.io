@@ -48,8 +48,9 @@ void setup() {
   //println ( "Relative Pathway:", pathwayMusic+groove+extension );
   String pathQuitButtonSound = sketchPath( pathwaySoundEffects + quitButtonSound + extension ); //Absolute Path
   filePathNameMusic[currentSong] = sketchPath( pathwayMusic + groove + extension ); //Absolute Path
+  //Note: sketchPath() used for pathways in AudioRecorder, thus choosing relative paths below
   //println( currentSong, filePathNameMusic[currentSong] );
-  //Equivalent Functions: ++ | +=1
+  //Equivalent Functions: ++ (buggie) | +=1 (functions better)
   filePathNameMusic[currentSong+=1] = pathwayMusic + beatYourCompetition + extension;
   //println( currentSong, filePathNameMusic[currentSong] );
   filePathNameMusic[currentSong+=1] = pathwayMusic + cycles + extension;
@@ -71,24 +72,25 @@ void setup() {
   soundEffects = minim.loadFile( filePathNameSoundEffect[0] );
   //
   //Random Start Prototype
-  println( "Current Song, Random Number:", int ( random(0, 8) ) );
+  //println( "Current Song, Random Number:", int ( random(0, 8) ) );
   //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
   println(currentSong, filePathNameMusic[currentSong]);
   playList =  minim.loadFile( filePathNameMusic[currentSong] ); // "" is compiler error
+  //Note: music player "plays" one loaded song at a time
   playList.loop(0); //Testing Only
   //
 } //End setup
 //
 void draw() {
   //Random Start Prototype
-  println( "Current Song, Random Number:", int ( random(0, 8) ) );
+  //println( "Current Song, Random Number:", int ( random(0, 8) ) );
   //
 } //End draw
 //
 void keyPressed() {
-  if () currentSong++;
+  if ( key=='' || key=='') currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
 } //End keyPressed
 //
 void mousePressed() {
