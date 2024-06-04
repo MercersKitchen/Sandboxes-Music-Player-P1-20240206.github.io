@@ -9,7 +9,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 Minim minim ; //creates object to access all functions
 int numberSoundEffects = 4; //DEV Verify, OS able to count (CS20 Solution)
-int numberMusicSongs = 9; //DEV Verify, OS able to count (CS20 Solution)
+int numberMusicSongs = 8; //DEV Verify, OS able to count (CS20 Solution)
 String[] filePathNameMusic = new String[numberMusicSongs];
 String[] filePathNameSoundEffect = new String[numberSoundEffects];
 AudioPlayer playList; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
@@ -86,19 +86,19 @@ void setup() {
 //
 void draw() {
   //Random Start Prototype
-  println( "Current Song, Random Number:", currentSong );
+  //println( "Current Song, Random Number:", currentSong );
   //
   //AutoPlay
-  if ( playList[currentSong].isPlaying() ) {
-    if ( !playList[currentSong].isLooping() && looping==true) looping=false; //Protect .loop() from .rewind() as STOP Loop
-  } else if ( looping == false && !playList[currentSong].isPlaying() && playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3 minutes, 180s, 180,000ms
+  if ( playList.isPlaying() ) {
+    if ( !playList.isLooping() && looping==true) looping=false; //Protect .loop() from .rewind() as STOP Loop
+  } else if ( looping == false && !playList.isPlaying() && playList.length() < 180000 ) { //PAIN Minutes is 3 minutes, 180s, 180,000ms
     //TRUE: if song is less than 3 minutes, STOP, I want to hear it from the beginning
     //.pause() in keyPressed() {} is actually STOP
-    playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
-  } else if ( looping == false && !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN # as % of Song
+    playList.rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
+  } else if ( looping == false && !playList.isPlaying()  && ( playList.position() > playList.length()*0.75 ) ) { //Calc PAIN # as % of Song
     //TRUE: if 75% played, we need a STOP & Rewind Button
     //.pause() in keyPressed() {} is actually STOP
-    playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
+    playList.rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
   } else {
     /* Future coding
      currentSong = currentSong + 1; //currentSong++; currentSong+=1
@@ -110,7 +110,36 @@ void draw() {
 //
 void keyPressed() {
   //Randomly Pick another song in the Play List
-  if ( key=='A' || key=='a') currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
+  if ( key=='A' || key=='a') {
+    currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
+    println( "Current Song, Random Number:", currentSong );
+    playList.pause(); //Note: computer plays harddrive file,
+    playList.rewind(); //     mulitple files will play at the same time
+    playList =  minim.loadFile( filePathNameMusic[currentSong] );
+    playList.play();
+  }
+  //
+  if ( key=='P' || key=='p' ) { //Play Pause Button
+    //How much of the song should play before the Pause Button is actually a rewind button
+    if ( playList[currentSong].isPlaying() ) {
+      playList[currentSong].pause();
+    } else {
+      playList[currentSong].play();
+    }
+  } //End Play Pause Button
+  if ( key=='L' || key=='l' ) { //Loop Once
+    playList[currentSong].loop(1);
+    looping = true;
+  } //End Loop Once
+  if ( key=='I' || key=='i' ) { //Loop Infinite Times
+    playList[currentSong].loop();
+    looping = true;
+  } //End Loop Infinite Times
+  if ( key=='S' || key=='s' ) { // STOP Button
+    playList[currentSong].pause();
+    playList[currentSong].rewind(); //Affects LOOP Times
+    looping = false;
+  } // End STOP Button
   //
 } //End keyPressed
 //
