@@ -15,6 +15,7 @@ String[] filePathNameSoundEffect = new String[numberSoundEffects];
 AudioPlayer playList; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer soundEffects; //"Play List" for Sound Effects
 int currentSong = numberMusicSongs - numberMusicSongs; //JAVA starts counting at 0, not for all languages
+int skip = 5000; //Default Preference, see draw() | keyPressed()
 //
 int appWidth, appHeight;
 //
@@ -120,26 +121,51 @@ void keyPressed() {
   //
   if ( key=='P' || key=='p' ) { //Play Pause Button
     //How much of the song should play before the Pause Button is actually a rewind button
-    if ( playList[currentSong].isPlaying() ) {
-      playList[currentSong].pause();
+    if ( playList.isPlaying() ) {
+      playList.pause();
     } else {
-      playList[currentSong].play();
+      playList.play();
     }
   } //End Play Pause Button
   if ( key=='L' || key=='l' ) { //Loop Once
-    playList[currentSong].loop(1);
+    playList.loop(1);
     looping = true;
   } //End Loop Once
   if ( key=='I' || key=='i' ) { //Loop Infinite Times
-    playList[currentSong].loop();
+    playList.loop();
     looping = true;
   } //End Loop Infinite Times
   if ( key=='S' || key=='s' ) { // STOP Button
-    playList[currentSong].pause();
-    playList[currentSong].rewind(); //Affects LOOP Times
+    playList.pause();
+    playList.rewind(); //Affects LOOP Times
     looping = false;
   } // End STOP Button
   //
+  /* Note: NEXT:
+   - FF: first 10 seconds means NEXT
+   - FF: last 25% means NEXT
+   - FF means between above, it is a FF Button
+   - Note: between the above, NEXT Exists
+   
+   Preferences, might need to be in draw()
+   Local, might need to be Global
+   
+   Previous Code Statements
+   int skip = 5000; //Basic Preference
+   if ( key=='H' || key=='h' ) skip = 5000 ;
+   if ( key=='G' || key=='g' ) skip = 10000 ;
+   */
+  if ( key=='G' || key=='g' ) { //Two Preference Option
+    if ( skip == 5000 ) {
+      skip = int ( playList[0].length()*0.25 ); //tuncated to nearest millisecond
+    } else {
+      skip = 5000;
+    }
+  }
+  //println(skip);
+  //
+  if ( key=='F' || key=='f' ) playList[0].skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds)
+  if ( key=='R' || key=='r' ) playList[0].skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
 } //End keyPressed
 //
 void mousePressed() {
