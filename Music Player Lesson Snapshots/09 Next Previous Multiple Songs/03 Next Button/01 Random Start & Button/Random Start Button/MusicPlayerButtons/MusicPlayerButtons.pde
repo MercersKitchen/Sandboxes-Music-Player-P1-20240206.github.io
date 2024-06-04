@@ -72,11 +72,12 @@ void setup() {
   soundEffects = minim.loadFile( filePathNameSoundEffect[0] );
   //
   //Random Start Prototype
-  //println( "Current Song, Random Number:", int ( random(0, 8) ) );
+  //println( "Current Song, Random Number:", int ( random(numberMusicSongs-numberMusicSongs, numberMusicSongs) ) );
   //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
   println(currentSong, filePathNameMusic[currentSong]);
+  currentSong = numberMusicSongs-numberMusicSongs; //Resetting the Defaults
   playList =  minim.loadFile( filePathNameMusic[currentSong] ); // "" is compiler error
   //Note: music player "plays" one loaded song at a time
   playList.loop(0); //Testing Only
@@ -85,12 +86,32 @@ void setup() {
 //
 void draw() {
   //Random Start Prototype
-  //println( "Current Song, Random Number:", int ( random(0, 8) ) );
+  println( "Current Song, Random Number:", currentSong );
+  //
+  //AutoPlay
+  if ( playList[currentSong].isPlaying() ) {
+    if ( !playList[currentSong].isLooping() && looping==true) looping=false; //Protect .loop() from .rewind() as STOP Loop
+  } else if ( looping == false && !playList[currentSong].isPlaying() && playList[currentSong].length() < 180000 ) { //PAIN Minutes is 3 minutes, 180s, 180,000ms
+    //TRUE: if song is less than 3 minutes, STOP, I want to hear it from the beginning
+    //.pause() in keyPressed() {} is actually STOP
+    playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
+  } else if ( looping == false && !playList[currentSong].isPlaying()  && ( playList[currentSong].position() > playList[currentSong].length()*0.75 ) ) { //Calc PAIN # as % of Song
+    //TRUE: if 75% played, we need a STOP & Rewind Button
+    //.pause() in keyPressed() {} is actually STOP
+    playList[currentSong].rewind(); //NOTE: !.isPlaying() & .rewind() = STOP
+  } else {
+    /* Future coding
+     currentSong = currentSong + 1; //currentSong++; currentSong+=1
+     playList[currentSong].play();
+     */
+  }
   //
 } //End draw
 //
 void keyPressed() {
-  if ( key=='' || key=='') currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
+  //Randomly Pick another song in the Play List
+  if ( key=='A' || key=='a') currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
+  //
 } //End keyPressed
 //
 void mousePressed() {
