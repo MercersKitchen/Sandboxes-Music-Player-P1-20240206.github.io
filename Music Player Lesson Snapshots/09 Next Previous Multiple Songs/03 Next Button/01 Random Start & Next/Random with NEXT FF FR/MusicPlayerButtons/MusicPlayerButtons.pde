@@ -180,10 +180,19 @@ void keyPressed() {
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
   if ( key=='F' || key=='f' ) {
+    /* NEXT Code
+    - Order of Nested IFs: <10 seconds, between 10 & 75%, >75%, then else allows for regular skip on any file when not playing
+    - Create a void next() to group this code if needing to use it other places
+    - NEXT Button
+    */
     playList.skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds)
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
   if ( key=='R' || key=='r' ) {
+    /* Previous Code
+    - Order of Nested IFs: <10 seconds, between 10 & 75%, >75%, then else allows for regular skip on any file when not playing
+    - Create a void next() to group this code if needing to use it other places
+    */
     playList.skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
