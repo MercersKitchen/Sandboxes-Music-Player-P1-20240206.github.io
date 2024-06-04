@@ -22,10 +22,4 @@ String pathTheSimplestSong = sketchPath( pathwayMusic + theSimplest + extension 
 
 //Note: currentSong++
 //Note" currentSong+=1
-playList[1] =  minim.loadFile( pathBeatYourCompetitionSong );
-playList[2] =  minim.loadFile( pathCyclesSong );
-playList[3] =  minim.loadFile( pathEurekaSong );
-playList[4] =  minim.loadFile( pathGhostWalkSong );
-playList[5] =  minim.loadFile( pathNewsroomSong );
-playList[6] =  minim.loadFile( pathStartYourEnginesSong );
-playList[7] =  minim.loadFile( pathTheSimplestSong );
+//"Load and Play one song at a time"
