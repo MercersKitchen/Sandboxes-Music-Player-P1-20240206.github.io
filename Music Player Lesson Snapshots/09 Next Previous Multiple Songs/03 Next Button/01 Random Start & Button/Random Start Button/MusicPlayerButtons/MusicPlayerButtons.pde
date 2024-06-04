@@ -109,8 +109,7 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
-  //Randomly Pick another song in the Play List
-  if ( key=='A' || key=='a') {
+  if ( key=='A' || key=='a') { //Randomly Pick another song in the Play List
     currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
     println( "Current Song, Random Number:", currentSong );
     playList.pause(); //Note: computer plays harddrive file,
