@@ -299,3 +299,6 @@ Change all programs
 
 --- 
 
+Update the intermeidate review and introduction: https://github.com/Intermediate-App-Dev-and-Deploy/Review-CS10-Music-Player.github.io
+
+---
