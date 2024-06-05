@@ -19,7 +19,7 @@ int skip = 5000; //Default Preference, see draw() | keyPressed()
 //
 int appWidth, appHeight;
 //
-Boolean looping=false;
+Boolean looping=false, randomPlayList=false;
 //Protects .rewind in draw() from being inappropriately accessed between .play(), .loop(1), & .loop()
 //
 void setup() {
@@ -121,10 +121,10 @@ void draw() {
      playList.pause(); //Note: computer plays harddrive file,
      playList.rewind(); //     mulitple files will play at the same time
      //Try Catch solves arrayListOutOfBounds
-     if ( currentSong >= numberMusicSongs-1 ) { //Note: posssible error when !=, better code ... currentSong<0
-     currentSong = 0;
+     if ( randomPlayList==true ) {
+     currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
      } else {
-     currentSong++;
+     if ( currentSong >= numberMusicSongs-1 ) {currentSong = 0;} else {currentSong++;}
      }
      println( "Current Song changed to:", currentSong );
      playList =  minim.loadFile( filePathNameMusic[currentSong] );
@@ -133,19 +133,28 @@ void draw() {
     println( "Else of IF-Elseif-Else ( .isPlaying) " );
   }
   //Debugging else of AutoPlay with println() & IF to mimic else of IF-Elseif-Else (computer has made mistake)
-  println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "DO NOT Press FF:", playList.position()>playList.length()*0.75, "\t\tSong Position:", playList.position(), "End of Song:", playList.length() );
+  //println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "DO NOT Press FF:", playList.position()>playList.length()*0.75, "\t\tSong Position:", playList.position(), "End of Song:", playList.length() );
   //if (  ) {} //Note: 3rd time for NEXT Code
   //
 } //End draw
 //
 void keyPressed() {
-  if ( key=='A' || key=='a') { //Randomly Pick another song in the Play List
+  if ( key=='A' || key=='a' ) { //Randomly Pick another song in the Play List
     currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
     println( "Current Song, Random Number:", currentSong );
     playList.pause(); //Note: computer plays harddrive file,
     playList.rewind(); //     mulitple files will play at the same time
     playList =  minim.loadFile( filePathNameMusic[currentSong] );
     playList.play();
+  }
+
+  if ( key=='Z' || key=='z' ) { //Randomly Pick another song all the time, even in autoplay
+    if ( randomPlayList == true ) {
+      randomPlayList = false;
+    } else {
+      randomPlayList = true;
+    }
+    println( "Randomizing the Play List is:", randomPlayList );
   }
   //
   if ( key=='P' || key=='p' ) { //Play Pause Button
@@ -210,10 +219,14 @@ void keyPressed() {
       playList.pause(); //Note: computer plays harddrive file,
       playList.rewind(); //     mulitple files will play at the same time
       //Try Catch solves arrayListOutOfBounds
-      if ( currentSong >= numberMusicSongs-1 ) { //Note: posssible error when !=, better code ... currentSong<0
-        currentSong = 0;
+      if ( randomPlayList==true ) {
+        currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
       } else {
-        currentSong++;
+        if ( currentSong >= numberMusicSongs-1 ) {
+          currentSong = 0;
+        } else {
+          currentSong++;
+        }
       }
       println( "Current Song changed to:", currentSong );
       playList =  minim.loadFile( filePathNameMusic[currentSong] );
@@ -231,10 +244,14 @@ void keyPressed() {
       playList.pause(); //Note: computer plays harddrive file,
       playList.rewind(); //     mulitple files will play at the same time
       //Try Catch solves arrayListOutOfBounds
-      if ( currentSong >= numberMusicSongs-1 ) { //Note: posssible error when !=
-        currentSong = 0;
+      if ( randomPlayList==true ) {
+        currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
       } else {
-        currentSong++;
+        if ( currentSong >= numberMusicSongs-1 ) {
+          currentSong = 0;
+        } else {
+          currentSong++;
+        }
       }
       println( "Current Song changed to:", currentSong );
       playList =  minim.loadFile( filePathNameMusic[currentSong] );
