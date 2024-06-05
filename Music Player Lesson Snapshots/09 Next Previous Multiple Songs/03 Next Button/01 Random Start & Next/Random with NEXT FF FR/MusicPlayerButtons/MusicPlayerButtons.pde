@@ -185,6 +185,9 @@ void keyPressed() {
     - Create a void next() to group this code if needing to use it other places
     - NEXT Button
     */
+    if (  ) ;
+    if (  ) ;
+    if (  ) ; 
     playList.skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds)
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
