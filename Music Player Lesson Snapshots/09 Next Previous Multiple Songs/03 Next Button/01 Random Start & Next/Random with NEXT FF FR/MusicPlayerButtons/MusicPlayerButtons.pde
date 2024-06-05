@@ -77,7 +77,7 @@ void setup() {
   //
   //Note: Music starts before CANVAS ... Purpose of Player
   //Note: See Easter Egg about Time-On and Looping Songs
-  println(currentSong, filePathNameMusic[currentSong]);
+  //println(currentSong, filePathNameMusic[currentSong]);
   currentSong = numberMusicSongs-numberMusicSongs; //Resetting the Defaults
   playList =  minim.loadFile( filePathNameMusic[currentSong] ); // "" is compiler error
   //Note: music player "plays" one loaded song at a time
@@ -194,10 +194,13 @@ void keyPressed() {
       - ERROR: arrayListOutOfBounds
       - TBA
       */
-      currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
-      println( "Current Song, Random Number:", currentSong );
+      println( "Current Song # is:", currentSong );
       playList.pause(); //Note: computer plays harddrive file,
       playList.rewind(); //     mulitple files will play at the same time
+      //Try Catch solves arrayListOutOfBounds
+      if () {} else {}
+      currentSong++;
+      println( "Current Song changed to:", currentSong );
       playList =  minim.loadFile( filePathNameMusic[currentSong] );
       playList.play();
     }
