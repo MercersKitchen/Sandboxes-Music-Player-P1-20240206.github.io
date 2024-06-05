@@ -130,25 +130,11 @@ void draw() {
      playList =  minim.loadFile( filePathNameMusic[currentSong] );
      playList.play();
      */
-     println( "Else of IF-Elseif-Else ( .isPlaying) " );
+    println( "Else of IF-Elseif-Else ( .isPlaying) " );
   }
   //Debugging else of AutoPlay with println() & IF to mimic else of IF-Elseif-Else (computer has made mistake)
-  println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "\t\tSong Position:", playList.position(), playList.position()>playList.length()*0.75, "End of Song:", playList.length() );
-  if ( playList.isPlaying()!=true ) {
-    println( "Current Song # is:", currentSong );
-     playList.pause(); //Note: computer plays harddrive file,
-     playList.rewind(); //     mulitple files will play at the same time
-     //Try Catch solves arrayListOutOfBounds
-     if ( currentSong >= numberMusicSongs-1 ) { //Note: posssible error when !=, better code ... currentSong<0
-     currentSong = 0;
-     } else {
-     currentSong++;
-     }
-     println( "Current Song changed to:", currentSong );
-     playList =  minim.loadFile( filePathNameMusic[currentSong] );
-     playList.play();
-  }
-
+  println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "DO NOT Press FF:", playList.position()>playList.length()*0.75, "\t\tSong Position:", playList.position(), "End of Song:", playList.length() );
+  //if (  ) {} //Note: 3rd time for NEXT Code
   //
 } //End draw
 //
@@ -266,7 +252,11 @@ void keyPressed() {
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
   //
-  /* Note: Basic PREVIOUS Code
+  /* Basic PREVIOUS Code
+   - NOTE: Students must code all PREVIOUS Buttons: FR only
+   - Note: advanced music player feature is to play the playlist backwards
+   - Hint: this reverses the autoplay from NEXT to PREVIOUS
+   
    println( "Current Song # is:", currentSong );
    playList.pause(); //Note: computer plays harddrive file,
    playList.rewind(); //     mulitple files will play at the same time
@@ -280,6 +270,7 @@ void keyPressed() {
    playList =  minim.loadFile( filePathNameMusic[currentSong] );
    playList.play();
    }
+   
    */
   //
 } //End keyPressed
