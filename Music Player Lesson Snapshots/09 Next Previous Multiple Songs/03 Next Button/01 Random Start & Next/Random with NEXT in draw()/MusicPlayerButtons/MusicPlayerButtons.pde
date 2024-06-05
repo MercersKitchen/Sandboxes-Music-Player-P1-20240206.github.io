@@ -130,20 +130,9 @@ void draw() {
      playList =  minim.loadFile( filePathNameMusic[currentSong] );
      playList.play();
      */
-    println( "Current Song # is:", currentSong );
-    playList.pause(); //Note: computer plays harddrive file,
-    playList.rewind(); //     mulitple files will play at the same time
-    //Try Catch solves arrayListOutOfBounds
-    if ( currentSong >= numberMusicSongs-1 ) { //Note: posssible error when !=, better code ... currentSong<0
-      currentSong = 0;
-    } else {
-      currentSong++;
-    }
-    println( "Current Song changed to:", currentSong );
-    playList =  minim.loadFile( filePathNameMusic[currentSong] );
-    playList.play();
+     println( "Else of IF-Elseif-Else ( .isPlaying) " );
   }
-  //Debugging else of AutoPlay
+  //Debugging else of AutoPlay with println() & IF to mimic else of IF-Elseif-Else (computer has made mistake)
   println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "\t\tSong Position:", playList.position(), playList.position()>playList.length()*0.75, "End of Song:", playList.length() );
   if ( playList.isPlaying()!=true ) {
     println( "Current Song # is:", currentSong );
