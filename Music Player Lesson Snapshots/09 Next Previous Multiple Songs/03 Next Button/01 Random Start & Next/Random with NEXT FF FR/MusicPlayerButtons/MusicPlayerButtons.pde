@@ -179,27 +179,48 @@ void keyPressed() {
     }
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
+  /* Repeating Code
+   - NOTE: two repetitions of the same code exist
+   - If a change happens to one, both should be automatically changed
+   - Best Practice: Procedural Programming
+   */
   if ( key=='F' || key=='f' ) {
     /* NEXT Code
      - Order of Nested IFs: <10 seconds, between 10s & 75%, >75%, then else allows for regular skip on any file when not playing
      - Create a void next() to group this code if needing to use it other places
      - NEXT Button
      */
-    if ( playList.position()<10000 ) ;
-    //CAUTION: inequalities do not confuse computer
-    if ( playList.position()>=10000 && playList.position()<=playList.length()*0.75 ) playList.skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds);
-    if ( playList.position()>playList.length()*0.75 ) {
-      /* NEXT
-      - Pauses current song, Rewinds current song, currentSong++, Play current song
-      - ERROR: arrayListOutOfBounds
-      - TBA
-      */
+    if ( playList.position()<10000 ) {
       println( "Current Song # is:", currentSong );
       playList.pause(); //Note: computer plays harddrive file,
       playList.rewind(); //     mulitple files will play at the same time
       //Try Catch solves arrayListOutOfBounds
-      if () {} else {}
-      currentSong++;
+      if ( currentSong >= numberMusicSongs-1 ) { //Note: posssible error when !=, better code ... currentSong<0
+        currentSong = 0;
+      } else {
+        currentSong++;
+      }
+      println( "Current Song changed to:", currentSong );
+      playList =  minim.loadFile( filePathNameMusic[currentSong] );
+      playList.play();
+    }
+    //CAUTION: inequalities do not confuse computer
+    if ( playList.position()>=10000 && playList.position()<=playList.length()*0.75 ) playList.skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds);
+    if ( playList.position()>playList.length()*0.75 ) {
+      /* NEXT
+       - Pauses current song, Rewinds current song, currentSong++, Play current song
+       - ERROR: arrayListOutOfBounds
+       - TBA
+       */
+      println( "Current Song # is:", currentSong );
+      playList.pause(); //Note: computer plays harddrive file,
+      playList.rewind(); //     mulitple files will play at the same time
+      //Try Catch solves arrayListOutOfBounds
+      if ( currentSong >= numberMusicSongs-1 ) { //Note: posssible error when !=
+        currentSong = 0;
+      } else {
+        currentSong++;
+      }
       println( "Current Song changed to:", currentSong );
       playList =  minim.loadFile( filePathNameMusic[currentSong] );
       playList.play();
@@ -215,6 +236,22 @@ void keyPressed() {
     playList.skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
+  //
+  /* Note: Basic PREVIOUS Code
+   println( "Current Song # is:", currentSong );
+   playList.pause(); //Note: computer plays harddrive file,
+   playList.rewind(); //     mulitple files will play at the same time
+   //Try Catch solves arrayListOutOfBounds
+   if ( currentSong <= 0-1 ) { //Note: posssible error when !=, better code ... currentSong<0
+   currentSong = numberMusicSongs;
+   } else {
+   currentSong++;
+   }
+   println( "Current Song changed to:", currentSong );
+   playList =  minim.loadFile( filePathNameMusic[currentSong] );
+   playList.play();
+   }
+   */
   //
 } //End keyPressed
 //
