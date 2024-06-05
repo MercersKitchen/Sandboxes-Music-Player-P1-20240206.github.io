@@ -88,13 +88,13 @@ void setup() {
 void draw() {
   /*
   //Instrpection of Booleans and Associated Varaiables
-  println( "Song Position", playList.position(), "Song Length", playList.length() );
-  if ( playList.isLooping() && playList.loopCount()!=-1 ) println("There are", playList.loopCount(), "loops left.");
-  if ( playList.isLooping() && playList.loopCount()==-1 ) println("Looping Infinitely");
-  //println("Keyboard Looping Question", looping);
-  if ( !playList.isPlaying() ) println( "Nothing is playing, Pick a Song" );
-  if ( playList.isPlaying() && !playList.isLooping() ) println("Play Once");
-  */
+   println( "Song Position", playList.position(), "Song Length", playList.length() );
+   if ( playList.isLooping() && playList.loopCount()!=-1 ) println("There are", playList.loopCount(), "loops left.");
+   if ( playList.isLooping() && playList.loopCount()==-1 ) println("Looping Infinitely");
+   //println("Keyboard Looping Question", looping);
+   if ( !playList.isPlaying() ) println( "Nothing is playing, Pick a Song" );
+   if ( playList.isPlaying() && !playList.isLooping() ) println("Play Once");
+   */
   //
   //Random Start Prototype
   //println( "Current Song, Random Number:", currentSong );
@@ -181,22 +181,34 @@ void keyPressed() {
   }
   if ( key=='F' || key=='f' ) {
     /* NEXT Code
-    - Order of Nested IFs: <10 seconds, between 10s & 75%, >75%, then else allows for regular skip on any file when not playing
-    - Create a void next() to group this code if needing to use it other places
-    - NEXT Button
-    */
+     - Order of Nested IFs: <10 seconds, between 10s & 75%, >75%, then else allows for regular skip on any file when not playing
+     - Create a void next() to group this code if needing to use it other places
+     - NEXT Button
+     */
     if ( playList.position()<10000 ) ;
     //CAUTION: inequalities do not confuse computer
     if ( playList.position()>=10000 && playList.position()<=playList.length()*0.75 ) playList.skip( skip ) ; //SKIP Forward 1 second (1000 milliseconds);
-    if ( playList.position()>playList.length()*0.75 ) {} 
-    
+    if ( playList.position()>playList.length()*0.75 ) {
+      /* NEXT
+      - Pauses current song, Rewinds current song, currentSong++, Play current song
+      - ERROR: arrayListOutOfBounds
+      - TBA
+      */
+      currentSong = int ( random( numberMusicSongs-numberMusicSongs, numberMusicSongs ) );
+      println( "Current Song, Random Number:", currentSong );
+      playList.pause(); //Note: computer plays harddrive file,
+      playList.rewind(); //     mulitple files will play at the same time
+      playList =  minim.loadFile( filePathNameMusic[currentSong] );
+      playList.play();
+    }
+
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
   if ( key=='R' || key=='r' ) {
     /* Previous Code
-    - Order of Nested IFs: <10 seconds, between 10s & 75%, >75%, then else allows for regular skip on any file when not playing
-    - Create a void next() to group this code if needing to use it other places
-    */
+     - Order of Nested IFs: <10 seconds, between 10s & 75%, >75%, then else allows for regular skip on any file when not playing
+     - Create a void next() to group this code if needing to use it other places
+     */
     playList.skip( -skip ) ; //SKIP Reverse 1 second (1000 milliseconds)
     println ( "New Value of SKIP", skip, "Position:", playList.position(), "Crossed Last 75%", playList.position()>playList.length()*0.75, "\t\tLast 75% starts at:", playList.length()*0.75, "Song Ends at:", playList.length() ) ;
   }
