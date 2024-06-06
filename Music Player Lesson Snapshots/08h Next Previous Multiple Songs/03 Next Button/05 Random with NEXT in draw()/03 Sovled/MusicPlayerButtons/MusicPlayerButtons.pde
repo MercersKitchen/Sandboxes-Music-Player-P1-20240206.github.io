@@ -21,8 +21,7 @@ int appWidth, appHeight;
 //
 Boolean looping=false;
 //Protects .rewind in draw() from being inappropriately accessed between .play(), .loop(1), & .loop()
-Boolean ignoreNextAutoPlayPause=false, ignoreNextAutoPlayStop=false;
-int pausePosition=0; //Default playList.play() parameter
+Boolean ignoreNextAutoPlayStop=false;
 //
 void setup() {
   //Display
@@ -137,7 +136,7 @@ void draw() {
   //Debugging else of AutoPlay with println() & IF to mimic else of IF-Elseif-Else (computer has made mistake)
   //println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "DO NOT Press FF:", playList.position()>playList.length()*0.75, "\t\tSong Position:", playList.position(), "End of Song:", playList.length() );
   //
-  if ( !playList.isPlaying() && ignoreNextAutoPlayStop==false && looping==false && ignoreNextAutoPlayPause==false ) { //ERROR: ELSE Required, STOP & PAUSE broken, BOOLEAN Needed
+  if ( !playList.isPlaying() && ignoreNextAutoPlayStop==false && looping==false) { //ERROR: ELSE Required, STOP & PAUSE broken, BOOLEAN Needed
     //Note: 3rd time for NEXT Code
     println( "Additional IF !playList.isPlaying, First IF Portion" );
     playList.pause(); //Note: computer plays harddrive file,
@@ -148,15 +147,11 @@ void draw() {
     } else {
       currentSong++;
     }
-    //println( "Current Song changed to:", currentSong );
+    println( "Current Song changed to:", currentSong );
     playList =  minim.loadFile( filePathNameMusic[currentSong] );
     playList.play();
-  } else if ( !playList.isPlaying() && ignoreNextAutoPlayStop==false && looping==true && ignoreNextAutoPlayPause==false ) {
+  } else if ( !playList.isPlaying() && ignoreNextAutoPlayStop==false && looping==true ) {
     //EMPTY Else
-    //println( "Additional IF !playList.isPlaying, First Else-If" );
-  } else if ( !playList.isPlaying() && ignoreNextAutoPlayStop==false && looping==false && ignoreNextAutoPlayPause==true ) {
-    //EMPTY Else
-    println( "Additional IF !playList.isPlaying, Second Else-If ... Postion is ...", playList.position() );
   } else {
     //EMPTY Else: no code is exectured, means ignores NEXT Feature in draw()
     //
@@ -164,7 +159,7 @@ void draw() {
      - Boolean made TRUE in keyPressed() PAUSE or STOP, returns ignoring NEXT
      - Boolean made FALSE in keyPressed() PLAY or STOP or LOOP, returns executing NEXT
      */
-     //println( "Additional IF !playList.isPlaying, ELSE Loop" );
+     println( "Additional IF !playList.isPlaying, ELSE Loop" );
   }
   //
 } //End draw
@@ -183,17 +178,10 @@ void keyPressed() {
   if ( key=='P' || key=='p' ) { //Play Pause Button
     //How much of the song should play before the Pause Button is actually a rewind button
     if ( playList.isPlaying() ) {
-      playList.pause(); //
-      pausePosition = playList.position(); //memory nees to be made, .position() garbage collected and reset as local
-      ignoreNextAutoPlayPause = true;
-      //Note: this Pause affects only 2nd !.playing() if, Boolean Controls this 
-      println( "P-Key, IF ... Postion is ...", playList.position(), pausePosition );
+      playList.pause();
     } else {
-      println( "P-Key, ELSE ... Postion is ...", playList.position(), pausePosition ); //verify .position() is local
-      playList.play( pausePosition ); //Note: Position from IF is set to Zero by parameter unless carried over
-      println( "P-Key, ELSE ... Postion is ...", playList.position(), pausePosition );
-      pausePosition = 0; //Reset .play( parameter ) to zero
-      ignoreNextAutoPlayPause = false; //ERROR: intends to reactives AutoPlay NEXT, see draw() / NEXT / Else-IF
+      playList.play();
+      //ignoreNextAutoPlayPause = false; //ERROR: intends to reactives AutoPlay NEXT, see draw() / NEXT / Else-IF
       ignoreNextAutoPlayStop = false;
     }
   } //End Play Pause Button

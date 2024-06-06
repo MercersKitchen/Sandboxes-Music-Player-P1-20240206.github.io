@@ -5,4 +5,6 @@ WORKS: Start / Stop / Infinite
 
 WORKS: Start / Stop / Loop / Loop (last) / Next Song
 
-Not Working: Start / Pause / Play --- NEXT
+WORKS: Start / Pause / Play --- NEXT / Loop
+
+WORKS: Start / Pause / Play --- NEXT / Infinite / STOP
