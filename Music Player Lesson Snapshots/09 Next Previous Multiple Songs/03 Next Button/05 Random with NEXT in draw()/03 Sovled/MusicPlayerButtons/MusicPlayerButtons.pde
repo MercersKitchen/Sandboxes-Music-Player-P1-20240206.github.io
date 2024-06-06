@@ -21,7 +21,7 @@ int appWidth, appHeight;
 //
 Boolean looping=false;
 //Protects .rewind in draw() from being inappropriately accessed between .play(), .loop(1), & .loop()
-Boolean ignoreNextAutoPlayPause=false, ignoreNextAutoPlayStop=false;
+Boolean ignoreNextAutoPlayStop=false;
 //
 void setup() {
   //Display
@@ -136,7 +136,7 @@ void draw() {
   //Debugging else of AutoPlay with println() & IF to mimic else of IF-Elseif-Else (computer has made mistake)
   //println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "DO NOT Press FF:", playList.position()>playList.length()*0.75, "\t\tSong Position:", playList.position(), "End of Song:", playList.length() );
   //
-  if ( !playList.isPlaying() && ignoreNextAutoPlayPause==false && ignoreNextAutoPlayStop==false) { //ERROR: ELSE Required, STOP & PAUSE broken, BOOLEAN Needed
+  if ( !playList.isPlaying() && ignoreNextAutoPlayStop==false && looping==false) { //ERROR: ELSE Required, STOP & PAUSE broken, BOOLEAN Needed
     //Note: 3rd time for NEXT Code
     println( "Additional IF !playList.isPlaying, after ELSE " );
     playList.pause(); //Note: computer plays harddrive file,
@@ -150,13 +150,10 @@ void draw() {
     println( "Current Song changed to:", currentSong );
     playList =  minim.loadFile( filePathNameMusic[currentSong] );
     playList.play();
-  } else if ( !playList.isPlaying() && ignoreNextAutoPlayPause==true ) {
-    playList.play();
-    ignoreNextAutoPlayPause = false;
-  } else if ( !playList.isPlaying() && ignoreNextAutoPlayStop==true ) {
+  } else if ( !playList.isPlaying() && ignoreNextAutoPlayStop==false && looping==true ) {
     //EMPTY Else
-  }else if ( !playList.isLooping() && looping==true) {
-    looping=false; 
+  } else if ( !playList.isPlaying() && ignoreNextAutoPlayStop==false && looping==true ) {
+    //EMPTY Else
   } else {
     //EMPTY Else: no code is exectured, means ignores NEXT Feature in draw()
     //
@@ -177,15 +174,12 @@ void keyPressed() {
     playList =  minim.loadFile( filePathNameMusic[currentSong] );
     playList.play();
     //
-    ignoreNextAutoPlayPause = false; //Reactives AutoPlay NEXT
-    ignoreNextAutoPlayStop = false;
   }
   //
   if ( key=='P' || key=='p' ) { //Play Pause Button
     //How much of the song should play before the Pause Button is actually a rewind button
     if ( playList.isPlaying() ) {
       playList.pause();
-      ignoreNextAutoPlayPause = true; //Disables AutoPlay NEXT
     } else {
       playList.play();
       //ignoreNextAutoPlayPause = false; //ERROR: intends to reactives AutoPlay NEXT, see draw() / NEXT / Else-IF

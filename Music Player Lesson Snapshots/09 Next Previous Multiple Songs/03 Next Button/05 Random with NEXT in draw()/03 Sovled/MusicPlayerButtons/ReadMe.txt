@@ -1,7 +1,8 @@
 
-Boolean Works for STOP
+WORKS: Start / Stop / Play
 
-Looping ONCE or INFINITE plays mutlple songs
+WORKS: Start / Stop / Infinite
 
-PAUSE-PLAY restarts the file from the beginning
+WORKS: Start / Stop / Loop / Loop (last) / Next Song
 
+Not Working: Start / Pause / Play --- NEXT
