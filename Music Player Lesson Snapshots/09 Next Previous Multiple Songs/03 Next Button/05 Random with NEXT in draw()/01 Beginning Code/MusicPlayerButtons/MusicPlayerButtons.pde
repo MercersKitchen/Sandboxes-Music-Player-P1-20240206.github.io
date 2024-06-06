@@ -131,6 +131,12 @@ void draw() {
      playList.play();
      */
     println( "Else of IF-Elseif-Else ( .isPlaying) " );
+  }
+  //Debugging else of AutoPlay with println() & IF to mimic else of IF-Elseif-Else (computer has made mistake)
+  //println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "DO NOT Press FF:", playList.position()>playList.length()*0.75, "\t\tSong Position:", playList.position(), "End of Song:", playList.length() );
+  //
+  if ( !playList.isPlaying() ) { //ERROR: ELSE Required, STOP & PAUSE broken, BOOLEAN Needed
+    println( "Additional IF !playList.isPlaying, after ELSE " );
     playList.pause(); //Note: computer plays harddrive file,
     playList.rewind(); //     mulitple files will play at the same time
     //Try Catch solves arrayListOutOfBounds
@@ -142,10 +148,7 @@ void draw() {
     println( "Current Song changed to:", currentSong );
     playList =  minim.loadFile( filePathNameMusic[currentSong] );
     playList.play();
-  }
-  //Debugging else of AutoPlay with println() & IF to mimic else of IF-Elseif-Else (computer has made mistake)
-  println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "DO NOT Press FF:", playList.position()>playList.length()*0.75, "\t\tSong Position:", playList.position(), "End of Song:", playList.length() );
-  //if (  ) {} //Note: 3rd time for NEXT Code
+  } //Note: 3rd time for NEXT Code
   //
 } //End draw
 //
