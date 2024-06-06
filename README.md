@@ -299,6 +299,13 @@ Change all programs
 
 --- 
 
-Update the intermeidate review and introduction: https://github.com/Intermediate-App-Dev-and-Deploy/Review-CS10-Music-Player.github.io
+Update the intermediate review and introduction: https://github.com/Intermediate-App-Dev-and-Deploy/Review-CS10-Music-Player.github.io
+
+---
+
+# Note about Grading
+
+- AutoPlay NEXT breaks PLAY-PAUSE, STOP, and LOOP unless Boolean Added: students to complete
+- Previous BButton not coded, students must complete
 
 ---
