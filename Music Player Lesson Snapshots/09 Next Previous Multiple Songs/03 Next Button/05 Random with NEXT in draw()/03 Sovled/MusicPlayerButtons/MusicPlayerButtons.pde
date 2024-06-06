@@ -21,6 +21,7 @@ int appWidth, appHeight;
 //
 Boolean looping=false;
 //Protects .rewind in draw() from being inappropriately accessed between .play(), .loop(1), & .loop()
+Boolean ignoreNextAutoPlay=false;
 //
 void setup() {
   //Display
@@ -135,7 +136,7 @@ void draw() {
   //Debugging else of AutoPlay with println() & IF to mimic else of IF-Elseif-Else (computer has made mistake)
   //println("Playing Boolean:", playList.isPlaying(), "\tCurrent Song is:", currentSong, "DO NOT Press FF:", playList.position()>playList.length()*0.75, "\t\tSong Position:", playList.position(), "End of Song:", playList.length() );
   //
-  if ( !playList.isPlaying() ) { //ERROR: ELSE Required, STOP & PAUSE broken, BOOLEAN Needed
+  if ( !playList.isPlaying() && ignoreNextAutoPlay==false) { //ERROR: ELSE Required, STOP & PAUSE broken, BOOLEAN Needed
     //Note: 3rd time for NEXT Code
     println( "Additional IF !playList.isPlaying, after ELSE " );
     playList.pause(); //Note: computer plays harddrive file,
@@ -168,28 +169,35 @@ void keyPressed() {
     playList.rewind(); //     mulitple files will play at the same time
     playList =  minim.loadFile( filePathNameMusic[currentSong] );
     playList.play();
+    //
+    ignoreNextAutoPlay = false; //Reactives AutoPlay NEXT
   }
   //
   if ( key=='P' || key=='p' ) { //Play Pause Button
     //How much of the song should play before the Pause Button is actually a rewind button
     if ( playList.isPlaying() ) {
       playList.pause();
+      ignoreNextAutoPlay = true; //Disables AutoPlay NEXT
     } else {
       playList.play();
+      ignoreNextAutoPlay = false; //Reactives AutoPlay NEXT
     }
   } //End Play Pause Button
   if ( key=='L' || key=='l' ) { //Loop Once
     playList.loop(1);
     looping = true;
+    ignoreNextAutoPlay = false; //Reactives AutoPlay NEXT
   } //End Loop Once
   if ( key=='I' || key=='i' ) { //Loop Infinite Times
     playList.loop();
     looping = true;
+    ignoreNextAutoPlay = false; //Reactives AutoPlay NEXT
   } //End Loop Infinite Times
   if ( key=='S' || key=='s' ) { // STOP Button
     playList.pause();
     playList.rewind(); //Affects LOOP Times
     looping = false;
+    ignoreNextAutoPlay = true; //Disables AutoPlay NEXT
   } // End STOP Button
   //
   /* Note: NEXT:
